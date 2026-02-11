@@ -16,280 +16,351 @@ export interface TestimonialPreview {
   timeAgo: string;
 }
 
+export const testimonialImages = [
+  '/images/testimonials/carlos.png',
+  '/images/testimonials/laura.png',
+  '/images/testimonials/david-y-ana.png',
+  '/images/testimonials/cristina.png',
+  '/images/testimonials/erik.png',
+  '/images/testimonials/sofia.png',
+  '/images/testimonials/carmen.png',
+  '/images/testimonials/javier.png',
+  '/images/testimonials/miguel-y-laura.png',
+  '/images/testimonials/elena.png',
+  '/images/testimonials/adrian.png',
+  '/images/testimonials/pedro-y-marcos.png',
+  '/images/testimonials/mei.png',
+  '/images/testimonials/yuki.png',
+  '/images/testimonials/roberto-y-daniel.png',
+  '/images/testimonials/pablo.png',
+  '/images/testimonials/fernando-y-teresa.png',
+  '/images/testimonials/alvaro-y-sara.jpg',
+  '/images/testimonials/valentina.jpg',
+  '/images/testimonials/marco.jpg',
+];
+
 export const testimonials: Testimonial[] = [
   {
-    name: 'María y Javier G.',
+    name: 'Carlos M.',
     location: 'Madrid',
     rating: 5,
-    image: '/images/testi-1.jpeg',
-    kittenName: 'Casandra',
-    text: "Casandra es una gatita British Shorthair preciosa que nos robó el corazón desde el primer momento. Llegó a casa sana, sociable y con un pelaje azul impresionante. El equipo de Criadero Castellano nos orientó en todo lo relacionado con su alimentación y cuidados específicos de la raza. Estamos encantados con nuestra pequeña y no podríamos estar más agradecidos."
+    image: '/images/testimonials/carlos.png',
+    kittenName: 'Nieve',
+    text: "Nieve es un gatito blanco precioso que nos robó el corazón en cuanto lo vimos. Llegó sano, sociable y con un pelaje inmaculado. El equipo de Criadero Castellano nos orientó en todo momento con la alimentación y los cuidados. No podríamos estar más contentos."
   },
   {
-    name: 'Lucía R.',
+    name: 'Laura P.',
     location: 'Barcelona',
     rating: 5,
-    image: '/images/testi-2.jpeg',
-    kittenName: 'Enzo',
-    text: "Enzo es un Maine Coon espectacular, con un carácter dulce y juguetón que ha conquistado a toda la familia. Desde el primer día se adaptó perfectamente a nuestro hogar y a nuestros otros gatos. Criadero Castellano nos proporcionó toda la documentación veterinaria y un seguimiento impecable durante las primeras semanas. Sin duda, la mejor decisión que hemos tomado."
+    image: '/images/testimonials/laura.png',
+    kittenName: 'Mochi',
+    text: "Mochi es una gatita con un carácter increíble. Desde que llegó a casa se adaptó perfectamente y se lleva genial con toda la familia. El proceso con Criadero Castellano fue transparente y profesional de principio a fin."
   },
   {
-    name: 'Carlos y Ana M.',
+    name: 'David y Ana R.',
     location: 'Valencia',
     rating: 5,
-    image: '/images/testi-3.jpeg',
-    kittenName: 'Bridget',
-    text: "Bridget es nuestra gatita Ragdoll y es exactamente como nos la describieron: cariñosa, tranquila y con esos ojos azules que enamoran. Era nuestra primera experiencia adoptando un gatito de raza y Criadero Castellano hizo que todo fuera muy sencillo. Nos dieron consejos sobre el cepillado de su pelo semilargo y la garantía de salud nos dio total tranquilidad."
+    image: '/images/testimonials/david-y-ana.png',
+    kittenName: 'Sombra',
+    text: "Sombra es nuestro gatito negro y es pura ternura. Viajamos juntos para recogerlo y fue un momento mágico. La documentación veterinaria estaba completa y el seguimiento postventa ha sido excelente."
   },
   {
-    name: 'Elena P.',
+    name: 'Cristina V.',
     location: 'Sevilla',
     rating: 5,
-    image: '/images/testi-4.jpeg',
-    kittenName: 'Gabi',
-    text: "Gabi es un Bengalí con una energía increíble y unos patrones en el pelaje que son una obra de arte. Es súper inteligente, ya aprendió a buscar juguetes y responde cuando le llamas por su nombre. Se nota que en Criadero Castellano crían a sus gatitos con mucho amor y dedicación. Todo el vecindario se para a preguntarnos por él."
+    image: '/images/testimonials/cristina.png',
+    kittenName: 'Luna',
+    text: "Luna es una gatita atigrada con una personalidad arrolladora. Es cariñosa, juguetona y se ha convertido en la reina de la casa. Criadero Castellano hizo que todo el proceso fuera muy sencillo y nos dieron consejos muy útiles."
   },
   {
-    name: 'Pablo y Marta S.',
+    name: 'Erik S.',
     location: 'Bilbao',
     rating: 5,
-    image: '/images/testi-5.jpeg',
-    kittenName: 'Larimar',
-    text: "Larimar es una gatita Persa que ha sido la incorporación perfecta a nuestra familia. Nuestros hijos están fascinados con su carácter apacible y su pelaje largo y sedoso. Criadero Castellano nos entregó toda la documentación, el calendario de vacunación al día y un kit de bienvenida muy completo. Han superado con creces todas nuestras expectativas."
+    image: '/images/testimonials/erik.png',
+    kittenName: 'Thor',
+    text: "Thor es un gatito Maine Coon con una energía increíble. Es juguetón, cariñoso y ya domina el rascador. Se nota que en Criadero Castellano crían a sus gatitos con mucho amor. La mejor decisión que he tomado."
   },
   {
-    name: 'Raquel V.',
+    name: 'Sofía L.',
     location: 'Málaga',
     rating: 5,
-    image: '/images/testi-6.jpeg',
-    kittenName: 'Felicia',
-    text: "Felicia es una Siamesa con una personalidad arrolladora. Es vocal, cariñosa y siempre quiere estar donde estemos nosotros, típico de su raza. Nos la enviaron desde Criadero Castellano con todo el proceso de transporte perfectamente organizado y llegó feliz y sana. Tres meses después, es la reina de la casa y no la cambiaríamos por nada."
+    image: '/images/testimonials/sofia.png',
+    kittenName: 'Cleo',
+    text: "Cleo es mi pequeña Sphynx y es absolutamente adorable. Llegó en perfectas condiciones y con todo el papeleo en orden. El equipo fue muy atento y siempre disponible para resolver mis dudas. Estoy enamorada de mi gatita."
   },
   {
-    name: 'Adrián y Teresa L.',
+    name: 'Carmen D.',
     location: 'Zaragoza',
     rating: 5,
-    image: '/images/testi-7.jpeg',
-    kittenName: 'Bonita',
-    text: "Bonita es nuestra segunda gatita de Criadero Castellano, esta vez una Abisinia, y la experiencia ha sido igual de maravillosa que la primera. Es ágil, curiosa y tremendamente juguetona, como marca la raza. Ella y su hermana se llevan de maravilla y la calidad genética y el temperamento son siempre excepcionales."
+    image: '/images/testimonials/carmen.png',
+    kittenName: 'Simba',
+    text: "Simba es un gatito naranja con un carácter dulce y juguetón que ha llenado nuestra casa de alegría. Nuestros hijos están fascinados con él. Criadero Castellano nos entregó toda la documentación y un kit de bienvenida muy completo."
   },
   {
-    name: 'Sofía H.',
+    name: 'Javier T.',
     location: 'Granada',
     rating: 5,
-    image: '/images/testi-8.jpeg',
-    kittenName: 'Dieter',
-    text: "Dieter es un Bosque de Noruega impresionante, con un porte majestuoso y un carácter increíblemente dulce para su tamaño. Desde la primera consulta hasta el día que lo recogimos, Criadero Castellano fue profesional y cercano. Su pelaje es espectacular y su personalidad es aún mejor. Ya domina el rascador y adora las sesiones de juego."
+    image: '/images/testimonials/javier.png',
+    kittenName: 'Atlas',
+    text: "Atlas es un gatito atigrado con un porte impresionante. Es inteligente, curioso y se ha adaptado a la perfección. Todo el proceso con Criadero Castellano fue profesional y cercano. Lo recomendaría sin dudarlo."
+  },
+  {
+    name: 'Miguel y Laura H.',
+    location: 'Madrid',
+    rating: 5,
+    image: '/images/testimonials/miguel-y-laura.png',
+    kittenName: 'Canela',
+    text: "Canela es nuestra gatita naranja y es puro amor. La recogimos en el aeropuerto y fue amor a primera vista. El transporte fue impecable y llegó tranquila y sana. Criadero Castellano superó todas nuestras expectativas."
+  },
+  {
+    name: 'Elena B.',
+    location: 'Barcelona',
+    rating: 5,
+    image: '/images/testimonials/elena.png',
+    kittenName: 'Perla',
+    text: "Perla es una gatita preciosa con un pelaje suave y unos ojos cautivadores. Es dulce, sociable y se lleva genial con mi otro gato. La experiencia con Criadero Castellano ha sido fantástica. Atención personalizada y un seguimiento increíble."
+  },
+  {
+    name: 'Adrián G.',
+    location: 'Valencia',
+    rating: 5,
+    image: '/images/testimonials/adrian.png',
+    kittenName: 'Copito',
+    text: "Copito es un gatito blanco con una personalidad encantadora. Es tranquilo, mimoso y le encanta acurrucarse en el sofá. Todo el proceso fue muy fácil gracias a Criadero Castellano. La calidad genética y la socialización son insuperables."
+  },
+  {
+    name: 'Pedro y Marcos A.',
+    location: 'Sevilla',
+    rating: 5,
+    image: '/images/testimonials/pedro-y-marcos.png',
+    kittenName: 'Nacho',
+    text: "Nacho es un gatito naranja lleno de energía y travesuras. Es nuestro primer gato y Criadero Castellano nos guió en todo lo necesario como primerizos. El kit de bienvenida fue de gran ayuda. No podríamos estar más agradecidos."
+  },
+  {
+    name: 'Mei L.',
+    location: 'Bilbao',
+    rating: 5,
+    image: '/images/testimonials/mei.png',
+    kittenName: 'Kira',
+    text: "Kira es una gatita Sphynx con un carácter increíble. Es cariñosa, sociable y siempre busca el contacto humano. Llegó sana y con toda la documentación en regla. Criadero Castellano realmente se preocupa por cada gatito."
+  },
+  {
+    name: 'Yuki N.',
+    location: 'Málaga',
+    rating: 5,
+    image: '/images/testimonials/yuki.png',
+    kittenName: 'Milo y Lola',
+    text: "Adoptamos dos gatitos, Milo y Lola, y son inseparables. Llegaron en perfecto estado y se adaptaron desde el primer día. El equipo de Criadero Castellano organizó todo el transporte a la perfección. Son la alegría de nuestra casa."
+  },
+  {
+    name: 'Roberto y Daniel F.',
+    location: 'Zaragoza',
+    rating: 5,
+    image: '/images/testimonials/roberto-y-daniel.png',
+    kittenName: 'Toffee',
+    text: "Toffee es un gatito Bengalí con unos patrones espectaculares. Es súper inteligente y juguetón, ya aprendió varios trucos. Se nota la dedicación de Criadero Castellano en cada detalle. Todo el vecindario se para a preguntarnos por él."
+  },
+  {
+    name: 'Pablo C.',
+    location: 'Granada',
+    rating: 5,
+    image: '/images/testimonials/pablo.png',
+    kittenName: 'Bruma',
+    text: "Bruma es una gatita gris con un carácter dulce y aventurero. Es mi compañera perfecta, siempre está a mi lado. La comunicación con Criadero Castellano fue excelente durante todo el proceso. Nos enviaron fotos y vídeos antes de recogerla."
+  },
+  {
+    name: 'Fernando y Teresa O.',
+    location: 'Madrid',
+    rating: 5,
+    image: '/images/testimonials/fernando-y-teresa.png',
+    kittenName: 'Tigre',
+    text: "Tigre es un gatito naranja con una personalidad increíble. Es cariñoso con toda la familia y se lleva genial con los niños. Es nuestro segundo gatito de Criadero Castellano y la experiencia ha sido igual de maravillosa."
+  },
+  {
+    name: 'Álvaro y Sara K.',
+    location: 'Barcelona',
+    rating: 5,
+    image: '/images/testimonials/alvaro-y-sara.jpg',
+    kittenName: 'Calabaza',
+    text: "Calabaza es nuestro gatito naranja con su jersey verde y es la cosa más adorable del mundo. Lo recogimos en el aeropuerto y desde entonces no hemos dejado de sonreír. Criadero Castellano hizo que todo fuera perfecto."
+  },
+  {
+    name: 'Valentina R.',
+    location: 'Sevilla',
+    rating: 5,
+    image: '/images/testimonials/valentina.jpg',
+    kittenName: 'Pixel',
+    text: "Pixel es mi pequeña Sphynx y es única en el mundo. Tiene una personalidad fascinante y es increíblemente cariñosa. El proceso de adopción fue impecable y Criadero Castellano me dio total confianza desde el primer momento."
+  },
+  {
+    name: 'Marco J.',
+    location: 'Valencia',
+    rating: 5,
+    image: '/images/testimonials/marco.jpg',
+    kittenName: 'Blanco',
+    text: "Blanco es un gatito con un corazón enorme. Es tranquilo, cariñoso y tiene un pelaje precioso. Criadero Castellano superó mis expectativas con su profesionalidad y cercanía. Ya estoy pensando en adoptar otro."
   }
 ];
 
 export const testimonialPreviews: TestimonialPreview[] = [
   {
-    initials: 'MG',
-    name: 'María García',
+    initials: 'CM',
+    name: 'Carlos M.',
     rating: 5,
-    text: "Estamos enamorados de nuestra gatita de Criadero Castellano. Es una British Shorthair preciosa, sana y con un temperamento ideal. Todo el proceso fue transparente y profesional.",
+    text: "Nieve nos robó el corazón desde el primer momento. Llegó sano, sociable y con un pelaje inmaculado. El equipo de Criadero Castellano nos orientó en todo.",
     location: 'Madrid',
     timeAgo: 'hace 2 semanas'
   },
   {
-    initials: 'JL',
-    name: 'Javier López',
+    initials: 'LP',
+    name: 'Laura P.',
     rating: 5,
-    text: "La mejor decisión que hemos tomado. Nuestro Maine Coon es cariñoso, sociable y tiene un pelaje espectacular. Criadero Castellano nos dio un seguimiento excelente.",
+    text: "Mochi se adaptó perfectamente desde el primer día. El proceso con Criadero Castellano fue transparente y profesional de principio a fin.",
     location: 'Barcelona',
     timeAgo: 'hace 1 mes'
   },
   {
-    initials: 'CF',
-    name: 'Carmen Fernández',
+    initials: 'DA',
+    name: 'David y Ana R.',
     rating: 5,
-    text: "Nuestra Ragdoll se adaptó al hogar desde el primer día. Es tranquila, dulce y le encanta que la cojan en brazos. Se nota la dedicación del criadero en cada detalle.",
+    text: "Sombra es pura ternura. La documentación veterinaria estaba completa y el seguimiento postventa ha sido excelente. Muy recomendable.",
     location: 'Valencia',
     timeAgo: 'hace 3 semanas'
   },
   {
-    initials: 'AM',
-    name: 'Antonio Martínez',
+    initials: 'CV',
+    name: 'Cristina V.',
     rating: 5,
-    text: "Desde la primera llamada hasta la entrega del gatito, la comunicación fue impecable. Nuestro Bengalí llegó con todas las vacunas al día y una documentación completísima. Muy recomendable.",
+    text: "Luna se ha convertido en la reina de la casa. Criadero Castellano hizo que todo el proceso fuera muy sencillo y nos dieron consejos muy útiles.",
     location: 'Sevilla',
     timeAgo: 'hace 1 mes'
   },
   {
-    initials: 'LR',
-    name: 'Laura Rodríguez',
+    initials: 'ES',
+    name: 'Erik S.',
     rating: 5,
-    text: "Nuestro gatito Persa tiene un carácter maravilloso y un pelaje precioso. Criadero Castellano realmente se preocupa por la salud y el bienestar de cada uno de sus gatitos.",
+    text: "Thor tiene una energía increíble. Se nota que en Criadero Castellano crían a sus gatitos con mucho amor. La mejor decisión que he tomado.",
     location: 'Bilbao',
-    timeAgo: 'hace 2 meses'
-  },
-  {
-    initials: 'DS',
-    name: 'Diego Sánchez',
-    rating: 5,
-    text: "Recibimos a nuestra gatita Siamesa en perfectas condiciones. El transporte fue rápido y seguro. Tres meses después, es la alegría de la casa y no para de ronronear.",
-    location: 'Málaga',
-    timeAgo: 'hace 6 semanas'
-  },
-  {
-    initials: 'PH',
-    name: 'Patricia Hernández',
-    rating: 5,
-    text: "Es nuestro segundo gatito de Criadero Castellano y la experiencia ha sido igual de fantástica. La calidad genética y la socialización de sus gatitos son insuperables.",
-    location: 'Zaragoza',
-    timeAgo: 'hace 3 meses'
-  },
-  {
-    initials: 'RD',
-    name: 'Roberto Díaz',
-    rating: 5,
-    text: "El kit de bienvenida que nos proporcionaron fue de gran ayuda para nosotros como primerizos. Nuestro Bosque de Noruega se acomodó en casa enseguida. Gracias por todo.",
-    location: 'Granada',
-    timeAgo: 'hace 2 meses'
-  },
-  {
-    initials: 'IG',
-    name: 'Isabel González',
-    rating: 5,
-    text: "Adoptar un gatito de Criadero Castellano ha sido lo mejor del año. Nuestra Abisinia es súper activa, inteligente y tiene una personalidad única. El apoyo postventa ha sido increíble.",
-    location: 'Madrid',
-    timeAgo: 'hace 1 mes'
-  },
-  {
-    initials: 'FA',
-    name: 'Fernando Álvarez',
-    rating: 5,
-    text: "Criador excelente. Nuestro gatito vino con toda la documentación veterinaria, registro de pedigree y garantía de salud. La atención al detalle es impresionante.",
-    location: 'Barcelona',
-    timeAgo: 'hace 2 meses'
-  },
-  {
-    initials: 'NR',
-    name: 'Natalia Ruiz',
-    rating: 5,
-    text: "No podríamos estar más contentos con nuestro British Shorthair. Se lleva genial con nuestros hijos y con el otro gato de casa. Un verdadero gato de familia.",
-    location: 'Valencia',
-    timeAgo: 'hace 4 semanas'
-  },
-  {
-    initials: 'AT',
-    name: 'Alejandro Torres',
-    rating: 5,
-    text: "La experiencia con Criadero Castellano fue maravillosa. Se nota que aman lo que hacen y que cada gatito recibe cariño y atención individual desde que nace.",
-    location: 'Sevilla',
     timeAgo: 'hace 2 semanas'
   },
   {
-    initials: 'BN',
-    name: 'Beatriz Navarro',
+    initials: 'SL',
+    name: 'Sofía L.',
     rating: 5,
-    text: "Profesionales, cercanos y de total confianza. Así definiría a Criadero Castellano. Nuestra gatita es juguetona, sana y tiene un carácter estupendo.",
-    location: 'Bilbao',
+    text: "Cleo es absolutamente adorable. Llegó en perfectas condiciones y con todo el papeleo en orden. Estoy enamorada de mi gatita.",
+    location: 'Málaga',
     timeAgo: 'hace 5 semanas'
   },
   {
-    initials: 'MV',
-    name: 'Miguel Vargas',
+    initials: 'CD',
+    name: 'Carmen D.',
     rating: 5,
-    text: "Viajamos desde Málaga para recoger a nuestro gatito y mereció totalmente la pena. Criadero Castellano nos recibió con los brazos abiertos y la dedicación que muestran es evidente.",
-    location: 'Málaga',
+    text: "Simba ha llenado nuestra casa de alegría. Nuestros hijos están fascinados con él. El kit de bienvenida fue muy completo.",
+    location: 'Zaragoza',
     timeAgo: 'hace 3 semanas'
   },
   {
-    initials: 'SC',
-    name: 'Sara Castillo',
+    initials: 'JT',
+    name: 'Javier T.',
     rating: 5,
-    text: "Nuestro Maine Coon tiene un temperamento increíble. Es genial con desconocidos, niños y otros animales. No podríamos haber elegido mejor criador.",
-    location: 'Zaragoza',
+    text: "Atlas se ha adaptado a la perfección. Todo el proceso con Criadero Castellano fue profesional y cercano. Lo recomendaría sin dudarlo.",
+    location: 'Granada',
     timeAgo: 'hace 1 mes'
   },
   {
-    initials: 'EM',
-    name: 'Eva Moreno',
+    initials: 'ML',
+    name: 'Miguel y Laura H.',
     rating: 5,
-    text: "Investigué criaderos de gatos durante meses y Criadero Castellano destacó por encima de todos. La comunicación fue excelente desde el primer momento y nuestra gatita llegó sana y con un pelaje precioso.",
-    location: 'Granada',
-    timeAgo: 'hace 6 semanas'
-  },
-  {
-    initials: 'JO',
-    name: 'Jorge Ortega',
-    rating: 5,
-    text: "Criadero Castellano superó todas nuestras expectativas. Nuestro Bengalí es increíblemente listo y cariñoso. Toda la familia está encantada y ya pensamos en adoptar otro.",
+    text: "Canela es puro amor. La recogimos en el aeropuerto y fue amor a primera vista. Criadero Castellano superó todas nuestras expectativas.",
     location: 'Madrid',
-    timeAgo: 'hace 2 semanas'
+    timeAgo: 'hace 2 meses'
   },
   {
-    initials: 'CI',
-    name: 'Cristina Iglesias',
+    initials: 'EB',
+    name: 'Elena B.',
     rating: 5,
-    text: "El certificado de nacimiento, los informes veterinarios y la garantía de salud nos dieron total confianza. Nuestra gatita está creciendo sana y feliz. Eternamente agradecidos.",
+    text: "Perla se lleva genial con mi otro gato. La experiencia con Criadero Castellano ha sido fantástica. Atención personalizada y seguimiento increíble.",
     location: 'Barcelona',
-    timeAgo: 'hace 4 semanas'
-  },
-  {
-    initials: 'PR',
-    name: 'Pedro Ramírez',
-    rating: 5,
-    text: "Nuestra pequeña Ragdoll ha sido la mejor incorporación a la familia. Es tan juguetona y le encanta acurrucarse con nosotros en el sofá. Criadero Castellano hizo todo muy fácil.",
-    location: 'Valencia',
-    timeAgo: 'hace 3 semanas'
+    timeAgo: 'hace 6 semanas'
   },
   {
     initials: 'AG',
-    name: 'Andrea Gil',
+    name: 'Adrián G.',
     rating: 5,
-    text: "No puedo decir suficientes cosas buenas sobre Criadero Castellano. Nuestro gatito llegó sano, contento y ya usaba el arenero sin problema. El apoyo que hemos recibido ha sido excepcional.",
-    location: 'Sevilla',
-    timeAgo: 'hace 1 mes'
+    text: "Copito es tranquilo, mimoso y le encanta acurrucarse. La calidad genética y la socialización de Criadero Castellano son insuperables.",
+    location: 'Valencia',
+    timeAgo: 'hace 4 semanas'
   },
   {
-    initials: 'VB',
-    name: 'Víctor Blanco',
+    initials: 'PM',
+    name: 'Pedro y Marcos A.',
     rating: 5,
-    text: "Es nuestro tercer gato de raza y con diferencia la mejor experiencia. El temperamento del gatito es perfecto y se nota que fue criado con mucho cariño.",
-    location: 'Bilbao',
+    text: "Nacho está lleno de energía y travesuras. Criadero Castellano nos guió en todo como primerizos. No podríamos estar más agradecidos.",
+    location: 'Sevilla',
     timeAgo: 'hace 2 semanas'
   },
   {
-    initials: 'MJ',
-    name: 'Marina Jiménez',
+    initials: 'ML',
+    name: 'Mei L.',
     rating: 5,
-    text: "Teníamos dudas sobre el transporte del gatito, pero Criadero Castellano lo organizó todo a la perfección. Nuestra Siamesa llegó tranquila y en perfecto estado de salud.",
-    location: 'Málaga',
-    timeAgo: 'hace 5 semanas'
-  },
-  {
-    initials: 'RL',
-    name: 'Rubén Luna',
-    rating: 5,
-    text: "La comunicación con Criadero Castellano fue excelente durante todo el proceso. Nos enviaron fotos y vídeos del gatito antes de recogerlo. Un trato inmejorable.",
-    location: 'Zaragoza',
+    text: "Kira es cariñosa, sociable y siempre busca el contacto humano. Criadero Castellano realmente se preocupa por cada gatito.",
+    location: 'Bilbao',
     timeAgo: 'hace 3 semanas'
   },
   {
-    initials: 'LS',
-    name: 'Lorena Serrano',
+    initials: 'YN',
+    name: 'Yuki N.',
     rating: 5,
-    text: "Nuestra gatita Persa tiene una personalidad adorable. Le encanta que la mimen y ronronea sin parar. Criadero Castellano realmente busca los mejores hogares para sus gatitos.",
-    location: 'Granada',
+    text: "Adoptamos dos gatitos, Milo y Lola, y son inseparables. El equipo organizó todo el transporte a la perfección. Son la alegría de nuestra casa.",
+    location: 'Málaga',
     timeAgo: 'hace 1 mes'
   },
   {
-    initials: 'HC',
-    name: 'Hugo Campos',
+    initials: 'RD',
+    name: 'Roberto y Daniel F.',
     rating: 5,
-    text: "Llevamos seis meses con nuestro gatito y está absolutamente perfecto. Sano, feliz y lleno de energía. Muchas gracias a todo el equipo de Criadero Castellano.",
-    location: 'Madrid',
-    timeAgo: 'hace 6 semanas'
+    text: "Toffee es súper inteligente y juguetón. Se nota la dedicación de Criadero Castellano en cada detalle. Todo el vecindario pregunta por él.",
+    location: 'Zaragoza',
+    timeAgo: 'hace 5 semanas'
   },
   {
-    initials: 'TP',
-    name: 'Teresa Peña',
+    initials: 'PC',
+    name: 'Pablo C.',
     rating: 5,
-    text: "De principio a fin, Criadero Castellano nos ofreció un servicio excepcional. Nuestro Abisinio es todo lo que queríamos y más. Lo recomendaría a cualquiera sin dudarlo.",
+    text: "Bruma es mi compañera perfecta. La comunicación con Criadero Castellano fue excelente. Nos enviaron fotos y vídeos antes de recogerla.",
+    location: 'Granada',
+    timeAgo: 'hace 2 semanas'
+  },
+  {
+    initials: 'FT',
+    name: 'Fernando y Teresa O.',
+    rating: 5,
+    text: "Tigre es cariñoso con toda la familia. Es nuestro segundo gatito de Criadero Castellano y la experiencia ha sido igual de maravillosa.",
+    location: 'Madrid',
+    timeAgo: 'hace 1 mes'
+  },
+  {
+    initials: 'AS',
+    name: 'Álvaro y Sara K.',
+    rating: 5,
+    text: "Calabaza es la cosa más adorable del mundo. Lo recogimos en el aeropuerto y no hemos dejado de sonreír. Todo fue perfecto.",
     location: 'Barcelona',
+    timeAgo: 'hace 3 semanas'
+  },
+  {
+    initials: 'VR',
+    name: 'Valentina R.',
+    rating: 5,
+    text: "Pixel es única en el mundo. El proceso de adopción fue impecable y Criadero Castellano me dio total confianza desde el primer momento.",
+    location: 'Sevilla',
+    timeAgo: 'hace 4 semanas'
+  },
+  {
+    initials: 'MJ',
+    name: 'Marco J.',
+    rating: 5,
+    text: "Blanco tiene un corazón enorme. Criadero Castellano superó mis expectativas con su profesionalidad y cercanía. Ya pienso en adoptar otro.",
+    location: 'Valencia',
     timeAgo: 'hace 2 semanas'
   }
 ];

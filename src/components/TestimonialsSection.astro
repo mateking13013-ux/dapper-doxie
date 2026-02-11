@@ -1,31 +1,11 @@
 ---
 // TestimonialsSection component
-import { testimonials } from '../data/testimonials';
+import { testimonials, testimonialImages } from '../data/testimonials';
 
-const testimonialImages = [
-  '/images/testi-1.jpeg',
-  '/images/testi-2.jpeg',
-  '/images/testi-3.jpeg',
-  '/images/testi-4.jpeg',
-  '/images/testi-5.jpeg',
-  '/images/testi-6.jpeg',
-  '/images/testi-7.jpeg',
-  '/images/testi-8.jpeg',
-  '/images/testi-9.jpeg',
-  '/images/testi-10.jpeg',
-  '/images/testi-11.jpeg',
-  '/images/testi-12.jpeg',
-  '/images/testi-13.jpeg',
-  '/images/testi-14.jpeg',
-  '/images/testi-15.jpeg',
-  '/images/testi-16.jpeg',
-  '/images/testi-17.jpeg',
-  '/images/testi-18.jpeg',
-  '/images/testi-19.jpeg',
-  '/images/testi-20.jpeg',
-  '/images/testi-21.jpeg',
-  '/images/testi-22.jpeg',
-];
+// Split images into 3 rows for scrolling
+const row1 = testimonialImages.slice(0, 7);
+const row2 = testimonialImages.slice(7, 14);
+const row3 = testimonialImages.slice(14, 20);
 ---
 
 <section class="testimonials-section" id="testimonials">
@@ -36,13 +16,37 @@ const testimonialImages = [
       <p class="section-subtitle">Historias reales de familias que encontraron su compañero perfecto con nosotros.</p>
     </div>
 
-    <!-- Image Gallery Grid -->
-    <div class="image-gallery">
-      {testimonialImages.map((img, index) => (
-        <div class={`gallery-item gallery-item-${(index % 4) + 1}`}>
-          <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+    <!-- Scrolling Image Gallery -->
+    <div class="scroll-gallery">
+      <div class="scroll-row scroll-row-1">
+        <div class="scroll-track">
+          {[...row1, ...row1].map((img) => (
+            <div class="scroll-item">
+              <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
+
+      <div class="scroll-row scroll-row-2">
+        <div class="scroll-track scroll-track-reverse">
+          {[...row2, ...row2].map((img) => (
+            <div class="scroll-item">
+              <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <div class="scroll-row scroll-row-3">
+        <div class="scroll-track">
+          {[...row3, ...row3].map((img) => (
+            <div class="scroll-item">
+              <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
 
     <!-- Testimonials Masonry Grid -->
@@ -134,29 +138,76 @@ const testimonialImages = [
     margin: 0 auto;
   }
 
-  /* Image Gallery - Masonry Style */
-  .image-gallery {
-    columns: 4;
-    column-gap: 1rem;
+  /* Scrolling Gallery */
+  .scroll-gallery {
     margin-bottom: 3rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
   }
 
-  .gallery-item {
-    break-inside: avoid;
+  .scroll-row {
+    overflow: hidden;
     margin-bottom: 1rem;
+  }
+
+  .scroll-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .scroll-track {
+    display: flex;
+    gap: 1rem;
+    width: max-content;
+  }
+
+  .scroll-row-1 .scroll-track {
+    animation: scrollLeft 35s linear infinite;
+  }
+
+  .scroll-row-2 .scroll-track {
+    animation: scrollRight 45s linear infinite;
+  }
+
+  .scroll-row-3 .scroll-track {
+    animation: scrollLeft 25s linear infinite;
+  }
+
+  @keyframes scrollLeft {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  @keyframes scrollRight {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .scroll-item {
+    flex-shrink: 0;
+    width: 220px;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
   }
 
-  .gallery-item img {
+  .scroll-item img {
     width: 100%;
-    height: auto;
+    height: 160px;
+    object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
   }
 
-  .gallery-item:hover img {
+  .scroll-item:hover img {
     transform: scale(1.05);
   }
 
@@ -254,18 +305,18 @@ const testimonialImages = [
   }
 
   @media (max-width: 1100px) {
-    .image-gallery {
-      columns: 3;
-    }
-
     .testimonials-masonry {
       columns: 2;
     }
   }
 
   @media (max-width: 768px) {
-    .image-gallery {
-      columns: 2;
+    .scroll-item {
+      width: 180px;
+    }
+
+    .scroll-item img {
+      height: 130px;
     }
 
     .testimonials-masonry {
@@ -284,17 +335,26 @@ const testimonialImages = [
       font-size: 1.75rem;
     }
 
-    .image-gallery {
-      columns: 2;
-      column-gap: 0.75rem;
+    .scroll-item {
+      width: 150px;
     }
 
-    .gallery-item {
+    .scroll-item img {
+      height: 110px;
+    }
+
+    .scroll-row {
       margin-bottom: 0.75rem;
     }
 
     .testimonial-card {
       padding: 1.25rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-track {
+      animation-play-state: paused !important;
     }
   }
 </style>
