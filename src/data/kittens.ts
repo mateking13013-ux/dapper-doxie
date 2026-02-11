@@ -22,7 +22,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Casandra es una gatita dulce y tranquila que adora acurrucarse en el regazo de su dueño. Su pelaje sedoso y sus ojos azules conquistan a todos los que la conocen. Es perfecta para familias que buscan una compañera cariñosa y relajada.',
   },
   {
@@ -33,7 +33,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Castro es un gatito noble y apacible que disfruta de largos momentos de mimos. Tiene un carácter equilibrado y se adapta fácilmente a cualquier hogar. Le encanta seguir a sus humanos por toda la casa como un fiel compañero.',
   },
   {
@@ -44,7 +44,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Hike es un aventurero con alma de explorador que investiga cada rincón de su entorno. A pesar de su curiosidad, siempre vuelve a buscar caricias y compañía. Su personalidad juguetona y su mirada penetrante lo hacen irresistible.',
   },
   {
@@ -55,7 +55,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Leonardo es un gatito majestuoso con un porte elegante y un corazón tierno. Disfruta de las tardes tranquilas tumbado junto a la ventana observando el mundo. Es sociable con otros animales y se lleva de maravilla con los niños.',
   },
 
@@ -70,7 +70,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Alexandra es una princesa con un pelaje espectacular y unos ojos expresivos que derriten corazones. Le encanta que la cepillen y recibir atención constante. Es una gatita serena que llenará tu hogar de elegancia y ternura.',
   },
   {
@@ -81,7 +81,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Angel hace honor a su nombre con su temperamento dulce y apacible. Pasa horas ronroneando suavemente mientras descansa en su cojín favorito. Es la compañera ideal para personas que buscan tranquilidad y amor incondicional.',
   },
   {
@@ -92,7 +92,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Bella es tan hermosa como su nombre indica, con un manto suave y una cara adorable. Tiene un carácter tranquilo y disfruta de los ambientes calmados. Le gusta observar todo desde su lugar preferido y recibir caricias suaves.',
   },
   {
@@ -103,7 +103,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Fiona es una gatita encantadora con una personalidad cálida y acogedora. Siempre busca el lugar más cómodo de la casa para descansar plácidamente. Su ronroneo constante es la banda sonora perfecta para cualquier hogar feliz.',
   },
   {
@@ -114,7 +114,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Gasia es un gatito de carácter noble y sosegado que transmite paz con su sola presencia. Su pelaje abundante y sus ojos grandes le dan un aspecto regio. Disfruta de las rutinas y se adapta perfectamente a la vida en familia.',
   },
   {
@@ -125,7 +125,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '13 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Kisana es un gatito distinguido con un carácter afable y una elegancia natural. Le encanta que lo mimen y responde con un ronroneo profundo y reconfortante. Es muy leal a su familia y crea vínculos fuertes con sus dueños.',
   },
   {
@@ -136,7 +136,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 650,
     description: 'Troy es un gatito valiente y cariñoso que combina fortaleza con dulzura. Su mirada profunda refleja una inteligencia especial y un temperamento equilibrado. Será el compañero perfecto para quien busque un gato con personalidad única.',
   },
 
@@ -151,7 +151,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Alexia es una gatita extrovertida y llena de energía que ilumina cualquier habitación. Su piel suave y cálida invita a abrazarla constantemente. Adora ser el centro de atención y participar en todas las actividades del hogar.',
   },
   {
@@ -162,7 +162,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Andy es una gatita vivaz y curiosa que siempre está buscando nuevas aventuras dentro de casa. Su personalidad afectuosa la convierte en una compañera excepcional. Le encanta acurrucarse bajo las mantas y compartir calor con su familia.',
   },
   {
@@ -173,7 +173,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Jenny es una gatita sociable y divertida que se lleva bien con todos en la familia. Tiene una energía contagiosa y siempre está lista para jugar. Su carácter amigable y sus travesuras la hacen absolutamente encantadora.',
   },
   {
@@ -184,7 +184,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Erie es una gatita elegante y misteriosa con unos ojos que hipnotizan a cualquiera. Combina momentos de intensa actividad con ratos de pura tranquilidad. Es muy inteligente y aprende trucos con una facilidad sorprendente.',
   },
   {
@@ -195,7 +195,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Gabi es un gatito simpático y juguetón que no para de explorar su entorno. Su carácter alegre y su necesidad de compañía lo hacen perfecto para familias activas. Siempre encuentra la manera de arrancar una sonrisa a quien lo rodea.',
   },
   {
@@ -206,7 +206,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '14 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Gatos es un gatito con una personalidad arrolladora que conquista a todos al instante. Le fascina trepar, saltar y descubrir lugares nuevos en la casa. Su piel arrugada y su expresión curiosa le dan un encanto único e inolvidable.',
   },
   {
@@ -217,7 +217,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Ben es un gatito cariñoso y demandante que siempre quiere estar cerca de su familia. Tiene un ronroneo potente que demuestra lo feliz que es recibiendo mimos. Es muy sociable y se adapta rápidamente a nuevos ambientes y personas.',
   },
   {
@@ -228,7 +228,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '13 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Bryan es un gatito atlético y enérgico que disfruta de los juegos interactivos con sus dueños. Su inteligencia y agilidad lo convierten en un compañero fascinante. Por las noches le encanta buscar el calor humano y dormir abrazado.',
   },
 
@@ -243,7 +243,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Marta es una gatita robusta y cariñosa con un pelaje exuberante que invita a acariciarla. Tiene un espíritu aventurero y le encanta explorar cada rincón de su territorio. Es ideal para familias que buscan una compañera activa y leal.',
   },
   {
@@ -254,7 +254,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Selena es una gatita graciosa y juguetona con una personalidad encantadora. Su manto denso y brillante refleja su excelente salud y genética. Disfruta de los juegos con plumas y pelotas, y siempre está lista para la diversión.',
   },
   {
@@ -265,7 +265,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Kasper es un gatito fuerte y decidido con el corazón más tierno que puedas imaginar. Le encanta trepar y observar el mundo desde las alturas con aire majestuoso. Es muy protector con su familia y forma lazos profundos con sus dueños.',
   },
   {
@@ -276,7 +276,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Rurik es un gatito imponente con un porte digno de su nombre de herencia rusa. Su carácter equilibrado combina momentos de juego intenso con siestas prolongadas. Es sociable con otros gatos y se adapta con facilidad a nuevos entornos.',
   },
 
@@ -291,7 +291,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Larimar es una gatita elegante con un pelaje azulado que brilla como una piedra preciosa. Tiene un carácter reservado al principio, pero una vez que confía, es enormemente cariñosa. Su belleza y delicadeza la convierten en una joya para cualquier hogar.',
   },
   {
@@ -302,7 +302,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Lama es una gatita tímida y dulce que va ganándose el corazón de su familia poco a poco. Sus ojos verdes intensos contrastan de forma espectacular con su pelaje plateado. Una vez en confianza, se convierte en la compañera más fiel y amorosa.',
   },
   {
@@ -313,7 +313,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Kay es un gatito inteligente y observador que analiza todo con sus brillantes ojos verdes. Disfruta de los juegos de inteligencia y los retos mentales que le propongan. Es tranquilo pero muy atento, siempre pendiente de lo que ocurre a su alrededor.',
   },
   {
@@ -324,7 +324,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Jay es un gatito sereno y refinado con modales impecables que sorprenden para su edad. Su pelaje denso y aterciopelado es un placer al tacto. Le gusta tener su rutina establecida y recompensa la constancia con un afecto profundo y sincero.',
   },
 
@@ -339,7 +339,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Felicia es una gatita parlanchina y expresiva que siempre tiene algo que comunicar. Sus orejas grandes y su cuerpo estilizado le dan un aspecto único y sofisticado. Es increíblemente leal a su dueño y lo sigue a todas partes sin descanso.',
   },
   {
@@ -350,7 +350,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Rosaline es una gatita grácil y delicada que se mueve con la elegancia de una bailarina. Tiene una voz melodiosa y no duda en usarla para expresar sus deseos. Su personalidad vibrante y su inteligencia aguda la hacen una compañera fascinante.',
   },
   {
@@ -361,7 +361,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Yumi es una gatita ágil y dinámica que transforma cualquier objeto en un juguete divertido. Su curiosidad insaciable y su energía la mantienen siempre en movimiento. Adora la interacción humana y necesita estar rodeada de compañía y estímulos.',
   },
   {
@@ -372,7 +372,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Dionysus es un gatito extravagante y carismático que domina cualquier sala con su presencia. Su personalidad intensa y apasionada lo convierte en el alma de la casa. Le encanta jugar, vocalizar y participar en todo lo que hagan sus humanos.',
   },
   {
@@ -383,7 +383,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Goofy es un gatito payaso y adorable que siempre está haciendo travesuras para llamar la atención. Sus movimientos torpes y graciosos arrancan carcajadas a toda la familia. A pesar de su lado cómico, es muy cariñoso y busca mimos constantemente.',
   },
 
@@ -398,7 +398,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Eney es una gatita imponente con un pelaje largo y una cola espectacular que parece un plumero. Su carácter dulce y sociable la hace perfecta para hogares con niños. Disfruta del agua y no le importa mojarse las patitas cuando tiene oportunidad.',
   },
   {
@@ -409,7 +409,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Honey es tan dulce como la miel, con un temperamento amable que enamora al instante. Su ronroneo es profundo y reconfortante, como el motor de un pequeño tractor. Adora las sesiones de cepillado y se queda dormida mientras la acicalan.',
   },
   {
@@ -420,7 +420,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Esmi es una gatita elegante y curiosa que combina la grandeza del Maine Coon con una ternura infinita. Le gusta perseguir juguetes y luego descansar en el regazo de su persona favorita. Su inteligencia y docilidad la hacen muy fácil de educar.',
   },
   {
@@ -431,7 +431,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '14 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Mia es una gatita majestuosa y cariñosa que ya muestra el tamaño impresionante de su raza. Tiene una mirada profunda y expresiva que comunica todo sin palabras. Es gentil con otros animales y tiene una paciencia admirable con los más pequeños.',
   },
   {
@@ -442,7 +442,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Enzo es un gatito poderoso y carismático que promete convertirse en un ejemplar magnífico. Su personalidad extrovertida y su amor por los juegos lo convierten en el compañero ideal. Le encanta correr por la casa y luego pedir mimos con su ronroneo atronador.',
   },
   {
@@ -453,7 +453,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '13 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Carus es un gatito noble y protector que cuida de su familia con devoción. Sus mechones en las orejas y su collar de pelo le dan un aspecto de pequeño león. Tiene un carácter tranquilo pero no duda en jugar cuando le ofrecen su ratón favorito.',
   },
   {
@@ -464,7 +464,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Wolfgan es un gatito con un nombre épico y una personalidad a la altura. Su pelaje abundante y sus grandes patas revelan el gigante gentil en que se convertirá. Es juguetón, inteligente y tiene una voz suave que usa para comunicarse con sus humanos.',
   },
   {
@@ -475,7 +475,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Hadi es un gatito joven y lleno de vida que ya muestra las características imponentes de su raza. Su carácter amistoso y su disposición juguetona lo hacen perfecto para cualquier familia. Le fascina el agua y observar las gotas caer del grifo con atención.',
   },
   {
@@ -486,7 +486,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 600,
     description: 'Hanerl es un gatito con un encanto especial y un porte distinguido que llama la atención. Es sociable, cariñoso y le gusta seguir a su dueño como una sombra fiel. Su pelaje frondoso y su cola larga y esponjosa completan su apariencia espectacular.',
   },
 
@@ -501,7 +501,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Bonita es una gatita adorable con una carita aplastada que derrocha simpatía. Su pelaje corto y denso es muy fácil de mantener y suave al tacto. Tiene un carácter plácido y le encanta pasar horas descansando junto a su familia.',
   },
   {
@@ -512,7 +512,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Diane es una gatita sofisticada y mimosa que adora ser el centro de atención en el hogar. Sus ojos redondos y expresivos le dan un aire de eterna sorpresa que resulta irresistible. Es perfecta para personas que buscan una compañera tranquila y elegante.',
   },
   {
@@ -523,7 +523,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Marcela es una gatita dulce y afectuosa que se adapta perfectamente a la vida en apartamento. Su naturaleza calmada y su necesidad moderada de ejercicio la hacen ideal para cualquier estilo de vida. Disfruta mucho de los juguetes interactivos y las caricias.',
   },
   {
@@ -534,7 +534,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Charlie es un gatito simpático y bonachón con una expresión que siempre parece sonreír. Le gusta jugar moderadamente y luego buscar un rincón acogedor para dormir. Es muy cariñoso y tiene un don especial para hacer sentir bien a sus dueños.',
   },
   {
@@ -545,7 +545,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Biton es un gatito compacto y robusto con una personalidad encantadora y apacible. Su cara chata y sus mejillas prominentes le dan un aspecto de peluche viviente. Es leal, tranquilo y se convierte rápidamente en el mejor amigo de toda la familia.',
   },
 
@@ -560,7 +560,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Fiona es una gatita traviesa y encantadora con un pelaje rizado que la hace única. Su energía inagotable y su curiosidad la mantienen siempre entretenida explorando. Adora saltar a los hombros de su dueño y observar el mundo desde las alturas.',
   },
   {
@@ -571,7 +571,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Sandra es una gatita juguetona y afectuosa con unas orejas enormes que le dan un aspecto de duendecillo. Le encanta interactuar con las personas y nunca se cansa de los juegos. Su pelaje ondulado y su mirada pícara la hacen absolutamente adorable.',
   },
   {
@@ -582,7 +582,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Xavia es una gatita audaz y cariñosa que no conoce el miedo ni la timidez. Su personalidad magnética atrae a todos los que la conocen desde el primer momento. Es muy inteligente y aprende a responder a su nombre con una rapidez asombrosa.',
   },
   {
@@ -593,7 +593,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Frankie es un gatito bromista y lleno de vida que convierte cada día en una fiesta. Su aspecto peculiar con orejas grandes y ojos enormes lo hace inolvidable. Es extremadamente sociable y disfruta de la compañía tanto de humanos como de otros animales.',
   },
   {
@@ -604,7 +604,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Magico hace honor a su nombre con sus acrobacias imposibles y sus apariciones sorpresa. Es un gatito veloz e ingenioso que siempre encuentra nuevas formas de divertirse. Su cariño es tan intenso como su energía, y llena el hogar de alegría pura.',
   },
   {
@@ -615,7 +615,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '13 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Martin es un gatito elegante y refinado que combina la diversión con momentos de calma sofisticada. Su pelaje rizado y su porte distinguido lo hacen destacar entre la multitud. Adora dormir cerca de fuentes de calor y acurrucarse con sus humanos favoritos.',
   },
   {
@@ -626,7 +626,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 750,
     description: 'Xavier es un gatito aventurero y valiente con una personalidad que llena toda la habitación. Sus saltos acrobáticos y sus carreras por la casa son un espectáculo diario. A pesar de su espíritu salvaje, es increíblemente tierno cuando llega la hora de los mimos.',
   },
 
@@ -641,7 +641,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Liya es una gatita redondita y adorable con un pelaje denso que parece un osito de peluche. Su temperamento tranquilo y su independencia moderada la hacen ideal para cualquier hogar. Disfruta observando el mundo desde su ventana favorita durante horas.',
   },
   {
@@ -652,7 +652,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Bridget es una gatita con clase y distinción que lleva la elegancia británica en su ADN. Su carácter equilibrado la convierte en una compañera perfecta tanto para familias como para personas solas. Es cariñosa sin ser demandante y siempre sabe cuándo acercarse.',
   },
   {
@@ -663,7 +663,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Jolie es una gatita preciosa con unos ojos color cobre que brillan con intensidad. Tiene un carácter amable y paciente que la hace ideal para convivir con niños. Le gusta jugar con moderación y luego descansar en su cama con total serenidad.',
   },
   {
@@ -674,7 +674,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Lyra es una gatita serena y contemplativa que observa todo con una calma admirable. Su pelaje aterciopelado y su cuerpo compacto la hacen irresistiblemente abrazable. Es independiente pero sabe mostrar su afecto con sutileza y delicadeza.',
   },
   {
@@ -685,7 +685,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '13 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Benny es un gatito fornido y simpático con las mejillas más gorditas que hayas visto. Su carácter bonachón y su actitud relajada lo convierten en el compañero perfecto. Le encanta que le rasquen detrás de las orejas y responde con un ronroneo profundo.',
   },
   {
@@ -696,7 +696,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Jurgen es un gatito serio y digno con un porte que impone respeto desde cachorro. Bajo esa apariencia formal se esconde un corazón tierno que adora los mimos nocturnos. Es muy leal a su familia y se convierte en la sombra de su persona favorita.',
   },
   {
@@ -707,7 +707,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '14 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Klaus es un gatito robusto y confiable con un temperamento estable que transmite seguridad. Su pelaje grueso y su expresión seria le dan un aire de pequeño caballero británico. Es educado, limpio y se adapta con facilidad a las normas del hogar.',
   },
   {
@@ -718,7 +718,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Samson es un gatito fuerte y valiente que ya muestra la corpulencia característica de su raza. A pesar de su nombre poderoso, es increíblemente dulce y gentil con todos. Disfruta de los juegos tranquilos y de las largas siestas en lugares cálidos y acogedores.',
   },
   {
@@ -729,7 +729,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 500,
     description: 'Neo es un gatito moderno y adaptable con una curiosidad innata por todo lo que le rodea. Su mirada inteligente y su actitud reflexiva lo distinguen del resto. Es cariñoso a su manera y sorprende cada día con algún gesto tierno e inesperado.',
   },
 
@@ -744,7 +744,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Annika es una gatita atlética y vivaz con un pelaje atigrado que recuerda a un pequeño puma. Su energía es contagiosa y siempre está inventando nuevos juegos para entretenerse. Es la compañera ideal para personas activas que disfrutan de la interacción con sus mascotas.',
   },
   {
@@ -755,7 +755,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Armin es una gatita decidida y valiente que no se amilana ante ningún desafío. Su pelo corto y brillante resalta su musculatura elegante y su agilidad natural. Adora trepar a los puntos más altos de la casa y supervisar todo desde su atalaya.',
   },
   {
@@ -766,7 +766,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Zara es una gatita elegante y sofisticada que se mueve con la gracia de una gacela. Su mirada penetrante y su pelaje cálido la hacen verdaderamente cautivadora. Es muy cariñosa con su familia y le encanta participar en todas las actividades del hogar.',
   },
   {
@@ -777,7 +777,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Yoga es una gatita flexible y serena que adopta las posturas más sorprendentes mientras descansa. Su naturaleza zen contrasta con sus explosiones de energía durante el juego. Tiene una capacidad especial para relajar a quienes la rodean con su presencia calmante.',
   },
   {
@@ -788,7 +788,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '13 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Dieter es un gatito enérgico y determinado que aborda cada día como una nueva aventura. Su pelaje rojizo y su cuerpo esbelto le dan un aspecto salvaje muy atractivo. Es extremadamente inteligente y disfruta de los juguetes que estimulan su mente inquieta.',
   },
   {
@@ -799,7 +799,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'Leo es un gatito audaz y carismático que lidera cualquier grupo con naturalidad. Su aspecto recuerda a un pequeño león africano y su valentía está a la altura. Es juguetón, sociable y crea vínculos muy fuertes con las personas que lo cuidan.',
   },
   {
@@ -810,7 +810,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '8 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 700,
     description: 'OX es un gatito fuerte y resistente con una personalidad que supera con creces su pequeño tamaño. Su nombre refleja su espíritu indomable y su corazón enorme. A pesar de su energía desbordante, sabe cuándo es momento de calmarse y buscar cariño.',
   },
   // =====================
@@ -824,7 +824,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Emil es una gatita Bengalí con un pelaje espectacular de rosetas doradas que recuerdan a un leopardo en miniatura. Es curiosa, ágil y tremendamente juguetona, siempre lista para una nueva aventura. Su energía contagiosa y su cariño incondicional la hacen irresistible.',
   },
   {
@@ -835,7 +835,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Mia es una Bengalí elegante y grácil con unos ojos verdes cautivadores y un pelaje brillante. Es dulce y sociable, disfruta de la compañía humana y se adapta rápidamente a su entorno. Su naturaleza juguetona la convierte en una compañera perfecta.',
   },
   {
@@ -846,7 +846,7 @@ export const kittens: Kitten[] = [
     sex: 'Hembra',
     age: '9 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Fiona es una gatita Bengalí con un carácter dulce y aventurero a partes iguales. Su pelaje marmolado es una verdadera obra de arte y su personalidad vibrante ilumina cualquier hogar. Adora los juegos con agua y trepar a las alturas.',
   },
   {
@@ -857,7 +857,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Fritz es un Bengalí atlético y musculoso con un pelaje dorado impresionante. Es valiente, curioso y tiene una energía inagotable que lo convierte en el alma de la casa. Su lealtad hacia su familia es comparable a la de un perro.',
   },
   {
@@ -868,7 +868,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '12 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Otto es un Bengalí majestuoso con unas rosetas perfectamente definidas y una mirada penetrante. Es inteligente y aprende trucos con facilidad, siempre buscando nuevos retos mentales. Su carácter sociable lo hace ideal para familias activas.',
   },
   {
@@ -879,7 +879,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '11 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Ramos es un Bengalí fuerte y carismático con un pelaje que brilla como el oro bajo la luz. Es juguetón y deportivo, adora correr y saltar por toda la casa. Su personalidad extrovertida y su cariño lo convierten en un compañero excepcional.',
   },
   {
@@ -890,7 +890,7 @@ export const kittens: Kitten[] = [
     sex: 'Macho',
     age: '10 Semanas',
     status: 'Disponible',
-    price: 1200,
+    price: 550,
     description: 'Roy es un Bengalí con una presencia imponente y un corazón tierno. Sus marcas de leopardo y sus ojos expresivos lo hacen destacar entre todos. Es cariñoso con su familia y disfruta tanto del juego activo como de los momentos de tranquilidad.',
   },
 ];

@@ -14,6 +14,7 @@ const breedData = breeds.map(breed => {
     males: breedKittens.filter(k => k.sex === 'Macho').length,
     females: breedKittens.filter(k => k.sex === 'Hembra').length,
     ages: [...new Set(breedKittens.map(k => k.age))],
+    minPrice: breedKittens.length > 0 ? Math.min(...breedKittens.map(k => k.price)) : 0,
   };
 });
 ---
@@ -53,7 +54,7 @@ const breedData = breeds.map(breed => {
             <div class="breed-body">
               <div class="breed-title-row">
                 <h3 class="breed-name">{breed.name}</h3>
-                <span class="breed-price">Desde 1.200 &euro;</span>
+                <span class="breed-price">Desde {breed.minPrice.toLocaleString('de-DE')} &euro;</span>
               </div>
 
               <div class="breed-stats">

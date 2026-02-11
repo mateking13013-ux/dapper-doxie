@@ -51,7 +51,7 @@ const breedKittens = getKittensByBreed(breed.id);
           <span class="stat-label">Machos</span>
         </div>
         <div class="stat-item">
-          <span class="stat-number">1.200 &euro;</span>
+          <span class="stat-number">{Math.min(...breedKittens.map(k => k.price)).toLocaleString('de-DE')} &euro;</span>
           <span class="stat-label">Desde</span>
         </div>
       </div>

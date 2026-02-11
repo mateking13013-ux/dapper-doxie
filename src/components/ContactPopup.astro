@@ -15,7 +15,7 @@
         <h3 id="popup-kitten-title">Nombre del Gatito</h3>
         <p id="popup-kitten-details">Detalles</p>
         <div class="kitten-price-row">
-          <span class="kitten-price">1.200 &euro;</span>
+          <span class="kitten-price" id="popup-kitten-price">500 &euro;</span>
           <span class="kitten-includes">Incluye documentación y kit de inicio</span>
         </div>
         <div class="kitten-guarantee">
@@ -82,7 +82,7 @@
 </div>
 
 <script is:inline>
-  function openContactPopup(kittenName, kittenImage, kittenDetails) {
+  function openContactPopup(kittenName, kittenImage, kittenDetails, kittenPrice) {
     const popup = document.getElementById('contact-popup');
     const kittenNameSpan = document.getElementById('popup-kitten-name');
     const formSubject = document.getElementById('form-subject');
@@ -112,6 +112,9 @@
       kittenImageEl.alt = kittenName;
       kittenTitle.textContent = kittenName;
       kittenDetailsEl.textContent = kittenDetails || '';
+      if (kittenPrice) {
+        document.getElementById('popup-kitten-price').textContent = kittenPrice.toLocaleString('de-DE') + ' €';
+      }
       kittenPreview.style.display = 'flex';
     } else {
       kittenPreview.style.display = 'none';

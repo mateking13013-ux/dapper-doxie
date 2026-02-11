@@ -114,7 +114,7 @@ const { kittens } = Astro.props;
 
           <div class="buttons-row">
             <a href="/contacto" class="btn btn-primary">Contactar</a>
-            <button type="button" class="btn btn-outline" onclick={`openContactPopup('${kitten.name}', '${kitten.image}', '${kitten.breedName} · ${kitten.sex} · ${kitten.age}')`}>Adoptar</button>
+            <button type="button" class="btn btn-outline" onclick={`openContactPopup('${kitten.name}', '${kitten.image}', '${kitten.breedName} · ${kitten.sex} · ${kitten.age}', ${kitten.price})`}>Adoptar</button>
           </div>
         </div>
       </div>
