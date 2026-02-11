@@ -83,4 +83,11 @@ export const breeds: Breed[] = [
       'El Abisinio es uno de los gatos más antiguos y fascinantes, con un pelaje atigrado característico que recuerda a los felinos salvajes de África. Es un gato extremadamente activo, curioso y atlético, que necesita explorar cada rincón de su entorno y que adora los juegos interactivos. Su inteligencia aguda, su elegancia natural y su personalidad vivaz y cariñosa lo convierten en un compañero inigualable para hogares dinámicos.',
     image: '/images/gatitos/abisinio/annika.webp',
   },
+  {
+    id: 'bengal',
+    name: 'Bengalí',
+    description:
+      'El gato Bengalí es una raza espectacular que combina la apariencia salvaje de un leopardo con el temperamento cariñoso de un gato doméstico. Su pelaje corto y brillante con marcas de rosetas o marmolado lo hace verdaderamente único y exótico. Es un gato extremadamente activo, inteligente y juguetón, que adora el agua y los juegos interactivos, convirtiéndolo en el compañero perfecto para familias dinámicas que buscan un felino lleno de energía y personalidad.',
+    image: '/images/gatitos/bengal/emil.jpg',
+  },
 ];
