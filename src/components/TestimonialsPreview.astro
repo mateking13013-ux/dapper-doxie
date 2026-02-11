@@ -35,15 +35,15 @@ const testimonialImages = [
       <div class="google-reviews-badge">
         <img src="/images/image.png" alt="Google Reviews 5 Stars">
       </div>
-      <h2 class="section-title">What Our Families Say</h2>
-      <p class="section-subtitle">Read reviews from happy puppy owners</p>
+      <h2 class="section-title">Lo Que Dicen Nuestras Familias</h2>
+      <p class="section-subtitle">Lee las opiniones de familias felices con sus gatitos</p>
     </div>
 
     <div class="testimonials-masonry">
       {testimonialPreviews.map((t, index) => (
         <div class="testimonial-card">
           <div class="card-image">
-            <img src={testimonialImages[index % testimonialImages.length]} alt={`${t.name}'s Staffie`} loading="lazy">
+            <img src={testimonialImages[index % testimonialImages.length]} alt={`Gatito de ${t.name}`} loading="lazy">
           </div>
           <div class="card-content">
             <div class="card-header">
@@ -55,7 +55,7 @@ const testimonialImages = [
               </div>
               <div class="reviewer-info">
                 <h4>{t.name}</h4>
-                <p class="reviewer-label">Reviewer</p>
+                <p class="reviewer-label">Verificado</p>
               </div>
             </div>
 
@@ -74,7 +74,7 @@ const testimonialImages = [
 
             <div class="card-footer">
               <img src="/images/image copy.png" alt="Google" class="google-icon">
-              <span class="business-name">Michael Paws</span>
+              <span class="business-name">Criadero Castellano</span>
             </div>
           </div>
         </div>

@@ -12,14 +12,14 @@ interface Props {
 }
 
 const {
-  title = 'Available Puppies',
-  subtitle = 'Find your perfect furry companion from our adorable our puppies',
+  title = 'Gatitos Disponibles',
+  subtitle = 'Encuentra tu compañero felino perfecto entre nuestros adorables gatitos de raza',
   breadcrumbs
 } = Astro.props;
 
 // Default breadcrumbs if not provided
 const breadcrumbItems: BreadcrumbItem[] = breadcrumbs || [
-  { label: 'Home', href: '/' },
+  { label: 'Inicio', href: '/' },
   { label: title }
 ];
 ---

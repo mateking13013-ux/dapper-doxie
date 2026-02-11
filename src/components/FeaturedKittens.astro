@@ -1,0 +1,236 @@
+---
+// FeaturedKittens component - displays featured kittens from various breeds
+const featuredKittens = [
+  { name: 'Bridget', breed: 'British Shorthair', image: '/images/gatitos/british-shorthair/bridget.webp' },
+  { name: 'Enzo', breed: 'Maine Coon', image: '/images/gatitos/maine-coon/enzo.jpg' },
+  { name: 'Larimar', breed: 'Azul Ruso', image: '/images/gatitos/azul-ruso/larimar.webp' },
+  { name: 'Casandra', breed: 'Ragdoll', image: '/images/gatitos/ragdoll/casandra.jpg' },
+  { name: 'Alexia', breed: 'Sphynx', image: '/images/gatitos/sphynx/alexia.jpg' },
+];
+---
+
+<section class="featured-section">
+  <div class="section-header">
+    <h2 class="section-title">
+      Conoce Nuestros Gatitos
+      <span class="cat-icon">🐱</span>
+    </h2>
+    <p class="section-subtitle">Adorables gatitos de raza buscando su hogar para siempre</p>
+  </div>
+
+  <div class="kittens-container">
+    <div class="kittens-grid">
+      {featuredKittens.map((kitten) => (
+        <article class="kitten-card">
+          <div class="card-image">
+            <span class="breed-badge">{kitten.breed}</span>
+            <img src={kitten.image} alt={kitten.name} loading="lazy">
+          </div>
+          <div class="card-content">
+            <h3 class="kitten-name">{kitten.name}</h3>
+            <div class="card-stats">
+              <span>Disponible</span>
+              <span>Listo Ahora</span>
+            </div>
+            <a href="/contacto" class="btn-contact">
+              Consultar Ahora
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .featured-section {
+    display: block;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+    background: linear-gradient(135deg, #1B2A4A 0%, #152238 100%);
+    padding: 3rem 1.5rem;
+    position: relative;
+  }
+
+  .section-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .cat-icon {
+    font-size: 1.5rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0;
+    font-style: italic;
+  }
+
+  .kittens-container {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  .kittens-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.25rem;
+  }
+
+  .kitten-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .kitten-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+
+  .card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+    background: #f9f9f9;
+    padding: 0.5rem;
+  }
+
+  .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    border-radius: 12px;
+  }
+
+  .breed-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    background: #1B2A4A;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    z-index: 1;
+  }
+
+  .card-content {
+    padding: 0.75rem 0.5rem;
+    border-top: 2px dashed #eee;
+  }
+
+  .kitten-name {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1B2A4A;
+    margin: 0 0 0.5rem;
+  }
+
+  .card-stats {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.75rem;
+    color: #666;
+    margin-bottom: 0.35rem;
+  }
+
+  .btn-contact {
+    display: block;
+    width: 100%;
+    background: #1B2A4A;
+    color: white;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .btn-contact:hover {
+    background: #2E8B8B;
+  }
+
+  @media (max-width: 1200px) {
+    .kittens-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+    }
+
+    .kitten-card:nth-child(5) {
+      display: none;
+    }
+
+    .card-image {
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .kittens-grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .kitten-card:nth-child(4),
+    .kitten-card:nth-child(5) {
+      display: none;
+    }
+
+    .card-image {
+      height: 180px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .featured-section {
+      padding: 2rem 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+    }
+
+    .kittens-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+
+    .kitten-card:nth-child(3),
+    .kitten-card:nth-child(4),
+    .kitten-card:nth-child(5) {
+      display: none;
+    }
+
+    .card-image {
+      height: 160px;
+    }
+
+    .card-content {
+      padding: 1rem 0.75rem;
+    }
+
+    .kitten-name {
+      font-size: 1rem;
+    }
+  }
+</style>

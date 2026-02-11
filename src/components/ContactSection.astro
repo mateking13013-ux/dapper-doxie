@@ -1,93 +1,85 @@
 ---
 // ContactSection component
-const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chill", "Connie", "Cooper", "Coy", "Echo", "Gracie", "Kobe", "Lucy", "Mabel", "Mack", "Maggie", "Mia", "Nevile", "Pip", "Rex", "Roy", "Royce", "Thor", "Wild", "Yava", "Zeus", "Ziggy", "Lime"];
+import { breeds } from '../data/breeds';
 ---
 
 <section class="contact-section" id="contact">
   <div class="contact-container">
     <div class="section-header">
-      <span class="section-badge">Get In Touch</span>
-      <h2 class="section-title">Ready to Welcome a <span>Staffie</span>?</h2>
-      <p class="section-subtitle">Have questions about our Staffordshire Bull Terrier puppies or ready to bring one home? We'd love to hear from you!</p>
+      <span class="section-badge">Contacto</span>
+      <h2 class="section-title">¿Listo para Adoptar un <span>Gatito</span>?</h2>
+      <p class="section-subtitle">¿Tienes preguntas sobre nuestros gatitos de raza o estás listo para llevar uno a casa? ¡Nos encantaría saber de ti!</p>
     </div>
 
     <div class="contact-grid">
       <div class="contact-form-wrapper">
-        <h3 class="form-title">Puppy Inquiry Form</h3>
+        <h3 class="form-title">Formulario de Consulta</h3>
         <form class="contact-form" id="homeContactForm">
           <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
-          <input type="hidden" name="subject" value="New Puppy Inquiry - Michael Paws">
-          <input type="hidden" name="from_name" value="Michael Paws Website">
+          <input type="hidden" name="subject" value="Nueva Consulta - Criadero Castellano">
+          <input type="hidden" name="from_name" value="Criadero Castellano">
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeFirstName">First Name *</label>
+              <label for="homeFirstName">Nombre *</label>
               <input type="text" id="homeFirstName" name="firstName" required>
             </div>
             <div class="form-group">
-              <label for="homeLastName">Last Name *</label>
+              <label for="homeLastName">Apellidos *</label>
               <input type="text" id="homeLastName" name="lastName" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeEmail">Email *</label>
+              <label for="homeEmail">Correo Electrónico *</label>
               <input type="email" id="homeEmail" name="email" required>
             </div>
             <div class="form-group">
-              <label for="homePhone">Phone *</label>
+              <label for="homePhone">Teléfono *</label>
               <input type="tel" id="homePhone" name="phone" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeState">State</label>
-              <input type="text" id="homeState" name="state" placeholder="e.g. California">
+              <label for="homeCity">Ciudad</label>
+              <input type="text" id="homeCity" name="city" placeholder="Ej: Madrid">
             </div>
             <div class="form-group">
-              <label for="homeAddress">Address</label>
-              <input type="text" id="homeAddress" name="address">
+              <label for="homeBreed">Raza de Interés</label>
+              <select id="homeBreed" name="breed">
+                <option value="">Seleccionar raza...</option>
+                {breeds.map((breed) => (
+                  <option value={breed.name}>{breed.name}</option>
+                ))}
+                <option value="No estoy seguro">No estoy seguro</option>
+              </select>
             </div>
           </div>
 
           <div class="form-group">
-            <label>Puppy(s) of Interest</label>
-            <p class="puppy-select-note">Select the puppy(s) you're interested in:</p>
-            <div class="puppy-checkbox-grid">
-              {puppyNames.map((name) => (
-                <label class="puppy-checkbox">
-                  <input type="checkbox" name="puppies" value={name}>
-                  <span class="checkbox-custom"></span>
-                  <span class="checkbox-label">{name}</span>
-                </label>
-              ))}
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="homeMessage">Message</label>
-            <textarea id="homeMessage" name="message" placeholder="Tell us about yourself and why you'd love a Staffie..."></textarea>
+            <label for="homeMessage">Mensaje</label>
+            <textarea id="homeMessage" name="message" placeholder="Cuéntanos sobre ti y por qué te gustaría adoptar un gatito..."></textarea>
           </div>
 
           <button type="submit" class="btn-submit">
-            Send Inquiry
+            Enviar Consulta
             <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
         </form>
       </div>
 
       <div class="contact-info">
-        <h3 class="info-title">Contact Information</h3>
+        <h3 class="info-title">Información de Contacto</h3>
 
         <div class="info-item">
           <div class="info-icon">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </div>
           <div class="info-content">
-            <h4>Email Us</h4>
-            <p><a href="mailto:info@michaelpaws.com">info@michaelpaws.com</a></p>
+            <h4>Correo Electrónico</h4>
+            <p><a href="mailto:info@criaderocastellano.es">info@criaderocastellano.es</a></p>
           </div>
         </div>
 
@@ -96,8 +88,8 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
             <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
           </div>
           <div class="info-content">
-            <h4>Response Time</h4>
-            <p>We typically respond within<br>24 hours or less</p>
+            <h4>Tiempo de Respuesta</h4>
+            <p>Respondemos normalmente en<br>menos de 24 horas</p>
           </div>
         </div>
 
@@ -106,24 +98,24 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
           <div class="info-content">
-            <h4>Based In</h4>
-            <p>United States</p>
+            <h4>Ubicación</h4>
+            <p>Castilla, España</p>
           </div>
         </div>
 
         <div class="info-note">
-          <h4>Our Location</h4>
-          <p>We operate as a family-based home breeder. For the safety and privacy of our family and Staffordshire Bull Terrier puppies, we do not publicly list our address. Once you contact us, we'll gladly share our location and arrange a convenient visit or delivery.</p>
+          <h4>Nuestra Ubicación</h4>
+          <p>Somos un criadero familiar. Por la seguridad y privacidad de nuestra familia y nuestros gatitos, no publicamos nuestra dirección. Una vez nos contactes, compartiremos encantados nuestra ubicación y organizaremos una visita o entrega conveniente.</p>
         </div>
 
-        <div class="info-puppies-card">
-          <h4>Available Puppies</h4>
-          <div class="info-puppies-list">
-            {puppyNames.map((name) => (
-              <span class="info-puppy-tag">{name}</span>
+        <div class="info-breeds-card">
+          <h4>Razas Disponibles</h4>
+          <div class="info-breeds-list">
+            {breeds.map((breed) => (
+              <a href={`/razas/${breed.id}`} class="info-breed-tag">{breed.name}</a>
             ))}
           </div>
-          <a href="/available-puppies" class="info-puppies-link">View All Puppies &rarr;</a>
+          <a href="/razas" class="info-breeds-link">Ver Todas las Razas &rarr;</a>
         </div>
       </div>
     </div>
@@ -142,15 +134,8 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
 
     formData.append("replyto", emailInput.value);
 
-    // Collect checked puppies into a single string
-    const checkedPuppies = Array.from(form.querySelectorAll('input[name="puppies"]:checked'))
-      .map((cb: any) => cb.value)
-      .join(', ');
-    formData.delete('puppies');
-    formData.append('puppies_interested', checkedPuppies || 'None selected');
-
     const originalHTML = submitBtn.innerHTML;
-    submitBtn.innerHTML = "Sending...";
+    submitBtn.innerHTML = "Enviando...";
     submitBtn.disabled = true;
 
     try {
@@ -162,12 +147,12 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
       const data = await response.json();
 
       if (response.ok) {
-        window.location.href = "/thank-you";
+        window.location.href = "/gracias";
       } else {
         alert("Error: " + data.message);
       }
     } catch (error) {
-      alert("Something went wrong. Please try again.");
+      alert("Algo salió mal. Por favor, inténtalo de nuevo.");
     } finally {
       submitBtn.innerHTML = originalHTML;
       submitBtn.disabled = false;
@@ -314,7 +299,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     line-height: 1.6;
   }
 
-  .info-puppies-card {
+  .info-breeds-card {
     background: #fff;
     border: 1px solid #E2E8F0;
     border-radius: 12px;
@@ -322,21 +307,21 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     margin-top: 1.25rem;
   }
 
-  .info-puppies-card h4 {
+  .info-breeds-card h4 {
     font-size: 1rem;
     font-weight: 600;
     color: #1B2A4A;
     margin: 0 0 0.75rem;
   }
 
-  .info-puppies-list {
+  .info-breeds-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-bottom: 0.75rem;
   }
 
-  .info-puppy-tag {
+  .info-breed-tag {
     display: inline-block;
     background: #F0F4F8;
     color: #0F1B33;
@@ -345,9 +330,16 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     font-size: 0.75rem;
     font-weight: 600;
     border: 1px solid rgba(27, 42, 74, 0.15);
+    text-decoration: none;
+    transition: all 0.2s ease;
   }
 
-  .info-puppies-link {
+  .info-breed-tag:hover {
+    background: #1B2A4A;
+    color: white;
+  }
+
+  .info-breeds-link {
     display: inline-block;
     color: #1B2A4A;
     font-size: 0.85rem;
@@ -355,7 +347,7 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     text-decoration: none;
   }
 
-  .info-puppies-link:hover {
+  .info-breeds-link:hover {
     color: #2E8B8B;
   }
 
@@ -422,69 +414,6 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
     resize: vertical;
   }
 
-  .puppy-select-note {
-    font-size: 0.8rem;
-    color: #888;
-    margin: 0;
-  }
-
-  .puppy-checkbox-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
-  }
-
-  .puppy-checkbox {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    font-size: 0.85rem;
-    color: #444;
-    padding: 0.4rem 0.5rem;
-    border-radius: 6px;
-    transition: background 0.2s;
-  }
-
-  .puppy-checkbox:hover {
-    background: #F0F4F8;
-  }
-
-  .puppy-checkbox input[type="checkbox"] {
-    display: none;
-  }
-
-  .checkbox-custom {
-    width: 18px;
-    height: 18px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: all 0.2s;
-  }
-
-  .puppy-checkbox input[type="checkbox"]:checked + .checkbox-custom {
-    background: #1B2A4A;
-    border-color: #1B2A4A;
-  }
-
-  .puppy-checkbox input[type="checkbox"]:checked + .checkbox-custom::after {
-    content: '';
-    width: 5px;
-    height: 9px;
-    border: solid white;
-    border-width: 0 2px 2px 0;
-    transform: rotate(45deg);
-    margin-top: -2px;
-  }
-
-  .checkbox-label {
-    font-weight: 500;
-  }
-
   .btn-submit {
     display: inline-flex;
     align-items: center;
@@ -535,10 +464,6 @@ const puppyNames = ["Alex", "Ashley", "Bella", "Belly", "Boston", "Carlos", "Chi
 
     .form-row {
       grid-template-columns: 1fr;
-    }
-
-    .puppy-checkbox-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
 
     .contact-info,

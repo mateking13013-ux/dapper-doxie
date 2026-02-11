@@ -1,62 +1,74 @@
 ---
-// HeroSection component - Banner background with text left, image right
+// HeroSection component - Full-width hero with overlay text and multi-image grid
 ---
 
 <section class="hero">
-  <div class="hero-banner">
-  <div class="hero-container">
-    <div class="hero-content">
-      <h1 class="hero-title">
-        Premium<br>
-        <span class="highlight">Staffie</span><br>
-        Puppies
-      </h1>
-      <p class="hero-description">
-        Lovingly raised Staffordshire Bull Terrier puppies from our family to yours. Health guaranteed, fully vaccinated, and ready to steal your heart. We provide lifetime support for every puppy.
-      </p>
-      <a href="/available-puppies" class="btn-primary">View Puppies</a>
+  <div class="hero-main">
+    <div class="hero-bg">
+      <img src="/images/gatitos/british-shorthair/liya.jpg" alt="Gatito British Shorthair" />
+      <div class="hero-overlay"></div>
+    </div>
 
-      <div class="hero-contact">
-        <div class="contact-item">
-          <span class="contact-icon">
-            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          </span>
-          <span>info@michaelpaws.com</span>
+    <div class="hero-container">
+      <div class="hero-content">
+        <span class="hero-badge">Criadero Castellano — 11 Razas Disponibles</span>
+        <h1 class="hero-title">Gatitos de Raza<br><span class="highlight">Premium</span></h1>
+        <p class="hero-description">Criados con amor en un entorno familiar en España. Con garantía de salud, vacunados y listos para robarte el corazón.</p>
+        <div class="hero-actions">
+          <a href="/razas" class="btn-primary">Ver Razas</a>
+          <a href="/contacto" class="btn-secondary">Contactar</a>
+        </div>
+      </div>
+
+      <div class="hero-gallery">
+        <div class="gallery-card card-1">
+          <img src="/images/gatitos/ragdoll/casandra.jpg" alt="Ragdoll" />
+          <span class="gallery-label">Ragdoll</span>
+        </div>
+        <div class="gallery-card card-2">
+          <img src="/images/gatitos/maine-coon/enzo.jpg" alt="Maine Coon" />
+          <span class="gallery-label">Maine Coon</span>
+        </div>
+        <div class="gallery-card card-3">
+          <img src="/images/gatitos/sphynx/alexia.jpg" alt="Sphynx" />
+          <span class="gallery-label">Sphynx</span>
+        </div>
+        <div class="gallery-card card-4">
+          <img src="/images/gatitos/british-shorthair/benny.jpg" alt="British Shorthair" />
+          <span class="gallery-label">British Shorthair</span>
+        </div>
+        <div class="gallery-card card-5">
+          <img src="/images/gatitos/persa/alexandra.jpg" alt="Persa" />
+          <span class="gallery-label">Persa</span>
+        </div>
+        <div class="gallery-card card-6">
+          <img src="/images/gatitos/devon-rex/fiona.jpg" alt="Devon Rex" />
+          <span class="gallery-label">Devon Rex</span>
         </div>
       </div>
     </div>
-
-    <div class="hero-image">
-      <img src="/images/h1.jpeg" alt="Staffordshire Bull Terrier puppy" />
-    </div>
-  </div>
   </div>
 
   <div class="trust-bar">
     <div class="trust-container">
       <div class="trust-item">
-        <span class="trust-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        </span>
-        <span class="trust-label">Family Raised</span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        <span>Criados en Familia</span>
       </div>
+      <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        </span>
-        <span class="trust-label">Health Guaranteed</span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+        <span>Garantía de Salud</span>
       </div>
+      <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-icon">
-          <svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        </span>
-        <span class="trust-label">Vet Checked</span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+        <span>Revisados por Veterinario</span>
       </div>
+      <div class="trust-divider"></div>
       <div class="trust-item">
-        <span class="trust-icon">
-          <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-        </span>
-        <span class="trust-label">Lifetime Support</span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+        <span>Soporte de por Vida</span>
       </div>
     </div>
   </div>
@@ -70,247 +82,323 @@
     padding: 0;
   }
 
-  .hero-banner {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+  /* Full-width background image */
+  .hero-main {
+    position: relative;
+    min-height: 480px;
   }
 
+  .hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .hero-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(15, 27, 51, 0.92) 0%, rgba(27, 42, 74, 0.8) 50%, rgba(46, 139, 139, 0.6) 100%);
+  }
+
+  /* Content layout */
   .hero-container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 5rem 2rem 4rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 3rem;
-    min-height: 560px;
-  }
-
-  /* Content - left side */
-  .hero-content {
     position: relative;
     z-index: 1;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem 3rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .hero-content {
+    max-width: 560px;
+  }
+
+  .hero-badge {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 3px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-bottom: 1.25rem;
+    backdrop-filter: blur(8px);
   }
 
   .hero-title {
-    font-size: 4rem;
+    font-size: 3.25rem;
     font-weight: 900;
-    line-height: 1.05;
-    color: var(--color-primary, #1B2A4A);
-    margin: 0 0 1.5rem;
-    letter-spacing: -1px;
-    text-transform: uppercase;
+    line-height: 1.1;
+    color: white;
+    margin: 0 0 1.25rem;
+    letter-spacing: -0.5px;
   }
 
   .highlight {
-    position: relative;
-    display: inline-block;
-  }
-
-  .highlight::after {
-    content: '';
-    position: absolute;
-    left: -10px;
-    right: -10px;
-    top: -4px;
-    bottom: -4px;
-    border: 3px solid var(--color-primary, #1B2A4A);
-    border-radius: 50px;
-    opacity: 0.3;
+    color: #4EADAD;
   }
 
   .hero-description {
-    font-size: 1.1rem;
-    line-height: 1.75;
-    color: var(--color-gray-700, #616161);
-    margin: 0 0 2rem;
-    max-width: 520px;
+    font-size: 1.05rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.85);
+    margin: 0 0 1.75rem;
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 0.75rem;
   }
 
   .btn-primary {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    background: var(--color-primary, #1B2A4A);
-    color: white;
-    padding: 1rem 2.5rem;
-    border-radius: 8px;
-    font-size: 1.05rem;
+    background: white;
+    color: #1B2A4A;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
     font-weight: 700;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 16px rgba(27, 42, 74, 0.3);
   }
 
   .btn-primary:hover {
-    background: var(--color-primary-dark, #0F1B33);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 24px rgba(27, 42, 74, 0.4);
+    background: #4EADAD;
     color: white;
+    transform: translateY(-2px);
   }
 
-  .hero-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 2rem;
-  }
-
-  .contact-item {
-    display: flex;
+  .btn-secondary {
+    display: inline-flex;
     align-items: center;
+    background: transparent;
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    border-color: white;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  /* Gallery cards - right side masonry */
+  .hero-gallery {
+    display: flex;
+    flex-wrap: wrap;
     gap: 0.6rem;
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--color-gray-800, #424242);
+    width: 340px;
+    justify-content: flex-end;
   }
 
-  .contact-icon {
-    width: 28px;
-    height: 28px;
-    background: var(--color-primary, #1B2A4A);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-  }
-
-  .contact-icon svg {
-    width: 16px;
-    height: 16px;
-    fill: white;
-  }
-
-  /* Image - right side */
-  .hero-image {
+  .gallery-card {
     position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 130px;
+    border-radius: 4px;
+    overflow: hidden;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
   }
 
-  .hero-image img {
+  .gallery-card:hover {
+    border-color: #4EADAD;
+    transform: scale(1.03);
+  }
+
+  .card-1 { width: 55%; }
+  .card-2 { width: 40%; }
+  .card-3 { width: 38%; }
+  .card-4 { width: 57%; }
+  .card-5 { width: 48%; }
+  .card-6 { width: 47%; }
+
+  .gallery-card img {
     width: 100%;
-    max-width: 500px;
-    height: auto;
-    border-radius: 16px;
+    height: 100%;
     object-fit: cover;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  }
+
+  .gallery-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(15, 27, 51, 0.85));
+    color: white;
+    padding: 1.5rem 0.6rem 0.4rem;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
   }
 
   /* Trust bar */
   .trust-bar {
-    background: #F0F4F8;
-    border-bottom: 1px solid rgba(27, 42, 74, 0.08);
+    background: #1B2A4A;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   .trust-container {
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 3rem;
-    padding: 1.25rem 1.5rem;
+    gap: 2rem;
+    padding: 1rem 1.5rem;
   }
 
   .trust-item {
     display: flex;
     align-items: center;
-    gap: 0.6rem;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2px;
   }
 
-  .trust-icon {
-    width: 22px;
-    height: 22px;
+  .trust-item svg {
+    width: 18px;
+    height: 18px;
+    color: #4EADAD;
     flex-shrink: 0;
   }
 
-  .trust-icon svg {
-    width: 100%;
-    height: 100%;
-    fill: var(--color-primary, #1B2A4A);
-  }
-
-  .trust-label {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--color-primary-dark, #0F1B33);
-    letter-spacing: 0.2px;
+  .trust-divider {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
   }
 
   /* Responsive */
   @media (max-width: 900px) {
+    .hero-main {
+      min-height: auto;
+    }
+
     .hero-container {
       grid-template-columns: 1fr;
-      padding: 3rem 1.5rem 2rem;
-      min-height: auto;
+      padding: 3rem 1.5rem 2.5rem;
+      gap: 2rem;
     }
 
     .hero-content {
       text-align: center;
+      max-width: 100%;
     }
 
     .hero-title {
-      font-size: 3rem;
+      font-size: 2.5rem;
     }
 
-    .hero-description {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn-primary {
-      margin: 0 auto;
-    }
-
-    .hero-contact {
-      align-items: center;
-    }
-
-    .hero-image {
-      display: none;
-    }
-
-    .trust-container {
-      gap: 1.5rem;
-      flex-wrap: wrap;
+    .hero-actions {
       justify-content: center;
     }
 
-    .trust-label {
-      font-size: 0.8rem;
+    .hero-gallery {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 450px;
+      margin: 0 auto;
+      gap: 0.5rem;
+    }
+
+    .gallery-card {
+      height: 90px;
+    }
+
+    .trust-container {
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .trust-divider {
+      display: none;
     }
   }
 
   @media (max-width: 480px) {
     .hero-container {
-      padding: 2rem 1rem 1.5rem;
+      padding: 2.5rem 1rem 2rem;
+    }
+
+    .hero-badge {
+      font-size: 0.65rem;
+      padding: 0.3rem 0.75rem;
     }
 
     .hero-title {
-      font-size: 2.25rem;
+      font-size: 2rem;
     }
 
     .hero-description {
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
 
-    .btn-primary {
-      padding: 0.9rem 2rem;
-      font-size: 0.95rem;
+    .hero-actions {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .hero-gallery {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.4rem;
+    }
+
+    .gallery-card {
+      height: 65px;
+    }
+
+    .gallery-label {
+      font-size: 0.6rem;
+      padding: 1rem 0.4rem 0.3rem;
     }
 
     .trust-container {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0.75rem;
-      padding: 1rem;
+      gap: 0.6rem;
+      padding: 0.75rem 1rem;
+    }
+
+    .trust-item {
+      font-size: 0.7rem;
+    }
+
+    .trust-item svg {
+      width: 15px;
+      height: 15px;
     }
   }
 </style>

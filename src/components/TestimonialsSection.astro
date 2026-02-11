@@ -31,16 +31,16 @@ const testimonialImages = [
 <section class="testimonials-section" id="testimonials">
   <div class="testimonials-container">
     <div class="section-header">
-      <span class="section-badge">Happy Staffie Families</span>
-      <h2 class="section-title">What Our Families Say</h2>
-      <p class="section-subtitle">Real stories from families who found their perfect companion with us.</p>
+      <span class="section-badge">Familias Felinas Felices</span>
+      <h2 class="section-title">Lo Que Dicen Nuestras Familias</h2>
+      <p class="section-subtitle">Historias reales de familias que encontraron su compañero perfecto con nosotros.</p>
     </div>
 
     <!-- Image Gallery Grid -->
     <div class="image-gallery">
       {testimonialImages.map((img, index) => (
         <div class={`gallery-item gallery-item-${(index % 4) + 1}`}>
-          <img src={img} alt="Happy Staffie family" loading="lazy">
+          <img src={img} alt="Familia feliz con su gatito" loading="lazy">
         </div>
       ))}
     </div>
@@ -51,7 +51,7 @@ const testimonialImages = [
         <div class={`testimonial-card card-${(index % 3) + 1}`}>
           <div class="testimonial-header">
             <div class="customer-avatar">
-              <img src={testimonial.image} alt={testimonial.puppyName} loading="lazy">
+              <img src={testimonial.image} alt={testimonial.kittenName} loading="lazy">
             </div>
             <div class="customer-info">
               <h4 class="customer-name">{testimonial.name}</h4>
@@ -64,9 +64,9 @@ const testimonialImages = [
             </div>
           </div>
           <p class="testimonial-text">"{testimonial.text}"</p>
-          <span class="puppy-tag">
+          <span class="kitten-tag">
             <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            Adopted {testimonial.puppyName}
+            Adoptó a {testimonial.kittenName}
           </span>
         </div>
       ))}
@@ -235,7 +235,7 @@ const testimonialImages = [
     font-style: italic;
   }
 
-  .puppy-tag {
+  .kitten-tag {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
@@ -247,7 +247,7 @@ const testimonialImages = [
     font-weight: 600;
   }
 
-  .puppy-tag svg {
+  .kitten-tag svg {
     width: 14px;
     height: 14px;
     fill: #1B2A4A;

@@ -5,14 +5,14 @@ import { expenses, expenseNotes } from '../data/faqs';
 
 <section class="expenses-section">
   <div class="section-container">
-    <h2 class="section-title">Expenses For A puppy Puppy</h2>
-    <p class="section-intro">Here's a simple table illustrating potential monthly expenses for a puppy puppy:</p>
+    <h2 class="section-title">Gastos Mensuales de un Gatito</h2>
+    <p class="section-intro">Aquí tienes una tabla orientativa con los gastos mensuales estimados para el cuidado de un gatito:</p>
 
     <table class="expenses-table">
       <thead>
         <tr>
-          <th>Expense Item</th>
-          <th>Estimated Monthly Cost</th>
+          <th>Concepto</th>
+          <th>Coste Mensual Estimado</th>
         </tr>
       </thead>
       <tbody>
@@ -23,20 +23,20 @@ import { expenses, expenseNotes } from '../data/faqs';
           </tr>
         ))}
         <tr class="total-row">
-          <td>Total Estimated Cost</td>
-          <td>$270 – $455</td>
+          <td>Coste Total Estimado</td>
+          <td>155€ – 335€</td>
         </tr>
       </tbody>
     </table>
 
     <div class="notes-section">
-      <h3>Notes:</h3>
+      <h3>Notas:</h3>
       <ul class="notes-list">
         {expenseNotes.map((note) => (
           <li><strong>{note.label}</strong>: {note.text}</li>
         ))}
       </ul>
-      <p class="notes-footer">Feel free to adjust the figures based on your specific situation or location!</p>
+      <p class="notes-footer">Estos valores son orientativos y pueden variar según tu ubicación y las necesidades específicas de la raza.</p>
     </div>
   </div>
 </section>
