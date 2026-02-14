@@ -1,0 +1,602 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Vaccinations | HillSide Paws"
+  description="Complete vaccination and deworming schedule for HillSide Paws Dachshund puppies. DHPP, Bordetella, Rabies protocols and health records included."
+  keywords="puppy vaccinations, Dachshund vaccine schedule, DHPP vaccine, puppy deworming, Bordetella vaccine, Rabies vaccine puppies, HillSide Paws vaccinations"
+>
+  <PageHeader
+    title="Vaccinations"
+    subtitle="A complete overview of the vaccination and deworming protocols for every HillSide Paws puppy"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Vaccinations' }
+    ]}
+  />
+
+  <section class="vaccine-content">
+    <div class="content-container">
+
+      <!-- Intro -->
+      <div class="intro-block">
+        <h2>Puppy Vaccination Program</h2>
+        <p>Proper vaccination is one of the most important steps in protecting your Dachshund puppy's health. At HillSide Paws, we follow a veterinarian-approved vaccination schedule that meets or exceeds the guidelines set by the American Animal Hospital Association (AAHA). Every puppy leaves our care with age-appropriate vaccinations completed and documented.</p>
+      </div>
+
+      <!-- Vaccination Timeline -->
+      <div class="section-block">
+        <h2 class="section-heading">
+          <span class="heading-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          </span>
+          Vaccination Schedule
+        </h2>
+        <p>Below is the complete vaccination timeline your puppy follows while in our care and what you will need to continue with your veterinarian:</p>
+
+        <div class="timeline">
+          <div class="timeline-card">
+            <div class="timeline-badge">6 wks</div>
+            <div class="timeline-body">
+              <h3>DHPP - 1st Dose</h3>
+              <p class="vaccine-full-name">Distemper, Hepatitis, Parainfluenza, Parvovirus</p>
+              <p>The first core vaccine is administered at 6 weeks of age. This combination vaccine begins building immunity against four serious canine diseases. Administered by our licensed veterinarian at HillSide Paws.</p>
+              <span class="badge badge-administered">Administered by HillSide Paws</span>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-badge">8 wks</div>
+            <div class="timeline-body">
+              <h3>DHPP - 2nd Dose + Bordetella</h3>
+              <p class="vaccine-full-name">DHPP booster + Bordetella bronchiseptica</p>
+              <p>The second DHPP dose strengthens the developing immune response. Bordetella vaccine is also administered at this time to protect against kennel cough, a highly contagious respiratory infection.</p>
+              <span class="badge badge-administered">Administered by HillSide Paws</span>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-badge">12 wks</div>
+            <div class="timeline-body">
+              <h3>DHPP - 3rd Dose</h3>
+              <p class="vaccine-full-name">Distemper, Hepatitis, Parainfluenza, Parvovirus</p>
+              <p>The third DHPP dose continues to build robust immunity. Depending on your puppy's age at pickup, this dose may be administered by your own veterinarian. We will advise you accordingly.</p>
+              <span class="badge badge-varies">May be administered by your veterinarian</span>
+            </div>
+          </div>
+
+          <div class="timeline-card">
+            <div class="timeline-badge">16 wks</div>
+            <div class="timeline-body">
+              <h3>DHPP - Final Dose + Rabies</h3>
+              <p class="vaccine-full-name">Final DHPP booster + Rabies vaccine</p>
+              <p>The final DHPP booster completes the puppy vaccination series. The Rabies vaccine is administered at 16 weeks as required by law in most states. This is typically handled by your veterinarian.</p>
+              <span class="badge badge-owner">Administered by your veterinarian</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deworming Schedule -->
+      <div class="section-block">
+        <h2 class="section-heading">
+          <span class="heading-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </span>
+          Deworming Schedule
+        </h2>
+        <p>All HillSide Paws puppies are dewormed on a regular schedule starting from 2 weeks of age. Intestinal parasites are common in young puppies and routine deworming is essential for their health and development.</p>
+
+        <div class="deworm-grid">
+          <div class="deworm-card">
+            <div class="deworm-age">2 Weeks</div>
+            <p>First deworming treatment administered</p>
+          </div>
+          <div class="deworm-card">
+            <div class="deworm-age">4 Weeks</div>
+            <p>Second deworming treatment</p>
+          </div>
+          <div class="deworm-card">
+            <div class="deworm-age">6 Weeks</div>
+            <p>Third deworming treatment</p>
+          </div>
+          <div class="deworm-card">
+            <div class="deworm-age">8 Weeks</div>
+            <p>Fourth deworming, internal and external parasites</p>
+          </div>
+          <div class="deworm-card">
+            <div class="deworm-age">10 Weeks</div>
+            <p>Fifth treatment, fecal test performed</p>
+          </div>
+          <div class="deworm-card">
+            <div class="deworm-age">12+ Weeks</div>
+            <p>Continued biweekly until pickup</p>
+          </div>
+        </div>
+
+        <div class="info-note">
+          <div class="note-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+          </div>
+          <p>After bringing your puppy home, we recommend continuing deworming every 2 to 4 weeks until 16 weeks of age, then transitioning to a monthly heartworm and parasite prevention program as directed by your veterinarian.</p>
+        </div>
+      </div>
+
+      <!-- Records Section -->
+      <div class="section-block">
+        <h2 class="section-heading">
+          <span class="heading-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </span>
+          Records Provided with Each Puppy
+        </h2>
+        <p>When you pick up or receive your HillSide Paws puppy, you will receive a comprehensive health packet that includes:</p>
+
+        <div class="records-list">
+          <div class="record-item">
+            <div class="record-check">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            </div>
+            <span>Official vaccination record with vaccine names, manufacturers, lot numbers, and dates administered</span>
+          </div>
+          <div class="record-item">
+            <div class="record-check">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            </div>
+            <span>Complete deworming log with product names, dosages, and treatment dates</span>
+          </div>
+          <div class="record-item">
+            <div class="record-check">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            </div>
+            <span>Veterinary health certificate issued within 72 hours of departure</span>
+          </div>
+          <div class="record-item">
+            <div class="record-check">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            </div>
+            <span>Microchip registration information and transfer instructions</span>
+          </div>
+          <div class="record-item">
+            <div class="record-check">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            </div>
+            <span>Recommended future vaccination schedule for your veterinarian to follow</span>
+          </div>
+          <div class="record-item">
+            <div class="record-check">
+              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+            </div>
+            <span>Fecal test results confirming parasite-free status at time of departure</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Important Note -->
+      <div class="warning-box">
+        <h3>Important: Keep Your Puppy Safe During Vaccination Period</h3>
+        <p>Until your puppy has completed the full DHPP vaccination series (all 4 doses by 16 weeks), avoid exposing them to areas frequented by unvaccinated dogs, such as dog parks, pet stores, and unfamiliar outdoor spaces. Socialization is important, but should be done safely with known, vaccinated dogs in clean environments.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>Questions About Our Vaccination Protocol?</h3>
+        <p>We are always happy to discuss our veterinary care and vaccination program in detail with prospective families.</p>
+        <a href="mailto:info@hillsidepaws.com" class="btn">Contact Us</a>
+      </div>
+
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .vaccine-content {
+    padding: 4rem 1.5rem;
+    background: #FFF8F0;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  }
+
+  .content-container {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .intro-block {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #E8DDD4;
+  }
+
+  h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3E2518;
+    margin: 0 0 1rem;
+  }
+
+  .section-heading {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1.75rem;
+    color: #3E2518;
+    margin: 0 0 1.25rem;
+  }
+
+  .heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #D4A574;
+    border-radius: 10px;
+    color: white;
+    flex-shrink: 0;
+  }
+
+  .heading-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #5C3D2E;
+    margin: 0 0 0.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+    color: #5a5a5a;
+    line-height: 1.8;
+    margin: 0 0 1rem;
+  }
+
+  .section-block {
+    background: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #E8DDD4;
+  }
+
+  /* Timeline Cards */
+  .timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    position: relative;
+  }
+
+  .timeline::before {
+    content: '';
+    position: absolute;
+    left: 36px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, #D4A574, #5C3D2E);
+    border-radius: 2px;
+  }
+
+  .timeline-card {
+    display: flex;
+    gap: 1.5rem;
+    position: relative;
+  }
+
+  .timeline-badge {
+    width: 72px;
+    height: 72px;
+    min-width: 72px;
+    background: linear-gradient(135deg, #5C3D2E, #3E2518);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 1;
+    border: 4px solid #FFF8F0;
+    box-shadow: 0 2px 8px rgba(92, 61, 46, 0.25);
+  }
+
+  .timeline-body {
+    background: #FFF8F0;
+    border-radius: 10px;
+    padding: 1.5rem;
+    flex: 1;
+    border: 1px solid #E8DDD4;
+    border-left: 4px solid #D4A574;
+  }
+
+  .timeline-body h3 {
+    color: #3E2518;
+    margin: 0 0 0.25rem;
+    font-size: 1.15rem;
+  }
+
+  .vaccine-full-name {
+    font-size: 0.85rem;
+    color: #D4A574;
+    font-weight: 600;
+    margin: 0 0 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+
+  .timeline-body p:last-of-type {
+    margin-bottom: 0.75rem;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 0.3rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+  }
+
+  .badge-administered {
+    background: #5C3D2E;
+    color: white;
+  }
+
+  .badge-varies {
+    background: #D4A574;
+    color: #3E2518;
+  }
+
+  .badge-owner {
+    background: #E2BB91;
+    color: #3E2518;
+  }
+
+  /* Deworming Grid */
+  .deworm-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin: 1.5rem 0;
+  }
+
+  .deworm-card {
+    background: #FFF8F0;
+    border-radius: 10px;
+    padding: 1.25rem;
+    text-align: center;
+    border: 1px solid #E8DDD4;
+    transition: transform 0.3s ease;
+  }
+
+  .deworm-card:hover {
+    transform: translateY(-2px);
+  }
+
+  .deworm-age {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #5C3D2E;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid #D4A574;
+  }
+
+  .deworm-card p {
+    font-size: 0.9rem;
+    color: #666;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  /* Info Note */
+  .info-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    background: #FFF8F0;
+    border: 1px solid #D4A574;
+    border-radius: 10px;
+    padding: 1.25rem;
+    margin-top: 1rem;
+  }
+
+  .note-icon {
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    color: #D4A574;
+  }
+
+  .note-icon svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .info-note p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #5C3D2E;
+  }
+
+  /* Records List */
+  .records-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .record-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    background: #FFF8F0;
+    border-radius: 8px;
+    border: 1px solid #E8DDD4;
+  }
+
+  .record-check {
+    width: 26px;
+    height: 26px;
+    min-width: 26px;
+    background: #5C3D2E;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-top: 1px;
+  }
+
+  .record-check svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .record-item span {
+    font-size: 0.95rem;
+    color: #5a5a5a;
+    line-height: 1.6;
+  }
+
+  /* Warning Box */
+  .warning-box {
+    background: #5C3D2E;
+    color: white;
+    border-radius: 12px;
+    padding: 2rem 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .warning-box h3 {
+    color: #E2BB91;
+    margin: 0 0 0.75rem;
+    font-size: 1.2rem;
+  }
+
+  .warning-box p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+    font-size: 0.95rem;
+  }
+
+  /* CTA Box */
+  .cta-box {
+    background: linear-gradient(135deg, #5C3D2E, #3E2518);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .cta-box h3 {
+    color: white;
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+  }
+
+  .cta-box p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0 0 1.5rem;
+  }
+
+  .btn {
+    display: inline-block;
+    background: #D4A574;
+    color: #3E2518;
+    padding: 0.875rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    background: #E2BB91;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 768px) {
+    .vaccine-content {
+      padding: 3rem 1rem;
+    }
+
+    h2 {
+      font-size: 1.75rem;
+    }
+
+    .section-heading {
+      font-size: 1.35rem;
+    }
+
+    .intro-block,
+    .section-block {
+      padding: 1.75rem;
+    }
+
+    .timeline::before {
+      left: 30px;
+    }
+
+    .timeline-badge {
+      width: 60px;
+      height: 60px;
+      min-width: 60px;
+      font-size: 0.75rem;
+    }
+
+    .timeline-body {
+      padding: 1.25rem;
+    }
+
+    .deworm-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .warning-box {
+      padding: 1.5rem;
+    }
+
+    .cta-box {
+      padding: 1.75rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .deworm-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .timeline-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .timeline::before {
+      display: none;
+    }
+
+    .timeline-body {
+      border-left: none;
+      border-top: 4px solid #D4A574;
+    }
+  }
+</style>

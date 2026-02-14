@@ -1,35 +1,41 @@
 ---
 // TestimonialsPreview component
-import { testimonialPreviews, testimonialImages } from '../data/testimonials';
+import { testimonials } from '../data/testimonials';
+
+function getInitials(name: string): string {
+  const cleaned = name.replace(/^The\s+/, '').replace(/\s+Family$/, '');
+  const parts = cleaned.split(/[\s&]+/).filter(p => p.length > 0);
+  return parts.map(p => p[0]).filter(c => c === c.toUpperCase()).slice(0, 2).join('');
+}
 ---
 
 <section class="testimonials-section">
   <div class="section-container">
     <div class="section-header">
-      <div class="google-reviews-badge">
-        <img src="/images/image.png" alt="Google Reviews 5 Stars">
+      <div class="reviews-badge">
+        <img class="badge-logo" src="/images/google-reviews.png" alt="Google Reviews" />
       </div>
-      <h2 class="section-title">Lo Que Dicen Nuestras Familias</h2>
-      <p class="section-subtitle">Lee las opiniones de familias felices con sus gatitos</p>
+      <h2 class="section-title">What Our Families Say</h2>
+      <p class="section-subtitle">Read reviews from happy families with their puppies</p>
     </div>
 
     <div class="testimonials-masonry">
-      {testimonialPreviews.map((t, index) => (
+      {testimonials.map((t) => (
         <div class="testimonial-card">
           <div class="card-image">
-            <img src={testimonialImages[index % testimonialImages.length]} alt={`Gatito de ${t.name}`} loading="lazy">
+            <img src={t.image} alt={`Puppy from ${t.name}`} loading="lazy">
           </div>
           <div class="card-content">
             <div class="card-header">
               <div class="avatar">
-                {t.initials}
+                {getInitials(t.name)}
                 <span class="verified-badge">
                   <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
                 </span>
               </div>
               <div class="reviewer-info">
                 <h4>{t.name}</h4>
-                <p class="reviewer-label">Verificado</p>
+                <p class="reviewer-label">Verified</p>
               </div>
             </div>
 
@@ -44,11 +50,13 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
 
             <p class="review-text">{t.text}</p>
 
-            <p class="review-meta">{t.timeAgo} - {t.location}</p>
+            <p class="review-meta">{t.location}</p>
 
             <div class="card-footer">
-              <img src="/images/image copy.png" alt="Google" class="google-icon">
-              <span class="business-name">Criadero Castellano</span>
+              <span class="business-icon">
+                <img src="/images/google-g.png" alt="Google" />
+              </span>
+              <span class="business-name">Google Reviews</span>
             </div>
           </div>
         </div>
@@ -61,7 +69,7 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
   .testimonials-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: #f8f9fa;
+    background: #FFF8F0;
     padding: 4rem 1.5rem;
   }
 
@@ -75,14 +83,17 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
     margin-bottom: 3rem;
   }
 
-  .google-reviews-badge {
-    display: inline-block;
+  .reviews-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
     margin-bottom: 1.5rem;
   }
 
-  .google-reviews-badge img {
-    height: 80px;
-    width: auto;
+  .badge-logo {
+    max-width: 280px;
+    height: auto;
   }
 
   .section-title {
@@ -110,7 +121,7 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
     border-radius: 12px;
     overflow: hidden;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    border: 1px solid #e8e8e8;
+    border: 1px solid #E8DDD4;
     margin-bottom: 1.5rem;
   }
 
@@ -145,14 +156,14 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
     position: relative;
     width: 50px;
     height: 50px;
-    background: #e0e0e0;
+    background: #F5E6D3;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.1rem;
     font-weight: 700;
-    color: #555;
+    color: #5C3D2E;
   }
 
   .verified-badge {
@@ -161,7 +172,7 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
     right: -2px;
     width: 18px;
     height: 18px;
-    background: #00a67d;
+    background: #5C3D2E;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -184,7 +195,7 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
 
   .reviewer-label {
     font-size: 0.85rem;
-    color: #00a67d;
+    color: #5C3D2E;
     margin: 0;
   }
 
@@ -213,8 +224,8 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
   }
 
   .review-text {
-    background: #f8f9fa;
-    border-left: 4px solid #00a67d;
+    background: #FFF8F0;
+    border-left: 4px solid #5C3D2E;
     padding: 1rem;
     margin: 0 0 1rem;
     font-size: 0.95rem;
@@ -236,16 +247,24 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
     border-top: 1px solid #eee;
   }
 
-  .google-icon {
+  .business-icon {
     width: 30px;
     height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .business-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .business-name {
     font-size: 0.95rem;
     font-weight: 600;
-    color: #1a73e8;
-    text-decoration: underline;
+    color: #5C3D2E;
   }
 
   @media (max-width: 1024px) {
@@ -267,10 +286,6 @@ import { testimonialPreviews, testimonialImages } from '../data/testimonials';
       columns: 1;
       max-width: 500px;
       margin: 0 auto;
-    }
-
-    .google-reviews-badge img {
-      height: 60px;
     }
   }
 </style>

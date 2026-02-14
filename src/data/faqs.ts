@@ -5,36 +5,36 @@ export interface Faq {
 
 export const faqs: Faq[] = [
   {
-    question: '¿Qué raza de gato es mejor para familias?',
-    answer: 'Razas como el Ragdoll, el British Shorthair y el Maine Coon son opciones excelentes para familias gracias a su temperamento tranquilo y cariñoso. El Ragdoll, por ejemplo, es conocido por su carácter dócil y su amor por los niños, mientras que el British Shorthair destaca por su paciencia y adaptabilidad al hogar. En Criadero Castellano te asesoramos para encontrar la raza que mejor se adapte a tu estilo de vida familiar.'
+    question: 'What makes HillSide Paws Dachshunds special?',
+    answer: 'Our Dachshunds are family-raised in our home since 1995, giving us nearly three decades of breeding experience. Every puppy is socialized with children, adults, and other dogs from birth. We perform comprehensive health testing on all parent dogs, including IVDD screening, PRA testing, and cardiac evaluations, so you can be confident you are bringing home a healthy, well-adjusted companion.'
   },
   {
-    question: '¿Los gatitos vienen vacunados?',
-    answer: 'Sí, todos nuestros gatitos se entregan con su cartilla de vacunación al día, incluyendo las vacunas contra la panleucopenia, el calicivirus y la rinotraqueítis felina. Además, se les realiza una desparasitación completa antes de la entrega. En Criadero Castellano trabajamos con veterinarios de confianza para garantizar que cada gatito llegue a su nuevo hogar en perfecto estado de salud.'
+    question: 'What Dachshund varieties do you breed?',
+    answer: 'We specialize in three beautiful Dachshund varieties: Miniature Smooth, Miniature Longhair, and Standard Smooth. Each variety has its own unique charm, from the sleek and easy-care Miniature Smooth to the elegant flowing coat of the Miniature Longhair and the bold, athletic Standard Smooth. We are happy to help you choose the variety that best fits your lifestyle.'
   },
   {
-    question: '¿Qué incluye el precio de un gatito?',
-    answer: 'El precio incluye la cartilla de vacunación completa, el microchip identificativo, la desparasitación interna y externa, un certificado veterinario de salud y el pedigrí oficial de la raza. También entregamos un kit de bienvenida con una muestra del pienso al que está acostumbrado el gatito y una guía de cuidados específica para su raza, ya sea Persa, Sphynx, Devon Rex u otra.'
+    question: 'Do your puppies come with a health guarantee?',
+    answer: 'Yes, every puppy from HillSide Paws comes with a comprehensive 2-year genetic health guarantee that covers hereditary and congenital conditions. Before leaving our home, each puppy receives a thorough veterinary examination and is cleared for any health concerns. We stand behind the health of our puppies because we invest in the best genetic testing and veterinary care available.'
   },
   {
-    question: '¿Hacen envíos a toda España?',
-    answer: 'Sí, realizamos envíos seguros a toda la Península Ibérica y las Islas Baleares y Canarias, siempre cumpliendo con la normativa vigente de transporte animal. Trabajamos con transportistas especializados que garantizan el bienestar del gatito durante todo el trayecto. No obstante, siempre recomendamos la recogida en persona en nuestro criadero en Castilla para que conozcas a tu futuro compañero antes de llevarlo a casa.'
+    question: 'What is included in the puppy price?',
+    answer: 'The price includes age-appropriate vaccinations (DHPP series), a complete deworming program, microchip with registration, a veterinary health certificate, AKC registration papers, and a puppy starter kit with the food they are accustomed to, a toy, a blanket with familiar scents, and a comprehensive care guide specific to Dachshunds.'
   },
   {
-    question: '¿Cómo elijo la raza adecuada para mí?',
-    answer: 'La elección depende de tu estilo de vida: si buscas un gato activo y juguetón, el Abisinio o el Oriental son ideales; si prefieres un compañero tranquilo y cariñoso, el Persa o el Exotic Shorthair serán perfectos. Para personas alérgicas, el Siberiano produce menos proteína Fel d 1, y el Sphynx es una opción popular por carecer de pelo. Nuestro equipo en Criadero Castellano te orientará según tus preferencias y circunstancias personales.'
+    question: 'Do you ship puppies?',
+    answer: 'Yes, we offer safe delivery options nationwide. Our preferred methods include personal pickup at our home (which we highly encourage so you can meet the parents), professional ground transport through a trusted pet transport service, and our flight nanny program where a dedicated handler accompanies your puppy on a commercial flight directly to your nearest airport. Every puppy travels with their health documents, food, and comfort items.'
   },
   {
-    question: '¿Los gatitos están socializados?',
-    answer: 'Todos nuestros gatitos crecen en un ambiente familiar y se socializan desde las primeras semanas de vida con personas, otros gatos y estímulos del hogar. Razas como el Azul Ruso y el Maine Coon responden especialmente bien a la socialización temprana, desarrollando un carácter equilibrado y afectuoso. Cada gatito de Criadero Castellano se entrega acostumbrado al contacto humano, a los sonidos cotidianos y al uso del arenero.'
+    question: 'How do I reserve a puppy?',
+    answer: 'To reserve a puppy, simply fill out our contact form or give us a call. After we chat and determine the right match for your family, a $500 non-refundable deposit secures your chosen puppy. The remaining balance is due at pickup or before shipping. We accept various payment methods and will keep you updated with photos and videos as your puppy grows.'
   },
   {
-    question: '¿Ofrecen garantía de salud?',
-    answer: 'Sí, ofrecemos una garantía de salud por escrito que cubre enfermedades congénitas y hereditarias durante los primeros dos años de vida del gatito. Antes de la entrega, cada ejemplar pasa un examen veterinario completo y se realizan pruebas genéticas específicas de la raza, como las de PKD en Persas y Exotic Shorthair o HCM en Ragdoll y Maine Coon. Si se detecta cualquier problema de salud cubierto, nos comprometemos a dar una solución justa y responsable.'
+    question: 'Are your puppies socialized?',
+    answer: 'Absolutely. Every puppy is raised inside our family home and has daily interaction with adults, children, and our other dogs. From the earliest weeks, they are exposed to household sounds, different surfaces, gentle handling, and new experiences. This early socialization helps them develop into confident, well-adjusted pets that transition smoothly into their new homes.'
   },
   {
-    question: '¿Puedo visitar el criadero antes de comprar?',
-    answer: 'Por supuesto, animamos a todos los futuros dueños a visitar Criadero Castellano con cita previa para conocer nuestras instalaciones, ver a los padres de las camadas y pasar tiempo con los gatitos disponibles. Podrás observar de primera mano cómo criamos razas como el Devon Rex, el Siberiano y el British Shorthair en un entorno limpio y enriquecido. Las visitas son la mejor forma de asegurarte de que eliges al compañero perfecto para tu hogar.'
+    question: 'What health testing do you perform on parent dogs?',
+    answer: 'We take health testing seriously. All breeding dogs undergo IVDD (Intervertebral Disc Disease) screening, which is the most critical health concern for Dachshunds. Additionally, we test for PRA (Progressive Retinal Atrophy), perform cardiac evaluations, patella evaluations, and Brucellosis testing. Only dogs that pass all health screenings are included in our breeding program, ensuring the healthiest possible puppies.'
   }
 ];
 
@@ -44,15 +44,15 @@ export interface Expense {
 }
 
 export const expenses: Expense[] = [
-  { item: 'Alimentación', cost: '40€ – 80€' },
-  { item: 'Golosinas', cost: '10€ – 20€' },
-  { item: 'Atención Veterinaria', cost: '20€ – 50€' },
-  { item: 'Seguro para Mascotas', cost: '25€ – 50€' },
-  { item: 'Aseo y Cuidado', cost: '15€ – 40€' },
-  { item: 'Arena para Gatos', cost: '15€ – 30€' },
-  { item: 'Juguetes', cost: '10€ – 20€' },
-  { item: 'Suministros (cama, rascador, etc.)', cost: '10€ – 25€' },
-  { item: 'Varios', cost: '10€ – 20€' }
+  { item: 'Premium Dog Food', cost: '$40 - $80' },
+  { item: 'Treats & Chews', cost: '$15 - $30' },
+  { item: 'Veterinary Care', cost: '$30 - $60' },
+  { item: 'Pet Insurance', cost: '$30 - $60' },
+  { item: 'Grooming', cost: '$20 - $50' },
+  { item: 'Heartworm & Flea Prevention', cost: '$15 - $35' },
+  { item: 'Toys & Enrichment', cost: '$15 - $25' },
+  { item: 'Supplies (bed, crate, leash, etc.)', cost: '$15 - $30' },
+  { item: 'Miscellaneous', cost: '$10 - $25' }
 ];
 
 export interface ExpenseNote {
@@ -61,9 +61,9 @@ export interface ExpenseNote {
 }
 
 export const expenseNotes: ExpenseNote[] = [
-  { label: 'Alimentación', text: 'El coste puede variar según la marca y las necesidades dietéticas de la raza; los gatos Sphynx y Siberiano, por ejemplo, pueden requerir alimentación especial.' },
-  { label: 'Atención Veterinaria', text: 'Incluye revisiones rutinarias, vacunas anuales, desparasitaciones y cuidados preventivos recomendados por el veterinario.' },
-  { label: 'Seguro para Mascotas', text: 'El precio varía según la cobertura y la aseguradora; algunas pólizas cubren también enfermedades hereditarias propias de ciertas razas.' },
-  { label: 'Aseo y Cuidado', text: 'Razas de pelo largo como el Persa y el Maine Coon necesitan cepillado frecuente, mientras que el Sphynx requiere baños regulares para mantener su piel sana.' },
-  { label: 'Arena para Gatos', text: 'Se recomienda arena aglomerante de buena calidad y limpiar el arenero a diario para garantizar la higiene y el bienestar de tu gato.' }
+  { label: 'Premium Dog Food', text: 'Cost varies by brand and dietary needs. Dachshunds can be prone to weight gain, so a high-quality, portion-controlled diet is especially important for this breed.' },
+  { label: 'Veterinary Care', text: 'Includes routine checkups, annual vaccinations, dental cleanings, and preventive care recommended by your veterinarian.' },
+  { label: 'Pet Insurance', text: 'Prices vary by coverage level and provider. We recommend plans that cover IVDD treatment, as this is the most common health concern for Dachshunds.' },
+  { label: 'Grooming', text: 'Smooth coat Dachshunds require minimal grooming, while longhair varieties benefit from regular brushing and occasional professional grooming to keep their coats healthy.' },
+  { label: 'Heartworm & Flea Prevention', text: 'Year-round heartworm and flea prevention is essential. Your veterinarian can recommend the best products for your area and your Dachshund.' }
 ];

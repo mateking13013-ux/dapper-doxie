@@ -2,27 +2,27 @@
 // TestimonialsSection component
 import { testimonials, testimonialImages } from '../data/testimonials';
 
-// Split images into 3 rows for scrolling
-const row1 = testimonialImages.slice(0, 7);
-const row2 = testimonialImages.slice(7, 14);
-const row3 = testimonialImages.slice(14, 20);
+// Split all 59 images into 3 rows for scrolling
+const row1 = testimonialImages.slice(0, 20);
+const row2 = testimonialImages.slice(20, 40);
+const row3 = testimonialImages.slice(40);
 ---
 
 <section class="testimonials-section" id="testimonials">
   <div class="testimonials-container">
     <div class="section-header">
-      <span class="section-badge">Familias Felinas Felices</span>
-      <h2 class="section-title">Lo Que Dicen Nuestras Familias</h2>
-      <p class="section-subtitle">Historias reales de familias que encontraron su compañero perfecto con nosotros.</p>
+      <span class="section-badge">Happy Puppy Families</span>
+      <h2 class="section-title">What Our Families Say</h2>
+      <p class="section-subtitle">Real stories from families who found their perfect companion with us.</p>
     </div>
 
-    <!-- Scrolling Image Gallery -->
+    <!-- Endless Scrolling Image Gallery -->
     <div class="scroll-gallery">
       <div class="scroll-row scroll-row-1">
         <div class="scroll-track">
-          {[...row1, ...row1].map((img) => (
+          {[...row1, ...row1, ...row1].map((img) => (
             <div class="scroll-item">
-              <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+              <img src={img} alt="Happy family with their Dachshund puppy" loading="lazy">
             </div>
           ))}
         </div>
@@ -30,9 +30,9 @@ const row3 = testimonialImages.slice(14, 20);
 
       <div class="scroll-row scroll-row-2">
         <div class="scroll-track scroll-track-reverse">
-          {[...row2, ...row2].map((img) => (
+          {[...row2, ...row2, ...row2].map((img) => (
             <div class="scroll-item">
-              <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+              <img src={img} alt="Happy family with their Dachshund puppy" loading="lazy">
             </div>
           ))}
         </div>
@@ -40,9 +40,9 @@ const row3 = testimonialImages.slice(14, 20);
 
       <div class="scroll-row scroll-row-3">
         <div class="scroll-track">
-          {[...row3, ...row3].map((img) => (
+          {[...row3, ...row3, ...row3].map((img) => (
             <div class="scroll-item">
-              <img src={img} alt="Familia feliz con su gatito" loading="lazy">
+              <img src={img} alt="Happy family with their Dachshund puppy" loading="lazy">
             </div>
           ))}
         </div>
@@ -55,7 +55,7 @@ const row3 = testimonialImages.slice(14, 20);
         <div class={`testimonial-card card-${(index % 3) + 1}`}>
           <div class="testimonial-header">
             <div class="customer-avatar">
-              <img src={testimonial.image} alt={testimonial.kittenName} loading="lazy">
+              <img src={testimonial.image} alt={testimonial.puppyName} loading="lazy">
             </div>
             <div class="customer-info">
               <h4 class="customer-name">{testimonial.name}</h4>
@@ -68,9 +68,9 @@ const row3 = testimonialImages.slice(14, 20);
             </div>
           </div>
           <p class="testimonial-text">"{testimonial.text}"</p>
-          <span class="kitten-tag">
+          <span class="puppy-tag">
             <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-            Adoptó a {testimonial.kittenName}
+            Adopted {testimonial.puppyName}
           </span>
         </div>
       ))}
@@ -78,11 +78,20 @@ const row3 = testimonialImages.slice(14, 20);
   </div>
 </section>
 
+<script>
+  // Endless scroll: when animation reaches end, seamlessly reset
+  document.querySelectorAll('.scroll-track').forEach((track) => {
+    track.addEventListener('animationiteration', () => {
+      // Animation loops natively via CSS infinite, this ensures smoothness
+    });
+  });
+</script>
+
 <style>
   .testimonials-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: linear-gradient(135deg, #1B2A4A 0%, #0F1B33 100%);
+    background: linear-gradient(135deg, #5C3D2E 0%, #3E2518 100%);
     padding: 4rem 1.5rem;
     position: relative;
     overflow: hidden;
@@ -138,12 +147,12 @@ const row3 = testimonialImages.slice(14, 20);
     margin: 0 auto;
   }
 
-  /* Scrolling Gallery */
+  /* Endless Scrolling Gallery */
   .scroll-gallery {
     margin-bottom: 3rem;
     overflow: hidden;
-    mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
-    -webkit-mask-image: linear-gradient(to right, transparent, black 5%, black 95%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 3%, black 97%, transparent);
   }
 
   .scroll-row {
@@ -159,18 +168,19 @@ const row3 = testimonialImages.slice(14, 20);
     display: flex;
     gap: 1rem;
     width: max-content;
+    will-change: transform;
   }
 
   .scroll-row-1 .scroll-track {
-    animation: scrollLeft 35s linear infinite;
+    animation: scrollLeft 60s linear infinite;
   }
 
   .scroll-row-2 .scroll-track {
-    animation: scrollRight 45s linear infinite;
+    animation: scrollRight 70s linear infinite;
   }
 
   .scroll-row-3 .scroll-track {
-    animation: scrollLeft 25s linear infinite;
+    animation: scrollLeft 50s linear infinite;
   }
 
   @keyframes scrollLeft {
@@ -178,13 +188,13 @@ const row3 = testimonialImages.slice(14, 20);
       transform: translateX(0);
     }
     100% {
-      transform: translateX(-50%);
+      transform: translateX(-33.333%);
     }
   }
 
   @keyframes scrollRight {
     0% {
-      transform: translateX(-50%);
+      transform: translateX(-33.333%);
     }
     100% {
       transform: translateX(0);
@@ -238,7 +248,7 @@ const row3 = testimonialImages.slice(14, 20);
     height: 55px;
     border-radius: 50%;
     overflow: hidden;
-    border: 3px solid #1B2A4A;
+    border: 3px solid #5C3D2E;
     flex-shrink: 0;
   }
 
@@ -286,22 +296,22 @@ const row3 = testimonialImages.slice(14, 20);
     font-style: italic;
   }
 
-  .kitten-tag {
+  .puppy-tag {
     display: inline-flex;
     align-items: center;
     gap: 0.4rem;
-    background: #F0F4F8;
+    background: #FFF8F0;
     padding: 0.4rem 0.9rem;
     border-radius: 50px;
     font-size: 0.8rem;
-    color: #1B2A4A;
+    color: #5C3D2E;
     font-weight: 600;
   }
 
-  .kitten-tag svg {
+  .puppy-tag svg {
     width: 14px;
     height: 14px;
-    fill: #1B2A4A;
+    fill: #5C3D2E;
   }
 
   @media (max-width: 1100px) {
@@ -312,11 +322,11 @@ const row3 = testimonialImages.slice(14, 20);
 
   @media (max-width: 768px) {
     .scroll-item {
-      width: 180px;
+      width: 200px;
     }
 
     .scroll-item img {
-      height: 130px;
+      height: 170px;
     }
 
     .testimonials-masonry {
@@ -336,11 +346,11 @@ const row3 = testimonialImages.slice(14, 20);
     }
 
     .scroll-item {
-      width: 150px;
+      width: 180px;
     }
 
     .scroll-item img {
-      height: 110px;
+      height: 150px;
     }
 
     .scroll-row {

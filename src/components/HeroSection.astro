@@ -1,50 +1,34 @@
 ---
 // HeroSection component - Full-width hero with overlay text and multi-image grid
+import { puppies } from '../data/puppies';
+const heroPuppies = puppies.filter(p => p.status === 'Available').slice(0, 6);
 ---
 
 <section class="hero">
   <div class="hero-main">
     <div class="hero-bg">
-      <img src="/images/gatitos/british-shorthair/liya.jpg" alt="Gatito British Shorthair" />
+      <img src={heroPuppies[0]?.image || '/images/puppies/COPPER male 10 weeks.jpeg'} alt="Dachshund puppy from HillSide Paws" />
       <div class="hero-overlay"></div>
     </div>
 
     <div class="hero-container">
       <div class="hero-content">
-        <span class="hero-badge">Criadero Castellano — 11 Razas Disponibles</span>
-        <h1 class="hero-title">Gatitos de Raza<br><span class="highlight">Premium</span></h1>
-        <p class="hero-description">Criados con amor en un entorno familiar en España. Con garantía de salud, vacunados y listos para robarte el corazón.</p>
+        <span class="hero-badge">HillSide Paws — Family Breeders Since 1995</span>
+        <h1 class="hero-title">Dachshund Puppies<br><span class="highlight">Raised with Love</span></h1>
+        <p class="hero-description">Family-raised Dachshund puppies in the heart of America. Health guaranteed, vet-checked, and ready to steal your heart.</p>
         <div class="hero-actions">
-          <a href="/razas" class="btn-primary">Ver Razas</a>
-          <a href="/contacto" class="btn-secondary">Contactar</a>
+          <a href="/available-puppies" class="btn-primary">See Available Puppies</a>
+          <a href="/contact" class="btn-secondary">Contact Us</a>
         </div>
       </div>
 
       <div class="hero-gallery">
-        <div class="gallery-card card-1">
-          <img src="/images/gatitos/ragdoll/casandra.jpg" alt="Ragdoll" />
-          <span class="gallery-label">Ragdoll</span>
-        </div>
-        <div class="gallery-card card-2">
-          <img src="/images/gatitos/maine-coon/enzo.jpg" alt="Maine Coon" />
-          <span class="gallery-label">Maine Coon</span>
-        </div>
-        <div class="gallery-card card-3">
-          <img src="/images/gatitos/sphynx/alexia.jpg" alt="Sphynx" />
-          <span class="gallery-label">Sphynx</span>
-        </div>
-        <div class="gallery-card card-4">
-          <img src="/images/gatitos/british-shorthair/benny.jpg" alt="British Shorthair" />
-          <span class="gallery-label">British Shorthair</span>
-        </div>
-        <div class="gallery-card card-5">
-          <img src="/images/gatitos/persa/alexandra.jpg" alt="Persa" />
-          <span class="gallery-label">Persa</span>
-        </div>
-        <div class="gallery-card card-6">
-          <img src="/images/gatitos/devon-rex/fiona.jpg" alt="Devon Rex" />
-          <span class="gallery-label">Devon Rex</span>
-        </div>
+        {heroPuppies.map((puppy, i) => (
+          <div class={`gallery-card card-${i + 1}`}>
+            <img src={puppy.image} alt={puppy.name} />
+            <span class="gallery-label">{puppy.name}</span>
+          </div>
+        ))}
       </div>
     </div>
   </div>
@@ -53,22 +37,22 @@
     <div class="trust-container">
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
-        <span>Criados en Familia</span>
+        <span>Family Raised</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
-        <span>Garantía de Salud</span>
+        <span>Health Guaranteed</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-        <span>Revisados por Veterinario</span>
+        <span>Vet Checked</span>
       </div>
       <div class="trust-divider"></div>
       <div class="trust-item">
         <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-        <span>Soporte de por Vida</span>
+        <span>Lifetime Support</span>
       </div>
     </div>
   </div>
@@ -82,7 +66,6 @@
     padding: 0;
   }
 
-  /* Full-width background image */
   .hero-main {
     position: relative;
     min-height: 480px;
@@ -109,10 +92,9 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(15, 27, 51, 0.92) 0%, rgba(27, 42, 74, 0.8) 50%, rgba(46, 139, 139, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(62, 37, 24, 0.92) 0%, rgba(92, 61, 46, 0.8) 50%, rgba(212, 165, 116, 0.6) 100%);
   }
 
-  /* Content layout */
   .hero-container {
     position: relative;
     z-index: 1;
@@ -154,7 +136,7 @@
   }
 
   .highlight {
-    color: #4EADAD;
+    color: #E2BB91;
   }
 
   .hero-description {
@@ -173,7 +155,7 @@
     display: inline-flex;
     align-items: center;
     background: white;
-    color: #1B2A4A;
+    color: #5C3D2E;
     padding: 0.85rem 2rem;
     border-radius: 4px;
     font-size: 0.9rem;
@@ -185,7 +167,7 @@
   }
 
   .btn-primary:hover {
-    background: #4EADAD;
+    background: #E2BB91;
     color: white;
     transform: translateY(-2px);
   }
@@ -213,7 +195,6 @@
     transform: translateY(-2px);
   }
 
-  /* Gallery cards - right side masonry */
   .hero-gallery {
     display: flex;
     flex-wrap: wrap;
@@ -232,7 +213,7 @@
   }
 
   .gallery-card:hover {
-    border-color: #4EADAD;
+    border-color: #E2BB91;
     transform: scale(1.03);
   }
 
@@ -254,7 +235,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(15, 27, 51, 0.85));
+    background: linear-gradient(transparent, rgba(62, 37, 24, 0.85));
     color: white;
     padding: 1.5rem 0.6rem 0.4rem;
     font-size: 0.7rem;
@@ -263,9 +244,8 @@
     letter-spacing: 0.5px;
   }
 
-  /* Trust bar */
   .trust-bar {
-    background: #1B2A4A;
+    background: #5C3D2E;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
 
@@ -292,7 +272,7 @@
   .trust-item svg {
     width: 18px;
     height: 18px;
-    color: #4EADAD;
+    color: #E2BB91;
     flex-shrink: 0;
   }
 
@@ -302,7 +282,6 @@
     background: rgba(255, 255, 255, 0.2);
   }
 
-  /* Responsive */
   @media (max-width: 900px) {
     .hero-main {
       min-height: auto;
@@ -328,14 +307,17 @@
     }
 
     .hero-gallery {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
+      width: 100%;
       max-width: 450px;
       margin: 0 auto;
       gap: 0.5rem;
     }
 
     .gallery-card {
-      height: 90px;
+      width: 100% !important;
+      height: 150px;
     }
 
     .trust-container {
@@ -372,12 +354,15 @@
     }
 
     .hero-gallery {
+      display: grid;
       grid-template-columns: repeat(3, 1fr);
+      width: 100% !important;
       gap: 0.4rem;
     }
 
     .gallery-card {
-      height: 65px;
+      width: 100% !important;
+      height: 130px;
     }
 
     .gallery-label {

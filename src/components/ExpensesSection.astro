@@ -5,14 +5,14 @@ import { expenses, expenseNotes } from '../data/faqs';
 
 <section class="expenses-section">
   <div class="section-container">
-    <h2 class="section-title">Gastos Mensuales de un Gatito</h2>
-    <p class="section-intro">Aquí tienes una tabla orientativa con los gastos mensuales estimados para el cuidado de un gatito:</p>
+    <h2 class="section-title">Monthly Puppy Expenses</h2>
+    <p class="section-intro">Here is a helpful guide with estimated monthly costs for caring for your Dachshund puppy:</p>
 
     <table class="expenses-table">
       <thead>
         <tr>
-          <th>Concepto</th>
-          <th>Coste Mensual Estimado</th>
+          <th>Item</th>
+          <th>Estimated Monthly Cost</th>
         </tr>
       </thead>
       <tbody>
@@ -23,20 +23,20 @@ import { expenses, expenseNotes } from '../data/faqs';
           </tr>
         ))}
         <tr class="total-row">
-          <td>Coste Total Estimado</td>
-          <td>155€ – 335€</td>
+          <td>Estimated Total</td>
+          <td>$155 – $335</td>
         </tr>
       </tbody>
     </table>
 
     <div class="notes-section">
-      <h3>Notas:</h3>
+      <h3>Notes:</h3>
       <ul class="notes-list">
         {expenseNotes.map((note) => (
           <li><strong>{note.label}</strong>: {note.text}</li>
         ))}
       </ul>
-      <p class="notes-footer">Estos valores son orientativos y pueden variar según tu ubicación y las necesidades específicas de la raza.</p>
+      <p class="notes-footer">These values are estimates and may vary based on your location and your Dachshund's specific needs.</p>
     </div>
   </div>
 </section>
@@ -45,7 +45,7 @@ import { expenses, expenseNotes } from '../data/faqs';
   .expenses-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: #f8f6f3;
+    background: #FFF8F0;
     padding: 4rem 1.5rem;
   }
 
@@ -86,7 +86,7 @@ import { expenses, expenseNotes } from '../data/faqs';
   }
 
   .expenses-table th {
-    background: #f8f6f3;
+    background: #FFF8F0;
     font-weight: 700;
     color: #2a2a2a;
     font-size: 0.95rem;
@@ -111,9 +111,9 @@ import { expenses, expenseNotes } from '../data/faqs';
   }
 
   .total-row td {
-    background: #f8f6f3 !important;
+    background: #FFF8F0 !important;
     font-weight: 700 !important;
-    color: #1B2A4A !important;
+    color: #5C3D2E !important;
     font-size: 1rem !important;
   }
 

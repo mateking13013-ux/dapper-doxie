@@ -1,0 +1,253 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { faqs } from '../data/faqs';
+---
+
+<BaseLayout
+  title="Frequently Asked Questions | HillSide Paws"
+  description="Find answers to common questions about HillSide Paws Dachshund puppies, our breeding program, health guarantees, shipping, and the adoption process."
+  keywords="Dachshund FAQ, puppy questions, HillSide Paws FAQ, Dachshund breeder questions, puppy adoption FAQ, Dachshund health guarantee"
+>
+  <PageHeader
+    title="Frequently Asked Questions"
+    subtitle="Find answers to the most common questions about our Dachshund puppies and adoption process"
+  />
+
+  <section class="faq-section">
+    <div class="faq-container">
+      <div class="faq-list">
+        {faqs.map((faq, index) => (
+          <div class="faq-item" data-faq-index={index}>
+            <button class="faq-header" aria-expanded="false">
+              <span class="faq-question">{faq.question}</span>
+              <span class="faq-toggle"></span>
+            </button>
+            <div class="faq-content">
+              <div class="faq-answer">
+                <p>{faq.answer}</p>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="cta-box">
+        <h3>Still Have Questions?</h3>
+        <p>We are here to help. Do not hesitate to reach out with any additional questions about our Dachshund puppies.</p>
+        <a href="/contact" class="cta-btn">Contact Us</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  document.querySelectorAll('.faq-item .faq-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const item = header.closest('.faq-item');
+      if (!item) return;
+      const isOpen = item.classList.contains('open');
+
+      // Close all other items
+      document.querySelectorAll('.faq-item.open').forEach(openItem => {
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-header')?.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      // Toggle current item
+      item.classList.toggle('open', !isOpen);
+      header.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+</script>
+
+<style>
+  .faq-section {
+    padding: 4rem 1.5rem;
+    background: #FFF8F0;
+  }
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-bottom: 3rem;
+  }
+
+  /* =============================================
+     FAQ Item
+     ============================================= */
+  .faq-item {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #E8DDD4;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .faq-item:hover {
+    border-color: #D4A574;
+  }
+
+  .faq-item.open {
+    border-color: #D4A574;
+    box-shadow: 0 4px 15px rgba(92, 61, 46, 0.08);
+  }
+
+  .faq-header {
+    width: 100%;
+    padding: 1.25rem 1.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    transition: background 0.2s ease;
+    background: none;
+    border: none;
+    text-align: left;
+    font-family: inherit;
+  }
+
+  .faq-header:hover {
+    background: #FFF8F0;
+  }
+
+  .faq-item.open .faq-header {
+    background: #FFF8F0;
+    border-bottom: 1px solid #E8DDD4;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3E2518;
+    line-height: 1.4;
+  }
+
+  .faq-toggle {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #5C3D2E;
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+  }
+
+  .faq-item.open .faq-toggle {
+    transform: rotate(180deg);
+  }
+
+  .faq-toggle::before {
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid currentColor;
+  }
+
+  .faq-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .faq-item.open .faq-content {
+    max-height: 600px;
+  }
+
+  .faq-answer {
+    padding: 1.25rem 1.5rem;
+  }
+
+  .faq-answer p {
+    font-size: 0.95rem;
+    color: #6b6b6b;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  /* =============================================
+     CTA Box
+     ============================================= */
+  .cta-box {
+    background: linear-gradient(135deg, #3E2518, #5C3D2E);
+    color: white;
+    padding: 2.5rem;
+    border-radius: 16px;
+    text-align: center;
+  }
+
+  .cta-box h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.75rem;
+  }
+
+  .cta-box p {
+    font-size: 1.05rem;
+    color: rgba(255, 255, 255, 0.88);
+    margin: 0 0 1.5rem;
+    line-height: 1.7;
+  }
+
+  .cta-btn {
+    display: inline-block;
+    background: #D4A574;
+    color: #3E2518;
+    padding: 0.875rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .cta-btn:hover {
+    background: #E2BB91;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  /* =============================================
+     Responsive Design
+     ============================================= */
+  @media (max-width: 768px) {
+    .faq-section {
+      padding: 3rem 1rem;
+    }
+
+    .faq-header {
+      padding: 1rem 1.25rem;
+    }
+
+    .faq-question {
+      font-size: 0.95rem;
+    }
+
+    .faq-answer {
+      padding: 1rem 1.25rem;
+    }
+
+    .cta-box {
+      padding: 2rem;
+    }
+
+    .cta-box h3 {
+      font-size: 1.25rem;
+    }
+
+    .cta-box p {
+      font-size: 0.95rem;
+    }
+  }
+</style>

@@ -1,85 +1,84 @@
 ---
 // ContactSection component
-import { breeds } from '../data/breeds';
 ---
 
 <section class="contact-section" id="contact">
   <div class="contact-container">
     <div class="section-header">
-      <span class="section-badge">Contacto</span>
-      <h2 class="section-title">¿Listo para Adoptar un <span>Gatito</span>?</h2>
-      <p class="section-subtitle">¿Tienes preguntas sobre nuestros gatitos de raza o estás listo para llevar uno a casa? ¡Nos encantaría saber de ti!</p>
+      <span class="section-badge">Contact</span>
+      <h2 class="section-title">Ready to Adopt a <span>Puppy</span>?</h2>
+      <p class="section-subtitle">Have questions about our Dachshund puppies or ready to bring one home? We would love to hear from you!</p>
     </div>
 
     <div class="contact-grid">
       <div class="contact-form-wrapper">
-        <h3 class="form-title">Formulario de Consulta</h3>
+        <h3 class="form-title">Inquiry Form</h3>
         <form class="contact-form" id="homeContactForm">
           <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
-          <input type="hidden" name="subject" value="Nueva Consulta - Criadero Castellano">
-          <input type="hidden" name="from_name" value="Criadero Castellano">
+          <input type="hidden" name="subject" value="New Inquiry - HillSide Paws">
+          <input type="hidden" name="from_name" value="HillSide Paws">
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeFirstName">Nombre *</label>
+              <label for="homeFirstName">First Name *</label>
               <input type="text" id="homeFirstName" name="firstName" required>
             </div>
             <div class="form-group">
-              <label for="homeLastName">Apellidos *</label>
+              <label for="homeLastName">Last Name *</label>
               <input type="text" id="homeLastName" name="lastName" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeEmail">Correo Electrónico *</label>
+              <label for="homeEmail">Email Address *</label>
               <input type="email" id="homeEmail" name="email" required>
             </div>
             <div class="form-group">
-              <label for="homePhone">Teléfono *</label>
+              <label for="homePhone">Phone *</label>
               <input type="tel" id="homePhone" name="phone" required>
             </div>
           </div>
 
           <div class="form-row">
             <div class="form-group">
-              <label for="homeCity">Ciudad</label>
-              <input type="text" id="homeCity" name="city" placeholder="Ej: Madrid">
+              <label for="homeCity">City / State</label>
+              <input type="text" id="homeCity" name="city" placeholder="e.g. Nashville, TN">
             </div>
             <div class="form-group">
-              <label for="homeBreed">Raza de Interés</label>
-              <select id="homeBreed" name="breed">
-                <option value="">Seleccionar raza...</option>
-                {breeds.map((breed) => (
-                  <option value={breed.name}>{breed.name}</option>
-                ))}
-                <option value="No estoy seguro">No estoy seguro</option>
+              <label for="homeVariety">Variety of Interest</label>
+              <select id="homeVariety" name="variety">
+                <option value="">Select variety...</option>
+                <option value="Miniature Smooth">Miniature Smooth</option>
+                <option value="Miniature Longhair">Miniature Longhair</option>
+                <option value="Standard Smooth">Standard Smooth</option>
+                <option value="Not sure yet">Not sure yet</option>
               </select>
             </div>
           </div>
 
           <div class="form-group">
-            <label for="homeMessage">Mensaje</label>
-            <textarea id="homeMessage" name="message" placeholder="Cuéntanos sobre ti y por qué te gustaría adoptar un gatito..."></textarea>
+            <label for="homeMessage">Message</label>
+            <textarea id="homeMessage" name="message" placeholder="Tell us about yourself and why you would like to adopt a Dachshund puppy..."></textarea>
           </div>
 
           <button type="submit" class="btn-submit">
-            Enviar Consulta
+            Send Inquiry
             <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
           </button>
         </form>
       </div>
 
       <div class="contact-info">
-        <h3 class="info-title">Información de Contacto</h3>
+        <h3 class="info-title">Contact Information</h3>
 
         <div class="info-item">
           <div class="info-icon">
             <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </div>
           <div class="info-content">
-            <h4>Correo Electrónico</h4>
-            <p><a href="mailto:info@criaderocastellano.es">info@criaderocastellano.es</a></p>
+            <h4>Email</h4>
+            <p><a href="mailto:info@hillsidepaws.com">info@hillsidepaws.com</a></p>
           </div>
         </div>
 
@@ -88,8 +87,8 @@ import { breeds } from '../data/breeds';
             <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
           </div>
           <div class="info-content">
-            <h4>Tiempo de Respuesta</h4>
-            <p>Respondemos normalmente en<br>menos de 24 horas</p>
+            <h4>Response Time</h4>
+            <p>We typically respond within<br>24 hours</p>
           </div>
         </div>
 
@@ -98,24 +97,24 @@ import { breeds } from '../data/breeds';
             <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
           </div>
           <div class="info-content">
-            <h4>Ubicación</h4>
-            <p>Castilla, España</p>
+            <h4>Location</h4>
+            <p>Heart of America, USA</p>
           </div>
         </div>
 
         <div class="info-note">
-          <h4>Nuestra Ubicación</h4>
-          <p>Somos un criadero familiar. Por la seguridad y privacidad de nuestra familia y nuestros gatitos, no publicamos nuestra dirección. Una vez nos contactes, compartiremos encantados nuestra ubicación y organizaremos una visita o entrega conveniente.</p>
+          <h4>Our Location</h4>
+          <p>We are a family breeder. For the safety and privacy of our family and puppies, we do not publish our address. Once you contact us, we will gladly share our location and arrange a convenient visit or delivery.</p>
         </div>
 
-        <div class="info-breeds-card">
-          <h4>Razas Disponibles</h4>
-          <div class="info-breeds-list">
-            {breeds.map((breed) => (
-              <a href={`/razas/${breed.id}`} class="info-breed-tag">{breed.name}</a>
-            ))}
+        <div class="info-varieties-card">
+          <h4>Dachshund Varieties</h4>
+          <div class="info-varieties-list">
+            <a href="/available-puppies" class="info-variety-tag">Miniature Smooth</a>
+            <a href="/available-puppies" class="info-variety-tag">Miniature Longhair</a>
+            <a href="/available-puppies" class="info-variety-tag">Standard Smooth</a>
           </div>
-          <a href="/razas" class="info-breeds-link">Ver Todas las Razas &rarr;</a>
+          <a href="/available-puppies" class="info-varieties-link">View Available Puppies &rarr;</a>
         </div>
       </div>
     </div>
@@ -135,7 +134,7 @@ import { breeds } from '../data/breeds';
     formData.append("replyto", emailInput.value);
 
     const originalHTML = submitBtn.innerHTML;
-    submitBtn.innerHTML = "Enviando...";
+    submitBtn.innerHTML = "Sending...";
     submitBtn.disabled = true;
 
     try {
@@ -147,12 +146,12 @@ import { breeds } from '../data/breeds';
       const data = await response.json();
 
       if (response.ok) {
-        window.location.href = "/gracias";
+        window.location.href = "/thank-you";
       } else {
         alert("Error: " + data.message);
       }
     } catch (error) {
-      alert("Algo salió mal. Por favor, inténtalo de nuevo.");
+      alert("Something went wrong. Please try again.");
     } finally {
       submitBtn.innerHTML = originalHTML;
       submitBtn.disabled = false;
@@ -164,7 +163,7 @@ import { breeds } from '../data/breeds';
   .contact-section {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: #F0F4F8;
+    background: #FFF8F0;
     padding: 4rem 1.5rem;
   }
 
@@ -180,7 +179,7 @@ import { breeds } from '../data/breeds';
 
   .section-badge {
     display: inline-block;
-    background: #1B2A4A;
+    background: #5C3D2E;
     color: white;
     padding: 0.4rem 1rem;
     border-radius: 50px;
@@ -197,7 +196,7 @@ import { breeds } from '../data/breeds';
   }
 
   .section-title span {
-    color: #1B2A4A;
+    color: #5C3D2E;
   }
 
   .section-subtitle {
@@ -239,7 +238,7 @@ import { breeds } from '../data/breeds';
   .info-icon {
     width: 45px;
     height: 45px;
-    background: linear-gradient(135deg, #1B2A4A, #2E8B8B);
+    background: linear-gradient(135deg, #5C3D2E, #D4A574);
     border-radius: 12px;
     display: flex;
     align-items: center;
@@ -268,21 +267,21 @@ import { breeds } from '../data/breeds';
   }
 
   .info-content a {
-    color: #1B2A4A;
+    color: #5C3D2E;
     text-decoration: none;
     font-weight: 500;
   }
 
   .info-content a:hover {
-    color: #2E8B8B;
+    color: #D4A574;
   }
 
   .info-note {
-    background: #F0F4F8;
+    background: #FFF8F0;
     border-radius: 12px;
     padding: 1.25rem;
     margin-top: 1rem;
-    border-left: 3px solid #1B2A4A;
+    border-left: 3px solid #5C3D2E;
   }
 
   .info-note h4 {
@@ -299,56 +298,56 @@ import { breeds } from '../data/breeds';
     line-height: 1.6;
   }
 
-  .info-breeds-card {
+  .info-varieties-card {
     background: #fff;
-    border: 1px solid #E2E8F0;
+    border: 1px solid #E8DDD4;
     border-radius: 12px;
     padding: 1.25rem;
     margin-top: 1.25rem;
   }
 
-  .info-breeds-card h4 {
+  .info-varieties-card h4 {
     font-size: 1rem;
     font-weight: 600;
-    color: #1B2A4A;
+    color: #5C3D2E;
     margin: 0 0 0.75rem;
   }
 
-  .info-breeds-list {
+  .info-varieties-list {
     display: flex;
     flex-wrap: wrap;
     gap: 0.4rem;
     margin-bottom: 0.75rem;
   }
 
-  .info-breed-tag {
+  .info-variety-tag {
     display: inline-block;
-    background: #F0F4F8;
-    color: #0F1B33;
+    background: #FFF8F0;
+    color: #3E2518;
     padding: 0.25rem 0.6rem;
     border-radius: 50px;
     font-size: 0.75rem;
     font-weight: 600;
-    border: 1px solid rgba(27, 42, 74, 0.15);
+    border: 1px solid rgba(92, 61, 46, 0.15);
     text-decoration: none;
     transition: all 0.2s ease;
   }
 
-  .info-breed-tag:hover {
-    background: #1B2A4A;
+  .info-variety-tag:hover {
+    background: #5C3D2E;
     color: white;
   }
 
-  .info-breeds-link {
+  .info-varieties-link {
     display: inline-block;
-    color: #1B2A4A;
+    color: #5C3D2E;
     font-size: 0.85rem;
     font-weight: 600;
     text-decoration: none;
   }
 
-  .info-breeds-link:hover {
-    color: #2E8B8B;
+  .info-varieties-link:hover {
+    color: #D4A574;
   }
 
   .contact-form-wrapper {
@@ -405,7 +404,7 @@ import { breeds } from '../data/breeds';
   .form-group select:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #1B2A4A;
+    border-color: #5C3D2E;
     background: white;
   }
 
@@ -419,7 +418,7 @@ import { breeds } from '../data/breeds';
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    background: #1B2A4A;
+    background: #5C3D2E;
     color: white;
     padding: 1rem 2rem;
     border: none;
@@ -432,7 +431,7 @@ import { breeds } from '../data/breeds';
   }
 
   .btn-submit:hover {
-    background: #2E8B8B;
+    background: #D4A574;
     transform: translateY(-2px);
   }
 

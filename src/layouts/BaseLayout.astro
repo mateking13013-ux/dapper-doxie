@@ -3,7 +3,6 @@ import '../styles/global.css';
 import TopBar from '../components/TopBar.astro';
 import MainHeader from '../components/MainHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
-import WhatsAppChat from '../components/WhatsAppChat.astro';
 
 interface Props {
   title: string;
@@ -17,8 +16,8 @@ interface Props {
 
 const {
   title,
-  description = "Criadero Castellano - Gatitos de raza premium criados con amor en España. Garantía de salud, criados en familia y listos para llenar tu hogar de alegría.",
-  keywords = "gatitos de raza, criadero de gatos España, gatitos en venta, Ragdoll, Persa, British Shorthair, Maine Coon, Sphynx, Devon Rex, Siberiano, Azul Ruso, Oriental, Exotic Shorthair, Abisinio, criadero castellano",
+  description = "HillSide Paws - Family-raised Dachshund puppies since 1995. Health guaranteed, vet-checked, and ready to join your family.",
+  keywords = "Dachshund puppies, Dachshund breeder, miniature Dachshund, Dachshund puppies for sale, HillSide Paws, family Dachshund breeder",
   ogTitle,
   ogDescription,
   ogType = "website",
@@ -27,30 +26,13 @@ const {
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content={description}>
   <meta name="keywords" content={keywords}>
-  <meta name="author" content="Criadero Castellano">
-
-  <!-- Google tag (gtag.js) -->
-  <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-8649N47RC6"></script>
-  <script is:inline>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-8649N47RC6');
-  </script>
-
-  <!-- Google Tag Manager -->
-  <script is:inline>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-  })(window,document,'script','dataLayer','GTM-M8Q7TR3V');</script>
-  <!-- End Google Tag Manager -->
+  <meta name="author" content="HillSide Paws">
 
   <!-- Open Graph / Social Media -->
   <meta property="og:title" content={ogTitle || title}>
@@ -59,7 +41,7 @@ const {
   {ogUrl && <meta property="og:url" content={ogUrl}>}
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐱</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🐶</text></svg>">
 
   <title>{title}</title>
 </head>
@@ -72,6 +54,5 @@ const {
   </main>
 
   <SiteFooter />
-  <WhatsAppChat />
 </body>
 </html>

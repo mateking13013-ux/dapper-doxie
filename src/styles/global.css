@@ -1,38 +1,38 @@
 /* ================================
-   Criadero Castellano
+   HillSide Paws
    Main Stylesheet
-   Deep Navy & Teal Theme
+   Warm Earthy Theme
 ================================ */
 
 /* CSS Custom Properties (Theme) */
 :root {
-  /* Primary Colors - Deep Navy */
-  --color-primary: #1B2A4A;
-  --color-primary-light: #2E8B8B;
-  --color-primary-dark: #0F1B33;
+  /* Primary Colors - Chocolate Brown */
+  --color-primary: #5C3D2E;
+  --color-primary-light: #7A5440;
+  --color-primary-dark: #3E2518;
 
-  /* Secondary Colors - Teal Accents */
-  --color-secondary: #2E8B8B;
-  --color-secondary-light: #4EADAD;
-  --color-secondary-dark: #245D5D;
+  /* Secondary Colors - Golden Amber */
+  --color-secondary: #D4A574;
+  --color-secondary-light: #E2BB91;
+  --color-secondary-dark: #B8885A;
 
   /* Accent Colors */
-  --color-gold: #3BA0A0;
-  --color-cream: #F0F4F8;
+  --color-gold: #C9A050;
+  --color-cream: #FFF8F0;
 
   /* Neutrals */
   --color-white: #FFFFFF;
-  --color-off-white: #FAFAFA;
-  --color-gray-100: #F5F5F5;
-  --color-gray-200: #EEEEEE;
-  --color-gray-300: #E0E0E0;
-  --color-gray-400: #BDBDBD;
-  --color-gray-500: #9E9E9E;
-  --color-gray-600: #757575;
-  --color-gray-700: #616161;
-  --color-gray-800: #424242;
-  --color-gray-900: #212121;
-  --color-black: #1A1A1A;
+  --color-off-white: #FFFAF5;
+  --color-gray-100: #F5F0EB;
+  --color-gray-200: #EDE5DC;
+  --color-gray-300: #DDD3C8;
+  --color-gray-400: #BDB0A3;
+  --color-gray-500: #9E8E80;
+  --color-gray-600: #756558;
+  --color-gray-700: #5A4B3F;
+  --color-gray-800: #3E3229;
+  --color-gray-900: #2C1810;
+  --color-black: #2C1810;
 
   /* Typography */
   --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
@@ -167,12 +167,12 @@ img {
 .btn-primary {
   background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
   color: var(--color-white);
-  box-shadow: 0 4px 15px rgba(27, 42, 74, 0.3);
+  box-shadow: 0 4px 15px rgba(92, 61, 46, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(27, 42, 74, 0.4);
+  box-shadow: 0 8px 25px rgba(92, 61, 46, 0.4);
   color: var(--color-white);
 }
 

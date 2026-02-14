@@ -1,0 +1,247 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Thank You | HillSide Paws"
+  description="Thank you for contacting HillSide Paws. We appreciate your interest in our Dachshund puppies and will respond soon."
+  keywords="thank you, HillSide Paws, Dachshund puppies inquiry"
+>
+  <PageHeader
+    title="Thank You!"
+    subtitle="We appreciate your interest in HillSide Paws"
+  />
+
+  <section class="thank-you-section">
+    <div class="thank-you-container">
+      <div class="thank-you-card">
+        <div class="icon-wrapper">
+          <svg viewBox="0 0 24 24" class="check-icon">
+            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+          </svg>
+        </div>
+
+        <h2>Your Message Has Been Received!</h2>
+
+        <p>Thank you for reaching out to HillSide Paws. We truly appreciate your interest in our family-raised Dachshund puppies.</p>
+
+        <p>Our team will review your inquiry and get back to you as soon as possible, typically within 24 hours.</p>
+
+        <div class="features-list">
+          <div class="feature">
+            <span class="check">&#10003;</span>
+            Your inquiry has been received
+          </div>
+          <div class="feature">
+            <span class="check">&#10003;</span>
+            Our team will review your message
+          </div>
+          <div class="feature">
+            <span class="check">&#10003;</span>
+            We will respond within 24 hours
+          </div>
+          <div class="feature">
+            <span class="check">&#10003;</span>
+            Check your email for our reply
+          </div>
+        </div>
+
+        <p class="note">In the meantime, feel free to browse our available puppies or learn more about our breeding program.</p>
+
+        <div class="action-buttons">
+          <a href="/" class="btn-primary">Back to Home</a>
+          <a href="/available-puppies" class="btn-secondary">View Available Puppies</a>
+        </div>
+      </div>
+
+      <div class="info-card">
+        <h3>What Happens Next?</h3>
+        <p>We carefully review every inquiry to make sure we provide the best possible service. Our team will reach out to discuss your needs and answer any questions you have about our Dachshund puppies.</p>
+        <p>We look forward to helping you find your perfect furry companion!</p>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .thank-you-section {
+    padding: 4rem 1.5rem;
+    background: #FFF8F0;
+  }
+
+  .thank-you-container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .thank-you-card {
+    background: white;
+    border-radius: 16px;
+    padding: 3rem;
+    box-shadow: 0 4px 20px rgba(92, 61, 46, 0.08);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .icon-wrapper {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #5C3D2E, #D4A574);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+  }
+
+  .check-icon {
+    width: 40px;
+    height: 40px;
+    fill: white;
+  }
+
+  .thank-you-card h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3E2518;
+    margin: 0 0 1.5rem;
+  }
+
+  .thank-you-card p {
+    font-size: 1.05rem;
+    color: #6b6b6b;
+    line-height: 1.7;
+    margin: 0 0 1rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 2rem auto;
+    max-width: 500px;
+  }
+
+  .feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+    color: #3E2518;
+    text-align: left;
+  }
+
+  .check {
+    color: #5C3D2E;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  .note {
+    background: #FFF8F0;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #5C3D2E;
+    margin: 2rem auto;
+    max-width: 500px;
+    text-align: left;
+  }
+
+  .action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+  }
+
+  .btn-primary {
+    background: #5C3D2E;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary:hover {
+    background: #D4A574;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(92, 61, 46, 0.15);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: #5C3D2E;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border: 2px solid #5C3D2E;
+    transition: all 0.3s ease;
+  }
+
+  .btn-secondary:hover {
+    background: #5C3D2E;
+    color: white;
+    transform: translateY(-2px);
+  }
+
+  .info-card {
+    background: linear-gradient(135deg, #3E2518, #5C3D2E);
+    color: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    text-align: center;
+  }
+
+  .info-card h3 {
+    font-size: 1.5rem;
+    margin: 0 0 1rem;
+  }
+
+  .info-card p {
+    font-size: 1rem;
+    opacity: 0.92;
+    margin: 0 0 1rem;
+    line-height: 1.7;
+  }
+
+  .info-card p:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: 768px) {
+    .thank-you-section {
+      padding: 3rem 1rem;
+    }
+
+    .thank-you-card {
+      padding: 2rem;
+    }
+
+    .thank-you-card h2 {
+      font-size: 1.5rem;
+    }
+
+    .features-list {
+      grid-template-columns: 1fr;
+    }
+
+    .action-buttons {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .info-card {
+      padding: 2rem;
+    }
+  }
+</style>

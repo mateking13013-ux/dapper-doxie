@@ -1,0 +1,508 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Contact Us | HillSide Paws"
+  description="Get in touch with HillSide Paws. We would love to help you find your perfect Dachshund puppy. Reach out with any questions about our available puppies."
+  keywords="contact HillSide Paws, Dachshund breeder contact, puppy inquiry, Dachshund puppies contact"
+>
+  <PageHeader
+    title="Contact Us"
+    subtitle="We would love to hear from you! Reach out with any questions about our Dachshund puppies."
+  />
+
+  <section class="contact-section">
+    <div class="contact-container">
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <div class="contact-form-wrapper">
+          <h3 class="form-title">Puppy Inquiry Form</h3>
+          <p class="form-intro">Fill out the form below and we will get back to you as soon as possible. Fields marked with * are required.</p>
+          <form class="contact-form" id="contactPageForm">
+            <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
+            <input type="hidden" name="subject" value="New Inquiry - HillSide Paws Contact Page">
+            <input type="hidden" name="from_name" value="HillSide Paws">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactFirstName">First Name *</label>
+                <input type="text" id="contactFirstName" name="firstName" placeholder="Your first name" required>
+              </div>
+              <div class="form-group">
+                <label for="contactLastName">Last Name *</label>
+                <input type="text" id="contactLastName" name="lastName" placeholder="Your last name" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactEmail">Email Address *</label>
+                <input type="email" id="contactEmail" name="email" placeholder="your@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Phone Number *</label>
+                <input type="tel" id="contactPhone" name="phone" placeholder="(555) 123-4567" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactCity">City / State</label>
+                <input type="text" id="contactCity" name="city" placeholder="e.g. Nashville, TN">
+              </div>
+              <div class="form-group">
+                <label for="contactVariety">Variety of Interest</label>
+                <select id="contactVariety" name="variety">
+                  <option value="">Select a variety...</option>
+                  <option value="Miniature Smooth">Miniature Smooth</option>
+                  <option value="Miniature Longhair">Miniature Longhair</option>
+                  <option value="Standard Smooth">Standard Smooth</option>
+                  <option value="Not sure yet">Not sure yet</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="contactMessage">Message *</label>
+              <textarea id="contactMessage" name="message" placeholder="Tell us about yourself and what you are looking for in a Dachshund puppy..." required></textarea>
+            </div>
+
+            <div class="form-notice">
+              <p>By submitting this form, you agree to be contacted by HillSide Paws regarding your inquiry.</p>
+            </div>
+
+            <button type="submit" class="btn-submit">
+              Send Message
+              <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+          </form>
+        </div>
+
+        <!-- Contact Info Sidebar -->
+        <div class="contact-sidebar">
+          <div class="contact-info">
+            <h3 class="info-title">Contact Information</h3>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </div>
+              <div class="info-content">
+                <h4>Email</h4>
+                <p><a href="mailto:info@hillsidepaws.com">info@hillsidepaws.com</a></p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg>
+              </div>
+              <div class="info-content">
+                <h4>Response Time</h4>
+                <p>We typically respond within<br>24 hours</p>
+              </div>
+            </div>
+
+            <div class="info-item">
+              <div class="info-icon">
+                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+              </div>
+              <div class="info-content">
+                <h4>Location</h4>
+                <p>Heart of America, USA</p>
+              </div>
+            </div>
+
+            <div class="info-note">
+              <h4>Our Location</h4>
+              <p>We are a family breeder. For the safety and privacy of our family and puppies, we do not publish our address. Once you contact us, we will gladly share our location and arrange a convenient visit or delivery.</p>
+            </div>
+          </div>
+
+          <div class="varieties-card">
+            <h4>Dachshund Varieties We Breed</h4>
+            <div class="varieties-list">
+              <a href="/available-puppies" class="variety-tag">Miniature Smooth</a>
+              <a href="/available-puppies" class="variety-tag">Miniature Longhair</a>
+              <a href="/available-puppies" class="variety-tag">Standard Smooth</a>
+            </div>
+            <a href="/available-puppies" class="varieties-link">View Available Puppies &rarr;</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<script>
+  const form = document.getElementById('contactPageForm') as HTMLFormElement;
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    const submitBtn = form.querySelector('button[type="submit"]') as HTMLButtonElement;
+    const emailInput = form.querySelector('#contactEmail') as HTMLInputElement;
+
+    // Validate required fields
+    const firstName = (form.querySelector('#contactFirstName') as HTMLInputElement).value.trim();
+    const lastName = (form.querySelector('#contactLastName') as HTMLInputElement).value.trim();
+    const email = emailInput.value.trim();
+    const phone = (form.querySelector('#contactPhone') as HTMLInputElement).value.trim();
+    const message = (form.querySelector('#contactMessage') as HTMLTextAreaElement).value.trim();
+
+    if (!firstName || !lastName || !email || !phone || !message) {
+      alert('Please fill in all required fields.');
+      return;
+    }
+
+    formData.append("replyto", emailInput.value);
+
+    const originalHTML = submitBtn.innerHTML;
+    submitBtn.innerHTML = "Sending...";
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formData
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        window.location.href = "/thank-you";
+      } else {
+        alert("Error: " + data.message);
+      }
+    } catch (error) {
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      submitBtn.innerHTML = originalHTML;
+      submitBtn.disabled = false;
+    }
+  });
+</script>
+
+<style>
+  .contact-section {
+    padding: 4rem 1.5rem;
+    background: #FFF8F0;
+  }
+
+  .contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  /* =============================================
+     Form Wrapper
+     ============================================= */
+  .contact-form-wrapper {
+    background: white;
+    border-radius: 16px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(92, 61, 46, 0.08);
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #3E2518;
+    margin: 0 0 0.5rem;
+  }
+
+  .form-intro {
+    font-size: 0.95rem;
+    color: #8a7a6a;
+    margin: 0 0 1.5rem;
+    line-height: 1.6;
+  }
+
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #3E2518;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 0.875rem 1rem;
+    border: 2px solid #E8DDD4;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    background: #fdfaf7;
+    color: #333;
+  }
+
+  .form-group input::placeholder,
+  .form-group textarea::placeholder {
+    color: #b5a899;
+  }
+
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: #5C3D2E;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(92, 61, 46, 0.08);
+  }
+
+  .form-group textarea {
+    min-height: 140px;
+    resize: vertical;
+  }
+
+  .form-notice {
+    background: #FFF8F0;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border-left: 3px solid #D4A574;
+  }
+
+  .form-notice p {
+    font-size: 0.82rem;
+    color: #8a7a6a;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .btn-submit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: #5C3D2E;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 0.5rem;
+  }
+
+  .btn-submit:hover {
+    background: #D4A574;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(92, 61, 46, 0.15);
+  }
+
+  .btn-submit:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .btn-submit svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+  }
+
+  /* =============================================
+     Sidebar
+     ============================================= */
+  .contact-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .contact-info {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(92, 61, 46, 0.08);
+  }
+
+  .info-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #3E2518;
+    margin: 0 0 1.5rem;
+  }
+
+  .info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .info-icon {
+    width: 45px;
+    height: 45px;
+    background: linear-gradient(135deg, #5C3D2E, #D4A574);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .info-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: white;
+  }
+
+  .info-content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3E2518;
+    margin: 0 0 0.25rem;
+  }
+
+  .info-content p {
+    font-size: 0.9rem;
+    color: #6b6b6b;
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .info-content a {
+    color: #5C3D2E;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .info-content a:hover {
+    color: #D4A574;
+  }
+
+  .info-note {
+    background: #FFF8F0;
+    border-radius: 12px;
+    padding: 1.25rem;
+    margin-top: 0.5rem;
+    border-left: 3px solid #5C3D2E;
+  }
+
+  .info-note h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #3E2518;
+    margin: 0 0 0.5rem;
+  }
+
+  .info-note p {
+    font-size: 0.88rem;
+    color: #6b6b6b;
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .varieties-card {
+    background: white;
+    border: 1px solid #E8DDD4;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(92, 61, 46, 0.08);
+  }
+
+  .varieties-card h4 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #5C3D2E;
+    margin: 0 0 0.75rem;
+  }
+
+  .varieties-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .variety-tag {
+    display: inline-block;
+    background: #FFF8F0;
+    color: #3E2518;
+    padding: 0.3rem 0.75rem;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    border: 1px solid rgba(92, 61, 46, 0.15);
+    text-decoration: none;
+    transition: all 0.2s ease;
+  }
+
+  .variety-tag:hover {
+    background: #5C3D2E;
+    color: white;
+  }
+
+  .varieties-link {
+    display: inline-block;
+    color: #5C3D2E;
+    font-size: 0.88rem;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .varieties-link:hover {
+    color: #D4A574;
+  }
+
+  /* =============================================
+     Responsive Design
+     ============================================= */
+  @media (max-width: 900px) {
+    .contact-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .contact-section {
+      padding: 3rem 1rem;
+    }
+
+    .form-row {
+      grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper,
+    .contact-info {
+      padding: 1.5rem;
+    }
+
+    .form-title {
+      font-size: 1.25rem;
+    }
+  }
+</style>

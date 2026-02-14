@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.criaderocastellano.es',
+  site: 'https://www.hillsidepaws.com',
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto'

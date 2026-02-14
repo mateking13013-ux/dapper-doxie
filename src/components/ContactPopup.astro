@@ -1,72 +1,72 @@
 ---
-// ContactPopup component - Modal popup for contacting about kittens
+// ContactPopup component - Modal popup for contacting about puppies
 ---
 
 <div id="contact-popup" class="popup-overlay" aria-hidden="true">
   <div class="popup-container">
     <button class="popup-close" aria-label="Close popup">&times;</button>
 
-    <div class="popup-kitten-preview" id="popup-kitten-preview" style="display: none;">
-      <div class="kitten-preview-image">
-        <img id="popup-kitten-image" src="" alt="Gatito">
+    <div class="popup-puppy-preview" id="popup-puppy-preview" style="display: none;">
+      <div class="puppy-preview-image">
+        <img id="popup-puppy-image" src="" alt="Puppy">
       </div>
-      <div class="kitten-preview-info">
-        <span class="kitten-status-badge">Disponible</span>
-        <h3 id="popup-kitten-title">Nombre del Gatito</h3>
-        <p id="popup-kitten-details">Detalles</p>
-        <div class="kitten-price-row">
-          <span class="kitten-price" id="popup-kitten-price">500 &euro;</span>
-          <span class="kitten-includes">Incluye documentación y kit de inicio</span>
+      <div class="puppy-preview-info">
+        <span class="puppy-status-badge">Available</span>
+        <h3 id="popup-puppy-title">Puppy Name</h3>
+        <p id="popup-puppy-details">Details</p>
+        <div class="puppy-price-row">
+          <span class="puppy-price" id="popup-puppy-price">$500</span>
+          <span class="puppy-includes">Includes documentation & starter kit</span>
         </div>
-        <div class="kitten-guarantee">
+        <div class="puppy-guarantee">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
-          <span>Garantía de Salud de 1 Año</span>
+          <span>2-Year Health Guarantee</span>
         </div>
       </div>
     </div>
 
     <div class="popup-header">
-      <h2 class="popup-title">Adoptar a <span id="popup-kitten-name">Este Gatito</span></h2>
-      <p class="popup-subtitle">Rellena el formulario y te contactaremos con los próximos pasos para llevar este gatito a casa.</p>
+      <h2 class="popup-title">Adopt <span id="popup-puppy-name">This Puppy</span></h2>
+      <p class="popup-subtitle">Fill out the form and we'll contact you with next steps to bring this puppy home.</p>
     </div>
 
     <form id="popup-contact-form" class="popup-form">
       <input type="hidden" name="access_key" value="dbb568ae-a29f-4450-b284-00eb05527be7">
-      <input type="hidden" name="subject" id="form-subject" value="Consulta de Gatito">
-      <input type="hidden" name="from_name" value="Criadero Castellano">
-      <input type="hidden" name="Gatito_Interesado" id="form-kitten-name" value="">
+      <input type="hidden" name="subject" id="form-subject" value="Puppy Inquiry - HillSide Paws">
+      <input type="hidden" name="from_name" value="HillSide Paws">
+      <input type="hidden" name="Puppy_Interested" id="form-puppy-name" value="">
       <input type="hidden" name="Source_Page" id="form-source-page" value="">
 
       <div class="form-row">
         <div class="form-group">
-          <label for="popup-name">Tu Nombre *</label>
+          <label for="popup-name">Your Name *</label>
           <input type="text" id="popup-name" name="name" required>
         </div>
         <div class="form-group">
-          <label for="popup-email">Correo Electrónico *</label>
+          <label for="popup-email">Email Address *</label>
           <input type="email" id="popup-email" name="email" required>
         </div>
       </div>
 
       <div class="form-row">
         <div class="form-group">
-          <label for="popup-phone">Teléfono</label>
+          <label for="popup-phone">Phone</label>
           <input type="tel" id="popup-phone" name="phone">
         </div>
         <div class="form-group">
-          <label for="popup-location">Tu Ubicación</label>
+          <label for="popup-location">Your Location</label>
           <input type="text" id="popup-location" name="location">
         </div>
       </div>
 
       <div class="form-group full-width">
-        <label for="popup-message">Mensaje *</label>
+        <label for="popup-message">Message *</label>
         <textarea id="popup-message" name="message" rows="4" required></textarea>
       </div>
 
       <button type="submit" class="popup-submit">
-        <span class="btn-text">Enviar Consulta</span>
-        <span class="btn-loading" style="display: none;">Enviando...</span>
+        <span class="btn-text">Send Inquiry</span>
+        <span class="btn-loading" style="display: none;">Sending...</span>
       </button>
     </form>
 
@@ -74,50 +74,50 @@
       <div class="success-icon">
         <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
       </div>
-      <h3>¡Gracias!</h3>
-      <p>Tu consulta ha sido enviada con éxito. Te responderemos en menos de 24 horas.</p>
-      <button class="popup-close-btn" onclick="closeContactPopup()">Cerrar</button>
+      <h3>Thank You!</h3>
+      <p>Your inquiry has been sent successfully. We'll respond within 24 hours.</p>
+      <button class="popup-close-btn" onclick="closeContactPopup()">Close</button>
     </div>
   </div>
 </div>
 
 <script is:inline>
-  function openContactPopup(kittenName, kittenImage, kittenDetails, kittenPrice) {
+  function openContactPopup(puppyName, puppyImage, puppyDetails, puppyPrice) {
     const popup = document.getElementById('contact-popup');
-    const kittenNameSpan = document.getElementById('popup-kitten-name');
+    const puppyNameSpan = document.getElementById('popup-puppy-name');
     const formSubject = document.getElementById('form-subject');
-    const formKittenName = document.getElementById('form-kitten-name');
+    const formPuppyName = document.getElementById('form-puppy-name');
     const formSourcePage = document.getElementById('form-source-page');
-    const kittenPreview = document.getElementById('popup-kitten-preview');
-    const kittenImageEl = document.getElementById('popup-kitten-image');
-    const kittenTitle = document.getElementById('popup-kitten-title');
-    const kittenDetailsEl = document.getElementById('popup-kitten-details');
+    const puppyPreview = document.getElementById('popup-puppy-preview');
+    const puppyImageEl = document.getElementById('popup-puppy-image');
+    const puppyTitle = document.getElementById('popup-puppy-title');
+    const puppyDetailsEl = document.getElementById('popup-puppy-details');
 
     // Set source page URL
     formSourcePage.value = window.location.href;
 
-    if (kittenName) {
-      kittenNameSpan.textContent = kittenName;
-      formSubject.value = `Solicitud de Adopción: ${kittenName} - Criadero Castellano`;
-      formKittenName.value = kittenName;
+    if (puppyName) {
+      puppyNameSpan.textContent = puppyName;
+      formSubject.value = `Adoption Request: ${puppyName} - HillSide Paws`;
+      formPuppyName.value = puppyName;
     } else {
-      kittenNameSpan.textContent = 'Nuestros Gatitos';
-      formSubject.value = 'Nueva Consulta - Criadero Castellano';
-      formKittenName.value = 'Consulta General';
+      puppyNameSpan.textContent = 'Our Puppies';
+      formSubject.value = 'New Inquiry - HillSide Paws';
+      formPuppyName.value = 'General Inquiry';
     }
 
-    // Show kitten preview if image provided
-    if (kittenImage) {
-      kittenImageEl.src = kittenImage;
-      kittenImageEl.alt = kittenName;
-      kittenTitle.textContent = kittenName;
-      kittenDetailsEl.textContent = kittenDetails || '';
-      if (kittenPrice) {
-        document.getElementById('popup-kitten-price').textContent = kittenPrice.toLocaleString('de-DE') + ' €';
+    // Show puppy preview if image provided
+    if (puppyImage) {
+      puppyImageEl.src = puppyImage;
+      puppyImageEl.alt = puppyName;
+      puppyTitle.textContent = puppyName;
+      puppyDetailsEl.textContent = puppyDetails || '';
+      if (puppyPrice) {
+        document.getElementById('popup-puppy-price').textContent = '$' + puppyPrice.toLocaleString('en-US');
       }
-      kittenPreview.style.display = 'flex';
+      puppyPreview.style.display = 'flex';
     } else {
-      kittenPreview.style.display = 'none';
+      puppyPreview.style.display = 'none';
     }
 
     popup.setAttribute('aria-hidden', 'false');
@@ -184,10 +184,10 @@
         form.style.display = 'none';
         successDiv.style.display = 'block';
       } else {
-        alert('Algo salió mal. Por favor, inténtalo de nuevo.');
+        alert('Something went wrong. Please try again.');
       }
     } catch (error) {
-      alert('Algo salió mal. Por favor, inténtalo de nuevo.');
+      alert('Something went wrong. Please try again.');
     } finally {
       btnText.style.display = 'inline';
       btnLoading.style.display = 'none';
@@ -214,18 +214,18 @@
     padding: 1rem;
   }
 
-  .popup-kitten-preview {
+  .popup-puppy-preview {
     display: flex;
     align-items: flex-start;
     gap: 1.25rem;
-    background: #F0F4F8;
+    background: #FFF8F0;
     border-radius: 12px;
     padding: 1.25rem;
     margin-bottom: 1.5rem;
-    border: 2px solid #1B2A4A;
+    border: 2px solid #5C3D2E;
   }
 
-  .kitten-preview-image {
+  .puppy-preview-image {
     width: 180px;
     height: 180px;
     border-radius: 12px;
@@ -234,19 +234,19 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 
-  .kitten-preview-image img {
+  .puppy-preview-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .kitten-preview-info {
+  .puppy-preview-info {
     flex: 1;
   }
 
-  .kitten-status-badge {
+  .puppy-status-badge {
     display: inline-block;
-    background: #1B2A4A;
+    background: #5C3D2E;
     color: white;
     font-size: 0.7rem;
     font-weight: 700;
@@ -256,21 +256,21 @@
     margin-bottom: 0.5rem;
   }
 
-  .kitten-preview-info h3 {
+  .puppy-preview-info h3 {
     font-size: 1.35rem;
     font-weight: 700;
-    color: #1B2A4A;
+    color: #5C3D2E;
     margin: 0 0 0.25rem;
   }
 
-  .kitten-preview-info p {
+  .puppy-preview-info p {
     font-size: 0.9rem;
     color: #555;
     margin: 0 0 0.75rem;
     line-height: 1.4;
   }
 
-  .kitten-price-row {
+  .puppy-price-row {
     display: flex;
     align-items: center;
     gap: 0.75rem;
@@ -278,27 +278,27 @@
     flex-wrap: wrap;
   }
 
-  .kitten-price {
+  .puppy-price {
     font-size: 1.25rem;
     font-weight: 800;
     color: #2a2a2a;
   }
 
-  .kitten-includes {
+  .puppy-includes {
     font-size: 0.75rem;
     color: #888;
   }
 
-  .kitten-guarantee {
+  .puppy-guarantee {
     display: flex;
     align-items: center;
     gap: 0.4rem;
-    color: #1B2A4A;
+    color: #5C3D2E;
     font-size: 0.8rem;
     font-weight: 600;
   }
 
-  .kitten-guarantee svg {
+  .puppy-guarantee svg {
     width: 16px;
     height: 16px;
   }
@@ -345,7 +345,7 @@
   }
 
   .popup-close:hover {
-    background: #1B2A4A;
+    background: #5C3D2E;
     color: white;
   }
 
@@ -362,7 +362,7 @@
   }
 
   .popup-title span {
-    color: #1B2A4A;
+    color: #5C3D2E;
   }
 
   .popup-subtitle {
@@ -411,8 +411,8 @@
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #1B2A4A;
-    box-shadow: 0 0 0 3px rgba(9, 81, 54, 0.1);
+    border-color: #5C3D2E;
+    box-shadow: 0 0 0 3px rgba(92, 61, 46, 0.1);
   }
 
   .form-group textarea {
@@ -421,7 +421,7 @@
   }
 
   .popup-submit {
-    background: #1B2A4A;
+    background: #5C3D2E;
     color: white;
     border: none;
     padding: 1rem 2rem;
@@ -434,7 +434,7 @@
   }
 
   .popup-submit:hover {
-    background: #2E8B8B;
+    background: #D4A574;
   }
 
   .popup-submit:disabled {
@@ -450,7 +450,7 @@
   .success-icon {
     width: 60px;
     height: 60px;
-    background: #1B2A4A;
+    background: #5C3D2E;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -476,7 +476,7 @@
   }
 
   .popup-close-btn {
-    background: #1B2A4A;
+    background: #5C3D2E;
     color: white;
     border: none;
     padding: 0.75rem 2rem;
@@ -488,7 +488,7 @@
   }
 
   .popup-close-btn:hover {
-    background: #2E8B8B;
+    background: #D4A574;
   }
 
   @media (max-width: 600px) {
