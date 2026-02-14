@@ -3,11 +3,12 @@
 interface Props {
   puppies: {
     name: string;
-    variety: string;
+    breed: string;
     image: string;
     sex: string;
     age: string;
     color: string;
+    coat: string;
     status: string;
     price: number;
     description: string;
@@ -79,17 +80,18 @@ const { puppies } = Astro.props;
                   <path d="M17.34 14.86c-.87-1.02-1.6-1.89-2.48-2.91-.46-.54-1.05-1.08-1.75-1.32-.11-.04-.22-.07-.33-.09-.25-.04-.52-.04-.78-.04s-.53 0-.79.05c-.11.02-.22.05-.33.09-.7.24-1.28.78-1.75 1.32-.87 1.02-1.6 1.89-2.48 2.91-1.31 1.31-2.92 2.76-2.62 4.79.29 1.02 1.02 2.03 2.33 2.32.73.15 3.06-.44 5.54-.44h.18c2.48 0 4.81.58 5.54.44 1.31-.29 2.04-1.31 2.33-2.32.31-2.04-1.3-3.49-2.61-4.8z"/>
                 </svg>
               </div>
-              <span class="stat-value">{puppy.variety}</span>
-              <span class="stat-label">Variety</span>
+              <span class="stat-value">{puppy.breed}</span>
+              <span class="stat-label">Breed</span>
             </div>
             <div class="stat-item">
               <div class="stat-icon">
                 <svg viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+                  <circle cx="12" cy="12" r="5"/>
                 </svg>
               </div>
-              <span class="stat-value">{puppy.status}</span>
-              <span class="stat-label">Status</span>
+              <span class="stat-value">{puppy.color}</span>
+              <span class="stat-label">Color</span>
             </div>
           </div>
 
@@ -112,16 +114,31 @@ const { puppies } = Astro.props;
               <li>2-year health guarantee</li>
               <li>Up-to-date vaccinations</li>
               <li>Complete deworming</li>
-              <li>Microchip & documentation</li>
-              <li>Starter kit & care guide</li>
             </ul>
+          </div>
+
+          <div class="coat-section">
+            <div class="coat-header">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><circle cx="12" cy="12" r="5"/></svg>
+              <span>Coat Details</span>
+            </div>
+            <div class="coat-details">
+              <div class="coat-item">
+                <span class="coat-label">Type</span>
+                <span class="coat-value">{puppy.coat}</span>
+              </div>
+              <div class="coat-item">
+                <span class="coat-label">Color</span>
+                <span class="coat-value">{puppy.color}</span>
+              </div>
+            </div>
           </div>
 
           <div class="buttons-row">
             {puppy.status === 'Available' ? (
               <>
                 <a href="/contact" class="btn btn-primary">Contact Us</a>
-                <button type="button" class="btn btn-outline" onclick={`openContactPopup('${puppy.name}', '${puppy.image}', '${puppy.variety} · ${puppy.sex} · ${puppy.age}', ${puppy.price})`}>Adopt Me</button>
+                <button type="button" class="btn btn-outline" onclick={`openContactPopup('${puppy.name}', '${puppy.image}', '${puppy.breed} · ${puppy.color} · ${puppy.coat}', ${puppy.price})`}>Adopt Me</button>
               </>
             ) : (
               <span class="btn btn-sold">This Puppy Has Been Adopted</span>
@@ -142,6 +159,7 @@ const { puppies } = Astro.props;
   .puppies-section .container {
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0;
   }
 
   .puppy-card {
@@ -340,6 +358,53 @@ const { puppies } = Astro.props;
     flex-grow: 1;
   }
 
+  .coat-section {
+    background: #F9F3ED;
+    border-radius: 8px;
+    padding: 12px 14px;
+    margin-bottom: 12px;
+  }
+
+  .coat-header {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #3E2518;
+  }
+
+  .coat-header svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .coat-details {
+    display: flex;
+    gap: 20px;
+  }
+
+  .coat-item {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .coat-label {
+    font-size: 0.65rem;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-weight: 600;
+  }
+
+  .coat-value {
+    font-size: 0.85rem;
+    color: #3E2518;
+    font-weight: 600;
+  }
+
   .comes-with-card {
     background: #FFF8F0;
     border: 1px solid #D4A574;
@@ -452,7 +517,12 @@ const { puppies } = Astro.props;
 
   @media (max-width: 600px) {
     .puppies-section {
-      padding: 20px 10px;
+      padding: 15px 14px;
+    }
+
+    .puppy-card {
+      border-radius: 8px;
+      margin-bottom: 20px;
     }
 
     .main-image {

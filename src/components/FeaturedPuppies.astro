@@ -18,7 +18,7 @@ const featuredPuppies = getFeaturedPuppies(5);
       {featuredPuppies.map((puppy) => (
         <article class="puppy-card">
           <div class="card-image">
-            <span class="variety-badge">{puppy.variety}</span>
+            <span class="variety-badge">{puppy.coat} · {puppy.color}</span>
             <img src={puppy.image} alt={puppy.name} loading="lazy">
           </div>
           <div class="card-content">
