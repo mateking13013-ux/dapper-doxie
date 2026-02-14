@@ -43,8 +43,14 @@ const { puppies } = Astro.props;
           </div>
 
           <div class="price-banner">
-            <span class="price-amount">${puppy.price.toLocaleString('en-US')}</span>
-            <span class="price-text">Includes Documentation & Starter Kit</span>
+            <div class="price-info">
+              <span class="price-amount">${puppy.price.toLocaleString('en-US')}</span>
+              <span class="price-text">Includes Documentation & Starter Kit</span>
+            </div>
+            <button type="button" class="btn-send-text">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+              Send Text
+            </button>
           </div>
 
           <div class="stats-row">
@@ -253,7 +259,7 @@ const { puppies } = Astro.props;
   }
 
   .status-badge.available {
-    background: #5C3D2E;
+    background: #4A7C59;
     color: #fff;
   }
 
@@ -274,6 +280,14 @@ const { puppies } = Astro.props;
     flex-wrap: wrap;
   }
 
+  .price-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex: 1;
+    flex-wrap: wrap;
+  }
+
   .price-amount {
     font-size: 1.5rem;
     font-weight: 800;
@@ -284,6 +298,10 @@ const { puppies } = Astro.props;
     font-size: 0.9rem;
     font-weight: 600;
     opacity: 0.95;
+  }
+
+  .btn-send-text {
+    display: none;
   }
 
   .stats-row {
@@ -538,22 +556,54 @@ const { puppies } = Astro.props;
     }
 
     .price-banner {
+      background: #FFF8F0;
+      border: 1px solid #D4A574;
       padding: 10px 12px;
       margin-bottom: 12px;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+
+    .price-info {
       flex-direction: column;
       align-items: flex-start;
-      gap: 4px;
-      text-align: center;
+      gap: 2px;
+      flex: 1;
     }
 
     .price-amount {
+      color: #5C3D2E;
       font-size: 1.3rem;
-      width: 100%;
+      width: auto;
     }
 
     .price-text {
+      color: #888;
+      font-size: 0.75rem;
+      width: auto;
+      opacity: 1;
+    }
+
+    .btn-send-text {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      background: #5C3D2E;
+      color: white;
+      border: none;
+      padding: 8px 14px;
+      border-radius: 6px;
       font-size: 0.8rem;
-      width: 100%;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .btn-send-text svg {
+      width: 15px;
+      height: 15px;
     }
 
     .name-section h2 {
