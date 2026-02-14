@@ -17,17 +17,12 @@ export interface TestimonialPreview {
 }
 
 export const testimonialImages = [
-  '/images/testimonials/IMG_1162.JPG',
   '/images/testimonials/IMG_1163.JPG',
-  '/images/testimonials/IMG_1164.JPG',
-  '/images/testimonials/IMG_1165.JPG',
   '/images/testimonials/IMG_1166.JPG',
   '/images/testimonials/IMG_1167.JPG',
-  '/images/testimonials/IMG_1168.JPG',
   '/images/testimonials/IMG_1169.JPG',
   '/images/testimonials/IMG_1170.JPG',
   '/images/testimonials/IMG_1188.JPG',
-  '/images/testimonials/IMG_1189.JPG',
   '/images/testimonials/IMG_1190.JPG',
   '/images/testimonials/IMG_1191.JPG',
   '/images/testimonials/IMG_1192.JPG',
@@ -57,7 +52,6 @@ export const testimonialImages = [
   '/images/testimonials/IMG_1216.JPG',
   '/images/testimonials/IMG_1217.JPG',
   '/images/testimonials/IMG_1218.JPG',
-  '/images/testimonials/IMG_1219.JPG',
   '/images/testimonials/IMG_1220.JPG',
   '/images/testimonials/IMG_1221.JPG',
   '/images/testimonials/IMG_E1171.JPG',
@@ -72,7 +66,6 @@ export const testimonialImages = [
   '/images/testimonials/IMG_E1181.JPG',
   '/images/testimonials/IMG_E1182.JPG',
   '/images/testimonials/IMG_E1183.JPG',
-  '/images/testimonials/IMG_E1184.JPG',
   '/images/testimonials/IMG_E1185.JPG',
   '/images/testimonials/IMG_E1186.JPG',
   '/images/testimonials/IMG_E1187.JPG',
@@ -80,36 +73,12 @@ export const testimonialImages = [
 
 export const testimonials: Testimonial[] = [
   {
-    name: 'Sarah M.',
-    location: 'Marietta, GA',
-    rating: 5,
-    image: '/images/testimonials/IMG_1162.JPG',
-    puppyName: 'Copper',
-    text: "Copper has been the best addition to our family. He arrived healthy, well-socialized, and already knew basic commands. The team at HillSide Paws was incredibly supportive throughout the entire process and even checked in on us weeks after bringing him home. We could not be happier with our little guy."
-  },
-  {
     name: 'Jennifer & Tom L.',
     location: 'Austin, TX',
     rating: 5,
     image: '/images/testimonials/IMG_1163.JPG',
     puppyName: 'Penny',
     text: "Penny is the sweetest little Dachshund and has stolen everyone's hearts. From the moment we picked her up, it was clear she had been raised with love and care. HillSide Paws made the whole experience smooth and professional from start to finish. The welcome kit they sent home with us had everything we needed for the first week."
-  },
-  {
-    name: 'David & Amy R.',
-    location: 'Nashville, TN',
-    rating: 5,
-    image: '/images/testimonials/IMG_1164.JPG',
-    puppyName: 'Duke',
-    text: "Duke is our third Dachshund but our first from HillSide Paws, and the difference is remarkable. His temperament is wonderful and he came with complete health documentation. The breeder clearly cares deeply about every single puppy they raise. We have already recommended them to three other families."
-  },
-  {
-    name: 'Christine W.',
-    location: 'Charlotte, NC',
-    rating: 5,
-    image: '/images/testimonials/IMG_1165.JPG',
-    puppyName: 'Hazel',
-    text: "Hazel is an absolute dream. Her chocolate dapple coat is gorgeous and her personality is even more beautiful. She settled into our home within days and already loves our children. HillSide Paws answered every question we had with patience and kindness throughout our entire journey."
   },
   {
     name: 'Eric S.',
@@ -126,14 +95,6 @@ export const testimonials: Testimonial[] = [
     image: '/images/testimonials/IMG_1167.JPG',
     puppyName: 'Ginger',
     text: "Ginger has become the center of our family in just a few short weeks. Our three kids adore her and she is so patient and gentle with them. The two-year health guarantee gave us complete peace of mind. HillSide Paws is the real deal and we are so thankful we found them."
-  },
-  {
-    name: 'Karen & Bill D.',
-    location: 'Birmingham, AL',
-    rating: 5,
-    image: '/images/testimonials/IMG_1168.JPG',
-    puppyName: 'Biscuit',
-    text: "Biscuit has brought so much joy to our home. He came with a full health guarantee, vaccination records, and a starter kit that had everything we needed for his first month. HillSide Paws truly thinks of everything. We are so grateful we chose them for our first Dachshund."
   },
   {
     name: 'Jason T.',
@@ -158,14 +119,6 @@ export const testimonials: Testimonial[] = [
     image: '/images/testimonials/IMG_1188.JPG',
     puppyName: 'Willow',
     text: "Willow is a gentle soul with the most loving personality. She gets along beautifully with our older dog and has fit right into our routine. The team at HillSide Paws provided fantastic guidance on nutrition and care specific to the Dachshund breed. Their expertise really shows in the quality of their puppies."
-  },
-  {
-    name: 'Adrian G.',
-    location: 'Tampa, FL',
-    rating: 5,
-    image: '/images/testimonials/IMG_1189.JPG',
-    puppyName: 'Finn',
-    text: "Finn is loyal, protective, and absolutely loves our family. His chocolate and tan coloring is stunning and he has the best Dachshund personality. HillSide Paws made adopting our first dog a stress-free and enjoyable experience. The weekly photo updates before pickup day were the highlight of our week."
   },
   {
     name: 'Pete & Sandra A.',
@@ -400,14 +353,6 @@ export const testimonials: Testimonial[] = [
     text: "Murphy has been a perfect addition to our retired life. He is calm, well-mannered, and loves his daily walks around the neighborhood. HillSide Paws matched us with exactly the right temperament for our lifestyle. The health guarantee and ongoing support gave us complete peace of mind at every step."
   },
   {
-    name: 'Samantha & Drew C.',
-    location: 'Pittsburgh, PA',
-    rating: 5,
-    image: '/images/testimonials/IMG_1219.JPG',
-    puppyName: 'Stella',
-    text: "Stella is a stunning longhair with the most loving personality. She bonded with us instantly and already knows several commands. The training tips HillSide Paws included in the welcome packet were incredibly helpful, and we could tell Stella had already started learning before she even came home to us."
-  },
-  {
     name: 'Carlos & Maria L.',
     location: 'Orlando, FL',
     rating: 5,
@@ -518,14 +463,6 @@ export const testimonials: Testimonial[] = [
     image: '/images/testimonials/IMG_E1183.JPG',
     puppyName: 'Pip',
     text: "Pip is the smallest member of our family but has the biggest heart. She warmed up to our two older dogs within hours and now they are the best of friends. HillSide Paws provided guidance on introducing her to a multi-pet household, and their advice made the process incredibly smooth."
-  },
-  {
-    name: 'Danielle & Scott R.',
-    location: 'Fayetteville, NC',
-    rating: 5,
-    image: '/images/testimonials/IMG_E1184.JPG',
-    puppyName: 'Clementine',
-    text: "Clementine is a gorgeous red longhair who gets compliments everywhere she goes. The adoption process with HillSide Paws was straightforward and they kept us informed at every stage. Her AKC papers and health certifications arrived exactly as promised, and our vet confirmed she is in perfect health."
   },
   {
     name: 'Victor T.',
