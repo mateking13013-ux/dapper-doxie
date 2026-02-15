@@ -5,7 +5,7 @@ export interface Faq {
 
 export const faqs: Faq[] = [
   {
-    question: 'What makes HillSide Paws Dachshunds special?',
+    question: 'What makes Doxie Pups Creek Dachshunds special?',
     answer: 'Our Dachshunds are family-raised in our home since 1995, giving us nearly three decades of breeding experience. Every puppy is socialized with children, adults, and other dogs from birth. We perform comprehensive health testing on all parent dogs, including IVDD screening, PRA testing, and cardiac evaluations, so you can be confident you are bringing home a healthy, well-adjusted companion.'
   },
   {
@@ -14,7 +14,7 @@ export const faqs: Faq[] = [
   },
   {
     question: 'Do your puppies come with a health guarantee?',
-    answer: 'Yes, every puppy from HillSide Paws comes with a comprehensive 2-year genetic health guarantee that covers hereditary and congenital conditions. Before leaving our home, each puppy receives a thorough veterinary examination and is cleared for any health concerns. We stand behind the health of our puppies because we invest in the best genetic testing and veterinary care available.'
+    answer: 'Yes, every puppy from Doxie Pups Creek comes with a comprehensive 2-year genetic health guarantee that covers hereditary and congenital conditions. Before leaving our home, each puppy receives a thorough veterinary examination and is cleared for any health concerns. We stand behind the health of our puppies because we invest in the best genetic testing and veterinary care available.'
   },
   {
     question: 'What is included in the puppy price?',

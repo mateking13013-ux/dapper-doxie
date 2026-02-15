@@ -5,7 +5,8 @@
 <header class="header">
   <div class="header-container">
     <a href="/" class="logo">
-      <span class="logo-text">HillSide Paws</span>
+      <img src="/images/logo.png" alt="Doxie Pups Creek logo" class="logo-img" />
+      <span class="sr-only">Doxie Pups Creek</span>
     </a>
 
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -18,7 +19,7 @@
 
     <nav class="nav-menu">
       <div class="nav-brand-mobile">
-        <span style="font-size: 1.1rem; font-weight: 700; color: #5C3D2E;">HillSide Paws</span>
+        <span style="font-size: 1.1rem; font-weight: 700; color: #5C3D2E;">Doxie Pups Creek</span>
       </div>
       <ul>
         <li><a href="/">Home</a></li>
@@ -92,11 +93,22 @@
     flex-shrink: 0;
   }
 
-  .logo-text {
-    font-size: 1.4rem;
-    font-weight: 800;
-    color: #5C3D2E;
-    letter-spacing: -0.5px;
+  .logo-img {
+    display: block;
+    height: 52px;
+    width: auto;
+  }
+
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
   }
 
   .nav-menu {
