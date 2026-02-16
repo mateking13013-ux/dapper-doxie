@@ -1,0 +1,153 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Return & Refund Policy | Doxie Pups Creek"
+  description="Return and refund policy for Doxie Pups Creek puppy placements, including health-related refund conditions and claim steps."
+  keywords="Dachshund refund policy, puppy return policy, Doxie Pups Creek policy"
+>
+  <PageHeader
+    title="Return & Refund Policy"
+    subtitle="Clear terms for cancellations, health-related returns, and approved refunds"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Return & Refund Policy' }
+    ]}
+  />
+
+  <section class="refund-page">
+    <div class="refund-container">
+      <article class="refund-card">
+        <p class="last-updated">Last updated: February 16, 2026</p>
+        <p>
+          At Doxie Pups Creek, we are committed to fair and transparent placement policies. This page explains
+          when returns and refunds may apply.
+        </p>
+
+        <h2>1. Reservation and Deposit Terms</h2>
+        <ul>
+          <li>A puppy is considered reserved only after payment is confirmed.</li>
+          <li>Deposits used to hold a puppy are non-refundable if the buyer changes their mind.</li>
+          <li>If Doxie Pups Creek cannot complete the placement, the paid amount is fully refunded.</li>
+        </ul>
+
+        <h2>2. Veterinary Check Requirement</h2>
+        <p>
+          The buyer must complete a licensed veterinary exam within seven (7) days of receiving the puppy and
+          provide records if concerns are identified.
+        </p>
+
+        <h2>3. Health-Related Refund Eligibility</h2>
+        <p>
+          A full refund may be approved if a licensed veterinarian confirms a serious congenital defect or qualifying
+          pre-existing illness within the required reporting window, and the puppy is safely returned.
+        </p>
+
+        <h2>4. Communicable Illness Window</h2>
+        <p>
+          If a communicable illness is diagnosed within fourteen (14) days of arrival and documented by a licensed
+          veterinarian, a full refund may be issued upon return and record review.
+        </p>
+
+        <h2>5. Transportation Fees</h2>
+        <ul>
+          <li>Approved health-related refunds include documented transportation costs when applicable.</li>
+          <li>If a buyer cancels for non-health reasons, transportation and handling fees are non-refundable.</li>
+        </ul>
+
+        <h2>6. Non-Refundable Situations</h2>
+        <ul>
+          <li>Buyer remorse or household preference changes after reservation.</li>
+          <li>Failure to follow veterinary care instructions or maintain basic puppy welfare standards.</li>
+          <li>Minor, non-medical preferences (size expectation, ear set, coat shade, etc.).</li>
+          <li>Health concerns reported outside policy timelines without supporting records.</li>
+        </ul>
+
+        <h2>7. Return Request Process</h2>
+        <ol>
+          <li>Contact us immediately at <a href="mailto:info@doxiepupscreek.com">info@doxiepupscreek.com</a>.</li>
+          <li>Provide veterinary records, diagnosis notes, and timeline details.</li>
+          <li>Wait for written return authorization before arranging transport.</li>
+          <li>After review and approved return, refund processing typically completes within 5-10 business days.</li>
+        </ol>
+
+        <h2>8. Replacement Option</h2>
+        <p>
+          In some approved cases, buyers may choose a replacement puppy of equal value instead of a refund, subject
+          to availability.
+        </p>
+
+        <h2>9. Contact</h2>
+        <p>
+          Policy questions can be sent to <a href="mailto:info@doxiepupscreek.com">info@doxiepupscreek.com</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .refund-page {
+    background: #fff8f0;
+    padding: 4rem 1.5rem;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  }
+
+  .refund-container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .refund-card {
+    background: #fff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .last-updated {
+    margin: 0 0 0.9rem;
+    font-size: 0.9rem;
+    color: #7a6b5e;
+    font-weight: 600;
+  }
+
+  .refund-card h2 {
+    margin: 1.2rem 0 0.55rem;
+    color: #3e2518;
+    font-size: 1.35rem;
+  }
+
+  .refund-card p,
+  .refund-card li {
+    margin: 0;
+    color: #585858;
+    line-height: 1.68;
+  }
+
+  .refund-card ul,
+  .refund-card ol {
+    margin: 0.55rem 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .refund-card a {
+    color: #5c3d2e;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 800px) {
+    .refund-page {
+      padding: 3rem 1rem;
+    }
+
+    .refund-card {
+      padding: 1.2rem;
+    }
+  }
+</style>

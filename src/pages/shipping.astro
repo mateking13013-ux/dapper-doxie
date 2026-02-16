@@ -4,714 +4,489 @@ import PageHeader from '../components/PageHeader.astro';
 ---
 
 <BaseLayout
-  title="Shipping & Delivery | Doxie Pups Creek"
-  description="Safe and caring delivery options for your Doxie Pups Creek Dachshund puppy. Local pickup, ground transport, and flight nanny services available across the US."
-  keywords="puppy shipping, Dachshund puppy delivery, puppy transport, flight nanny puppy, ground transport puppy, Doxie Pups Creek shipping, puppy pickup"
+  title="Pickup & Delivery | Doxie Pups Creek"
+  description="Flexible pickup and delivery options to bring your Doxie Pups Creek puppy home safely."
+  keywords="pickup and delivery, puppy delivery, airport pickup, door-to-door puppy delivery, Doxie Pups Creek"
 >
   <PageHeader
-    title="Shipping & Delivery"
-    subtitle="Safe, comfortable delivery options to bring your new Dachshund puppy home"
+    title="Pickup & Delivery"
+    subtitle="Flexible options to bring your new furry family member home safely"
     breadcrumbs={[
       { label: 'Home', href: '/' },
-      { label: 'Shipping & Delivery' }
+      { label: 'Pickup & Delivery' }
     ]}
   />
 
-  <section class="shipping-content">
-    <div class="content-container">
-
-      <!-- Intro -->
-      <div class="intro-block">
-        <h2>Bringing Your Puppy Home</h2>
-        <p>At Doxie Pups Creek, the safety and well-being of our puppies is always our top priority. We offer three convenient delivery options so you can choose the method that works best for your family. All shipping and delivery services are available within the United States only. No matter which option you choose, your puppy will arrive with a complete health packet, comfort items, and everything needed for a smooth transition into your home.</p>
-      </div>
-
-      <!-- Delivery Options -->
-      <div class="options-grid">
-
-        <!-- Option 1: Local Pickup -->
-        <div class="option-card option-featured">
-          <div class="option-header">
-            <div class="option-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-            </div>
-            <div class="option-badge">Most Popular</div>
-          </div>
-          <h3>Local Pickup</h3>
-          <div class="option-price">Free</div>
-          <p class="option-desc">Visit our family home, meet the parents, and take your puppy home the same day. This is our preferred and most recommended option.</p>
-          <ul class="option-features">
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Tour our facility and meet the litter
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Meet the sire and dam of your puppy
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              One-on-one guidance from our breeders
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Receive a puppy care starter kit
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              No additional transport costs
-            </li>
-          </ul>
-          <div class="option-tip">
-            <strong>Tip:</strong> Please bring a secure, well-ventilated crate or carrier, a soft blanket, and water for the ride home.
-          </div>
+  <section class="delivery-page">
+    <div class="delivery-container">
+      <section class="hero-card">
+        <div class="hero-media">
+          <img src="/images/puppies/DUKE male 10 weeks.jpeg" alt="Dachshund puppy ready to go home" loading="lazy" />
         </div>
-
-        <!-- Option 2: Ground Transport -->
-        <div class="option-card">
-          <div class="option-header">
-            <div class="option-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
-            </div>
-          </div>
-          <h3>Ground Transport</h3>
-          <div class="option-price">$300 - $500</div>
-          <p class="option-desc">Professional pet transport via climate-controlled vehicle. Your puppy travels safely with an experienced handler, door-to-door.</p>
-          <ul class="option-features">
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Climate-controlled, pet-safe vehicle
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Experienced, USDA-licensed handler
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Regular rest stops with food and water
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Real-time GPS tracking updates
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Door-to-door delivery within the US
-            </li>
-          </ul>
-          <div class="option-note">Price varies by distance. Covers most of the continental United States.</div>
+        <div class="hero-copy">
+          <p class="hero-kicker">Getting Your Puppy Home</p>
+          <h2>We make it easy and safe to bring your new Doxie Pups Creek puppy home</h2>
+          <p>
+            At Doxie Pups Creek, we understand that our families come from near and far.
+            That is why we offer flexible pickup and delivery options to ensure your new Dachshund puppy
+            arrives home safely and comfortably.
+          </p>
         </div>
+      </section>
 
-        <!-- Option 3: Flight Nanny -->
-        <div class="option-card">
-          <div class="option-header">
-            <div class="option-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg>
-            </div>
-          </div>
-          <h3>Flight Nanny</h3>
-          <div class="option-price">$500 - $800</div>
-          <p class="option-desc">A dedicated flight companion personally escorts your puppy in-cabin on a commercial flight directly to your nearest airport.</p>
-          <ul class="option-features">
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Puppy travels in-cabin, never in cargo
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Personal, one-on-one attention throughout
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Photo and video updates during travel
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Fastest option for long-distance families
-            </li>
-            <li>
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-              Meet at airport for a warm handoff
-            </li>
-          </ul>
-          <div class="option-note">Price varies by destination. Available to all major US airports.</div>
+      <section class="content-block">
+        <h2>Your Options</h2>
+        <div class="options-grid">
+          <article class="option-card">
+            <h3>Personal Pickup</h3>
+            <p>
+              There is nothing quite like meeting your new puppy in person. Our home is open for approved buyers
+              to come and personally retrieve their new furry family member.
+            </p>
+            <h4>What to Expect</h4>
+            <ul>
+              <li>Meet your puppy's parents and see their environment</li>
+              <li>Receive hands-on guidance for your puppy's care</li>
+              <li>Get answers to all your questions in person</li>
+              <li>Bond with your puppy before the journey home</li>
+            </ul>
+            <h4>Weekend Availability</h4>
+            <p>
+              Weekend pickups are welcome. We are also happy to accommodate weekday pickups
+              for those who cannot make it on a weekend.
+            </p>
+          </article>
+
+          <article class="option-card">
+            <h3>Professional Delivery</h3>
+            <p>
+              Cannot make it to our location? No problem. We offer a professional pet delivery service
+              with a dedicated pet nanny who ensures your puppy travels safely in the cabin of the plane.
+            </p>
+            <h4>Service Includes</h4>
+            <ul>
+              <li>Dedicated pet nanny accompanies your puppy</li>
+              <li>Puppy travels in the cabin (not cargo)</li>
+              <li>Comfortable, stress-free journey</li>
+              <li>Flight tracking so you can follow the journey</li>
+            </ul>
+            <h4>Delivery Options</h4>
+            <ul>
+              <li><strong>Airport Pickup:</strong> Meet your puppy at your local airport.</li>
+              <li><strong>Door-to-Door:</strong> We deliver directly to your home.</li>
+            </ul>
+          </article>
         </div>
-      </div>
+      </section>
 
-      <!-- US Only Note -->
-      <div class="us-only-banner">
-        <div class="banner-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+      <section class="pricing-block">
+        <h2>Delivery Pricing</h2>
+        <p class="pricing-intro">Our delivery service is designed to be convenient and affordable:</p>
+        <div class="pricing-grid">
+          <article class="price-card">
+            <p class="price-amount">FREE</p>
+            <h3>Personal Pickup</h3>
+            <p>Visit us and take your puppy home yourself.</p>
+          </article>
+          <article class="price-card">
+            <p class="price-amount">$250</p>
+            <h3>Airport Pickup</h3>
+            <p>Meet your puppy at your nearest airport.</p>
+          </article>
+          <article class="price-card">
+            <p class="price-amount">$300</p>
+            <h3>Door-to-Door</h3>
+            <p>Delivery directly to your home.</p>
+          </article>
         </div>
-        <div>
-          <strong>United States Only</strong>
-          <p>All shipping and delivery services are currently available within the United States only. If you are located outside the US, please contact us to discuss possible arrangements.</p>
-        </div>
-      </div>
+      </section>
 
-      <!-- Delivery Process Steps -->
-      <div class="section-block">
-        <h2 class="section-heading">
-          <span class="heading-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-          </span>
-          The Delivery Process
-        </h2>
-        <p>No matter which delivery option you choose, we follow a careful process to ensure your puppy arrives safely and comfortably:</p>
+      <section class="content-block">
+        <h2>How Shipping Works</h2>
+        <p>Setting up delivery is simple and straightforward:</p>
+        <ol class="steps-list">
+          <li>
+            <h3>1. Provide Your Address</h3>
+            <p>
+              Share your complete address: street, city, state, and zip code. Let us know whether you prefer
+              airport pickup or door-to-door delivery.
+            </p>
+          </li>
+          <li>
+            <h3>2. We Coordinate Logistics</h3>
+            <p>
+              Our professional pet delivery company handles all arrangements. We usually need 24-48 hours
+              to finalize travel details.
+            </p>
+          </li>
+          <li>
+            <h3>3. Receive Flight Information</h3>
+            <p>
+              Once booked, we share flight details including estimated arrival time and a tracking number.
+            </p>
+          </li>
+          <li>
+            <h3>4. Welcome Your Puppy Home</h3>
+            <p>
+              Meet your puppy at the airport or greet them at your door. They arrive safe and ready for
+              their new life.
+            </p>
+          </li>
+        </ol>
+      </section>
 
-        <div class="steps-grid">
-          <div class="step-card">
-            <div class="step-number">1</div>
-            <h4>Reserve & Confirm</h4>
-            <p>Once your puppy is selected and the deposit is placed, we will coordinate the delivery date and method that works best for you.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">2</div>
-            <h4>Final Health Check</h4>
-            <p>Your puppy receives a comprehensive veterinary exam within 72 hours of departure, including a health certificate issued by our licensed veterinarian.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">3</div>
-            <h4>Prepare for Travel</h4>
-            <p>We assemble your puppy's travel kit: comfort blanket with familiar scent, food for the journey, health documents, and a care guide.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">4</div>
-            <h4>Safe Transit</h4>
-            <p>Whether by car, ground transport, or flight nanny, your puppy travels in a safe, comfortable, and temperature-controlled environment.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">5</div>
-            <h4>Warm Handoff</h4>
-            <p>You receive your puppy along with the complete health packet, signed paperwork, and personalized care instructions for the first weeks at home.</p>
-          </div>
-          <div class="step-card">
-            <div class="step-number">6</div>
-            <h4>Ongoing Support</h4>
-            <p>We check in with you after delivery and remain available for questions about feeding, training, health, or anything else as your puppy settles in.</p>
-          </div>
-        </div>
-      </div>
+      <section class="policy-block">
+        <h2>Visiting Policy</h2>
+        <article class="policy-card">
+          <h3>Important Information for Visitors</h3>
+          <p>
+            To protect the health of our puppies and maintain a calm environment, we do not allow drop-in visits
+            from prospective buyers who have not been approved. Once you have been approved to purchase,
+            you are welcome to visit and take your puppy home. This policy ensures the best experience for both
+            our puppies and our committed families.
+          </p>
+        </article>
+        <article class="policy-card">
+          <h3>Why We Have This Policy</h3>
+          <p>
+            Our visiting policy exists to protect our puppies' health and well-being. Too many visitors can stress
+            young puppies and potentially expose them to illness before they complete their vaccination series.
+            Once you are approved, we warmly welcome you to our home to meet your new family member.
+          </p>
+        </article>
+      </section>
 
-      <!-- What's Included -->
-      <div class="included-block">
-        <h3>Every Delivery Includes</h3>
-        <div class="included-grid">
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Veterinary health certificate</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Complete vaccination records</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Deworming history</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Microchip registration info</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Comfort blanket with familiar scent</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Starter food supply</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Signed sales contract</span>
-          </div>
-          <div class="included-item">
-            <div class="included-check">
-              <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
-            </div>
-            <span>Puppy care guide</span>
-          </div>
-        </div>
-      </div>
+      <section class="content-block faq-block">
+        <h2>Frequently Asked Questions</h2>
+        <ul class="faq-questions">
+          <li>How far in advance should I schedule delivery?</li>
+          <li>Is flying safe for puppies?</li>
+          <li>What should I prepare for my puppy's arrival?</li>
+        </ul>
+      </section>
 
-      <!-- CTA -->
-      <div class="cta-box">
-        <h3>Ready to Bring Your Puppy Home?</h3>
-        <p>Contact us to discuss the best delivery option for your family. We are here to make the process as smooth and stress-free as possible.</p>
-        <a href="mailto:info@doxiepupscreek.com" class="btn">Get in Touch</a>
-      </div>
-
+      <section class="cta-box">
+        <h3>Need help choosing pickup or delivery?</h3>
+        <p>Contact us and we will help you choose the best option for your family.</p>
+        <a href="mailto:info@doxiepupscreek.com" class="btn">Email Us</a>
+      </section>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .shipping-content {
+  .delivery-page {
     padding: 4rem 1.5rem;
-    background: #FFF8F0;
+    background: #fff8f0;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
   }
 
-  .content-container {
-    max-width: 1000px;
+  .delivery-container {
+    max-width: 1040px;
     margin: 0 auto;
+    display: grid;
+    gap: 1.5rem;
   }
 
-  .intro-block {
-    background: white;
+  .hero-card,
+  .content-block,
+  .pricing-block,
+  .policy-block,
+  .cta-box {
+    background: #fff;
+    border: 1px solid #e8ddd4;
     border-radius: 12px;
-    padding: 2.5rem;
-    margin-bottom: 3rem;
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    border: 1px solid #E8DDD4;
-    text-align: center;
+  }
+
+  .hero-card {
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
+    align-items: stretch;
+    background: linear-gradient(180deg, #ffffff 0%, #fdfaf7 100%);
+  }
+
+  .hero-media {
+    position: relative;
+    aspect-ratio: 4 / 3;
+    min-height: 320px;
+    overflow: hidden;
+    background: #f4ebe2;
+  }
+
+  .hero-card img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 35%;
+  }
+
+  .hero-copy {
+    padding: 2.25rem 2.3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+  }
+
+  .hero-kicker {
+    margin: 0;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    background: #5c3d2e;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border-radius: 999px;
+    padding: 0.35rem 0.7rem;
+  }
+
+  .hero-copy h2 {
+    margin: 0;
+    font-size: 2rem;
+    line-height: 1.15;
+    color: #3e2518;
+    max-width: 18ch;
+  }
+
+  .hero-copy p {
+    margin: 0;
+    line-height: 1.7;
+    color: #5a5a5a;
+    font-size: 1.06rem;
+    max-width: 43ch;
+  }
+
+  .content-block,
+  .pricing-block,
+  .policy-block,
+  .cta-box {
+    padding: 2rem;
   }
 
   h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #3E2518;
     margin: 0 0 1rem;
-  }
-
-  .section-heading {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1.75rem;
-    color: #3E2518;
-    margin: 0 0 1.25rem;
-    text-align: left;
-  }
-
-  .heading-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    background: #D4A574;
-    border-radius: 10px;
-    color: white;
-    flex-shrink: 0;
-  }
-
-  .heading-icon svg {
-    width: 22px;
-    height: 22px;
+    color: #3e2518;
+    font-size: 1.8rem;
   }
 
   h3 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #3E2518;
     margin: 0 0 0.5rem;
+    color: #3e2518;
+    font-size: 1.2rem;
   }
 
   h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #3E2518;
-    margin: 0 0 0.5rem;
+    margin: 1rem 0 0.4rem;
+    color: #5c3d2e;
+    font-size: 1rem;
   }
 
   p {
-    font-size: 1rem;
+    margin: 0 0 0.8rem;
     color: #5a5a5a;
-    line-height: 1.8;
-    margin: 0 0 1rem;
+    line-height: 1.75;
   }
 
-  /* Options Grid */
   .options-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
   }
 
   .option-card {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    border: 2px solid #E8DDD4;
-    display: flex;
-    flex-direction: column;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #fff8f0;
+    border: 1px solid #e8ddd4;
+    border-radius: 10px;
+    padding: 1.25rem;
   }
 
-  .option-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(92, 61, 46, 0.15);
+  ul {
+    margin: 0;
+    padding-left: 1.2rem;
+    color: #5a5a5a;
   }
 
-  .option-featured {
-    border-color: #D4A574;
-    position: relative;
+  ul li {
+    margin-bottom: 0.45rem;
+    line-height: 1.65;
   }
 
-  .option-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  .pricing-intro {
     margin-bottom: 1rem;
   }
 
-  .option-icon {
-    width: 52px;
-    height: 52px;
-    background: linear-gradient(135deg, #5C3D2E, #D4A574);
-    border-radius: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
   }
 
-  .option-icon svg {
-    width: 26px;
-    height: 26px;
+  .price-card {
+    background: #fff8f0;
+    border: 1px solid #e8ddd4;
+    border-radius: 10px;
+    text-align: center;
+    padding: 1.25rem;
   }
 
-  .option-badge {
-    background: #D4A574;
-    color: #3E2518;
-    padding: 0.3rem 0.85rem;
-    border-radius: 20px;
-    font-size: 0.8rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-
-  .option-card h3 {
-    font-size: 1.35rem;
-    margin-bottom: 0.25rem;
-  }
-
-  .option-price {
+  .price-amount {
     font-size: 1.75rem;
     font-weight: 800;
-    color: #5C3D2E;
-    margin-bottom: 1rem;
+    margin: 0 0 0.5rem;
+    color: #5c3d2e;
+    letter-spacing: 0.02em;
   }
 
-  .option-desc {
-    font-size: 0.95rem;
-    color: #666;
-    margin-bottom: 1.25rem;
-    flex-grow: 0;
-  }
-
-  .option-features {
-    list-style: none;
-    padding: 0;
-    margin: 0 0 1.25rem;
-    flex-grow: 1;
-  }
-
-  .option-features li {
-    display: flex;
-    align-items: flex-start;
-    gap: 0.75rem;
-    padding: 0.5rem 0;
-    font-size: 0.9rem;
-    color: #5a5a5a;
-    line-height: 1.5;
-    border-bottom: 1px solid #f5f0eb;
-  }
-
-  .option-features li:last-child {
-    border-bottom: none;
-  }
-
-  .option-features svg {
-    width: 18px;
-    height: 18px;
-    min-width: 18px;
-    fill: #5C3D2E;
-    margin-top: 1px;
-  }
-
-  .option-tip {
-    background: #FFF8F0;
-    border: 1px solid #D4A574;
-    border-radius: 8px;
-    padding: 0.85rem 1rem;
-    font-size: 0.85rem;
-    color: #5C3D2E;
-    line-height: 1.5;
-  }
-
-  .option-tip strong {
-    color: #3E2518;
-  }
-
-  .option-note {
-    font-size: 0.85rem;
-    color: #999;
-    font-style: italic;
+  .price-card p {
     margin: 0;
-    padding-top: 0.5rem;
-    border-top: 1px solid #f0ebe5;
   }
 
-  /* US Only Banner */
-  .us-only-banner {
-    display: flex;
-    align-items: flex-start;
-    gap: 1.25rem;
-    background: #5C3D2E;
-    color: white;
-    border-radius: 12px;
-    padding: 1.75rem 2rem;
-    margin-bottom: 2rem;
-  }
-
-  .banner-icon {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    color: #D4A574;
-  }
-
-  .banner-icon svg {
-    width: 44px;
-    height: 44px;
-  }
-
-  .us-only-banner strong {
-    display: block;
-    font-size: 1.1rem;
-    color: #E2BB91;
-    margin-bottom: 0.35rem;
-  }
-
-  .us-only-banner p {
-    color: rgba(255, 255, 255, 0.85);
+  .steps-list {
     margin: 0;
-    font-size: 0.95rem;
-  }
-
-  /* Section Block */
-  .section-block {
-    background: white;
-    border-radius: 12px;
-    padding: 2.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    border: 1px solid #E8DDD4;
-  }
-
-  /* Steps Grid */
-  .steps-grid {
+    padding-left: 1.1rem;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-top: 1.5rem;
-  }
-
-  .step-card {
-    background: #FFF8F0;
-    border-radius: 10px;
-    padding: 1.5rem;
-    border: 1px solid #E8DDD4;
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-
-  .step-card:hover {
-    transform: translateY(-3px);
-  }
-
-  .step-number {
-    width: 44px;
-    height: 44px;
-    background: linear-gradient(135deg, #5C3D2E, #D4A574);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-weight: 800;
-    font-size: 1.15rem;
-    margin: 0 auto 1rem;
-  }
-
-  .step-card h4 {
-    text-align: center;
-  }
-
-  .step-card p {
-    font-size: 0.9rem;
-    color: #666;
-    margin: 0;
-    line-height: 1.6;
-  }
-
-  /* Included Block */
-  .included-block {
-    background: white;
-    border-radius: 12px;
-    padding: 2rem 2.5rem;
-    margin-bottom: 2rem;
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-    border: 1px solid #E8DDD4;
-  }
-
-  .included-block h3 {
-    text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.35rem;
-  }
-
-  .included-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 0.85rem;
   }
 
-  .included-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.75rem 1rem;
-    background: #FFF8F0;
-    border-radius: 8px;
-    border: 1px solid #E8DDD4;
+  .steps-list li {
+    background: #fff8f0;
+    border: 1px solid #e8ddd4;
+    border-radius: 10px;
+    padding: 1rem 1rem 1rem 1.15rem;
   }
 
-  .included-check {
-    width: 24px;
-    height: 24px;
-    min-width: 24px;
-    background: #5C3D2E;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
+  .steps-list h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
   }
 
-  .included-check svg {
-    width: 14px;
-    height: 14px;
+  .steps-list p {
+    margin: 0;
   }
 
-  .included-item span {
-    font-size: 0.9rem;
-    color: #5a5a5a;
+  .policy-block {
+    display: grid;
+    gap: 1rem;
   }
 
-  /* CTA Box */
+  .policy-card {
+    background: #fff8f0;
+    border: 1px solid #e8ddd4;
+    border-radius: 10px;
+    padding: 1.25rem;
+  }
+
+  .faq-questions {
+    padding-left: 1.2rem;
+  }
+
+  .faq-questions li {
+    margin-bottom: 0.55rem;
+    font-weight: 600;
+    color: #3e2518;
+  }
+
   .cta-box {
-    background: linear-gradient(135deg, #5C3D2E, #3E2518);
-    color: white;
-    padding: 2.5rem;
-    border-radius: 12px;
     text-align: center;
-    margin-top: 3rem;
+    background: linear-gradient(135deg, #5c3d2e, #3e2518);
+    color: #fff;
   }
 
-  .cta-box h3 {
-    color: white;
-    margin: 0 0 0.5rem;
-    font-size: 1.5rem;
-  }
-
+  .cta-box h3,
   .cta-box p {
-    color: rgba(255, 255, 255, 0.9);
-    margin: 0 0 1.5rem;
+    color: #fff;
   }
 
   .btn {
     display: inline-block;
-    background: #D4A574;
-    color: #3E2518;
-    padding: 0.875rem 2rem;
+    margin-top: 0.45rem;
+    background: #d4a574;
+    color: #3e2518;
+    padding: 0.85rem 1.5rem;
     border-radius: 8px;
-    font-size: 1rem;
-    font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    font-weight: 700;
   }
 
   .btn:hover {
-    background: #E2BB91;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    background: #e2bb91;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 900px) {
+    .hero-card {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-media {
+      aspect-ratio: 16 / 11;
+      min-height: 260px;
+    }
+
+    .hero-copy {
+      padding: 1.6rem 1.5rem 1.7rem;
+      gap: 0.5rem;
+    }
+
+    .hero-copy h2 {
+      font-size: 1.65rem;
+      max-width: 100%;
+    }
+
+    .hero-copy p {
+      max-width: 100%;
+    }
+
+    .pricing-grid,
     .options-grid {
       grid-template-columns: 1fr;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .steps-grid {
-      grid-template-columns: repeat(2, 1fr);
     }
   }
 
-  @media (max-width: 768px) {
-    .shipping-content {
+  @media (max-width: 640px) {
+    .delivery-page {
       padding: 3rem 1rem;
     }
 
-    h2 {
-      font-size: 1.75rem;
-    }
-
-    .section-heading {
-      font-size: 1.35rem;
-    }
-
-    .intro-block {
-      padding: 1.75rem;
-    }
-
-    .section-block {
-      padding: 1.75rem;
-    }
-
-    .steps-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .included-grid {
-      grid-template-columns: 1fr;
-    }
-
-    .included-block {
-      padding: 1.5rem;
-    }
-
-    .us-only-banner {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      padding: 1.5rem;
-    }
-
+    .hero-copy,
+    .content-block,
+    .pricing-block,
+    .policy-block,
     .cta-box {
-      padding: 1.75rem;
+      padding: 1.35rem;
+    }
+
+    .hero-media {
+      aspect-ratio: 4 / 3;
+      min-height: 220px;
+    }
+
+    .hero-kicker {
+      font-size: 0.72rem;
+      padding: 0.32rem 0.65rem;
+    }
+
+    .hero-copy h2 {
+      font-size: 1.45rem;
+    }
+
+    .hero-copy p {
+      font-size: 0.98rem;
+      line-height: 1.65;
+    }
+
+    h2 {
+      font-size: 1.45rem;
+    }
+
+    .price-amount {
+      font-size: 1.5rem;
     }
   }
 </style>

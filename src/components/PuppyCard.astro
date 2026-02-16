@@ -46,10 +46,15 @@ const { puppies } = Astro.props;
               <span class="price-amount">${puppy.price.toLocaleString('en-US')}</span>
               <span class="price-text">Includes Documentation & Starter Kit</span>
             </div>
-            <button type="button" class="btn-send-text">
-              <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
-              Send Text
-            </button>
+            {puppy.status === 'Available' && (
+              <a
+                href={`sms:+14432263475?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://doxiepupscreek.com/available-puppies`)}`}
+                class="btn-send-text"
+              >
+                <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
+                Send Text
+              </a>
+            )}
           </div>
 
           <div class="stats-row">
@@ -125,13 +130,21 @@ const { puppies } = Astro.props;
           <div class="buttons-row">
             {puppy.status === 'Available' ? (
               <>
-                <a href="/contact" class="btn btn-primary">Contact Us</a>
-                <button type="button" class="btn btn-outline" onclick={`openContactPopup('${puppy.name}', '${puppy.image}', '${puppy.breed} · ${puppy.color}', ${puppy.price})`}>Adopt Me</button>
+                <a href="/contact" class="btn btn-primary btn-contact">Contact Us</a>
+                <button type="button" class="btn btn-outline btn-adopt" onclick={`openContactPopup('${puppy.name}', '${puppy.image}', '${puppy.breed} · ${puppy.color}', ${puppy.price})`}>Adopt Me</button>
               </>
             ) : (
               <span class="btn btn-sold">This Puppy Has Been Adopted</span>
             )}
           </div>
+          {puppy.status === 'Available' && (
+            <a
+              href={`sms:+14432263475?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://doxiepupscreek.com/available-puppies`)}`}
+              class="btn-sms-under"
+            >
+              Send Text
+            </a>
+          )}
         </div>
       </div>
     ))}
@@ -415,6 +428,31 @@ const { puppies } = Astro.props;
     text-decoration: none;
   }
 
+  .btn-sms-under {
+    display: none;
+    width: calc(50% - 5px);
+    margin-top: 10px;
+    margin-left: calc(50% + 5px);
+    text-align: center;
+    padding: 10px 15px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    background: #5C3D2E;
+    color: #fff;
+    border: 2px solid #5C3D2E;
+  }
+
+  .btn-sms-under:hover {
+    background: #3E2518;
+    border-color: #3E2518;
+    color: #fff;
+  }
+
   .btn-primary {
     background: #5C3D2E;
     color: #fff;
@@ -436,6 +474,20 @@ const { puppies } = Astro.props;
   .btn-outline:hover {
     background: #5C3D2E;
     color: #fff;
+  }
+
+  .btn-adopt {
+    background: #FFF8F0;
+    color: #5C3D2E;
+    border: 2px solid #D4A574;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .btn-adopt:hover {
+    background: #F6E8D9;
+    color: #3E2518;
+    border-color: #C79866;
   }
 
   .btn-sold {
@@ -465,6 +517,11 @@ const { puppies } = Astro.props;
     .buttons-row {
       flex-direction: column;
       gap: 8px;
+    }
+
+    .btn-sms-under {
+      width: 100%;
+      margin-left: 0;
     }
   }
 
@@ -526,7 +583,7 @@ const { puppies } = Astro.props;
       gap: 5px;
       background: #5C3D2E;
       color: white;
-      border: none;
+      text-decoration: none;
       padding: 8px 14px;
       border-radius: 6px;
       font-size: 0.8rem;
@@ -593,6 +650,21 @@ const { puppies } = Astro.props;
     .buttons-row .btn {
       padding: 10px 12px;
       font-size: 0.75rem;
+    }
+
+    .btn-adopt {
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .btn-sms-under {
+      display: inline-block;
+      padding: 10px 12px;
+      font-size: 0.75rem;
+    }
+
+    .buttons-row .btn-contact {
+      display: none;
     }
   }
 </style>

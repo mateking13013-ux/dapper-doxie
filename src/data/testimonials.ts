@@ -105,14 +105,6 @@ export const testimonials: Testimonial[] = [
     text: "Scout is one of the smartest dogs I have ever owned. He picked up house training in record time and already knows sit, stay, and come. The breeding quality from Doxie Pups Creek is exceptional and their knowledge of the Dachshund breed is second to none. I would recommend them without hesitation."
   },
   {
-    name: 'Mike & Laura H.',
-    location: 'Columbus, OH',
-    rating: 5,
-    image: '/images/testimonials/IMG_1170.JPG',
-    puppyName: 'Rosie',
-    text: "Rosie is the most adorable red dapple Dachshund and we are so grateful to Doxie Pups Creek for matching us with her. They really took the time to understand our lifestyle and recommended the perfect puppy for us. She arrived happy and healthy and has been an angel from day one."
-  },
-  {
     name: 'Elena B.',
     location: 'Richmond, VA',
     rating: 5,

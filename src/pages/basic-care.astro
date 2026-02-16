@@ -1,0 +1,244 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Basic Care Guide | Doxie Pups Creek"
+  description="Simple daily care guide for your Dachshund puppy: feeding, potty training, sleep routines, grooming, and first vet visits."
+  keywords="Dachshund puppy care guide, feeding schedule dachshund, potty training dachshund, first week with puppy"
+>
+  <PageHeader
+    title="Basic Care Guide"
+    subtitle="A clear first-week and daily routine to help your Dachshund puppy settle in smoothly"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Basic Care Guide' }
+    ]}
+  />
+
+  <section class="care-page">
+    <div class="care-container">
+      <article class="care-card">
+        <h2>First 72 Hours at Home</h2>
+        <ul>
+          <li>Set up a quiet crate or pen area before arrival.</li>
+          <li>Offer fresh water and a small meal after your puppy has calmed down.</li>
+          <li>Keep introductions to visitors and other pets slow and structured.</li>
+          <li>Start a consistent potty schedule from day one.</li>
+          <li>Book your wellness check with your veterinarian within 72 hours.</li>
+        </ul>
+      </article>
+
+      <article class="care-card">
+        <h2>Daily Feeding Routine</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Puppy Age</th>
+                <th>Meals Per Day</th>
+                <th>Notes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>8-12 weeks</td>
+                <td>3-4 meals</td>
+                <td>Small portions, same food used at transition.</td>
+              </tr>
+              <tr>
+                <td>3-6 months</td>
+                <td>3 meals</td>
+                <td>Maintain puppy formula and monitor growth.</td>
+              </tr>
+              <tr>
+                <td>6-12 months</td>
+                <td>2 meals</td>
+                <td>Transition slowly as advised by your veterinarian.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="note">Always make diet changes gradually over 5-7 days to avoid stomach upset.</p>
+      </article>
+
+      <article class="care-card split">
+        <div>
+          <h2>Potty & Crate Training Basics</h2>
+          <ul>
+            <li>Take your puppy out after waking, eating, drinking, and play sessions.</li>
+            <li>Use one outdoor potty area and reward immediately after success.</li>
+            <li>Keep crate sessions short at first and pair with treats or toys.</li>
+            <li>Do not use punishment for accidents. Clean thoroughly and stay consistent.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Sleep Expectations</h2>
+          <ul>
+            <li>Young puppies typically sleep 16-20 hours each day.</li>
+            <li>Place the crate close to your bed the first few nights.</li>
+            <li>Use a predictable bedtime routine: potty break, calm play, then sleep.</li>
+            <li>Short overnight wakeups are normal during the first 1-2 weeks.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="care-card split">
+        <div>
+          <h2>Grooming & Hygiene</h2>
+          <ul>
+            <li>Brush weekly for smooth coats, and 3-4 times weekly for longhair coats.</li>
+            <li>Trim nails every 2-4 weeks to support healthy movement.</li>
+            <li>Clean ears weekly and dry well after baths.</li>
+            <li>Start tooth brushing early with a dog-safe toothpaste.</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Safe Exercise</h2>
+          <ul>
+            <li>Use short, controlled play sessions throughout the day.</li>
+            <li>Avoid repeated jumping from furniture to protect the spine.</li>
+            <li>Use a harness for walks instead of pressure on the neck.</li>
+            <li>Increase activity gradually as your puppy matures.</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="care-card">
+        <h2>When to Contact Your Veterinarian</h2>
+        <p>Call your veterinarian promptly if your puppy shows any of the following:</p>
+        <ul>
+          <li>Vomiting or diarrhea lasting more than 12 hours</li>
+          <li>Refusing food for more than one meal</li>
+          <li>Persistent coughing, wheezing, or nasal discharge</li>
+          <li>Unusual lethargy, weakness, or limping</li>
+          <li>Sudden behavior changes or signs of pain</li>
+        </ul>
+      </article>
+
+      <article class="cta-card">
+        <h2>Need Help with Your Puppy Routine?</h2>
+        <p>We provide lifetime breeder support. If you need guidance with feeding, behavior, or transition planning, contact us anytime.</p>
+        <a href="/contact" class="cta-btn">Contact Doxie Pups Creek</a>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .care-page {
+    background: #fff8f0;
+    padding: 4rem 1.5rem;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  }
+
+  .care-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .care-card,
+  .cta-card {
+    background: #fff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    padding: 1.8rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .care-card h2,
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    font-size: 1.7rem;
+    color: #3e2518;
+  }
+
+  .care-card p,
+  .care-card li,
+  .cta-card p {
+    margin: 0;
+    color: #575757;
+    line-height: 1.65;
+  }
+
+  .care-card ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .split {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.2rem;
+  }
+
+  .split h2 {
+    font-size: 1.45rem;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 640px;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid #ebdfd5;
+    text-align: left;
+    padding: 0.75rem 0.6rem;
+    color: #515151;
+  }
+
+  th {
+    color: #3e2518;
+    background: #fcf7f1;
+    font-size: 0.95rem;
+  }
+
+  .note {
+    margin-top: 0.8rem;
+    font-size: 0.95rem;
+    color: #6a5b4f;
+  }
+
+  .cta-btn {
+    display: inline-flex;
+    margin-top: 0.9rem;
+    padding: 0.72rem 1.2rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #5c3d2e, #d4a574);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  @media (max-width: 900px) {
+    .care-page {
+      padding: 3rem 1rem;
+    }
+
+    .care-card,
+    .cta-card {
+      padding: 1.2rem;
+    }
+
+    .split {
+      grid-template-columns: 1fr;
+    }
+
+    .care-card h2,
+    .cta-card h2 {
+      font-size: 1.45rem;
+    }
+  }
+</style>

@@ -1,0 +1,157 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="Terms of Service | Doxie Pups Creek"
+  description="Terms of Service for the Doxie Pups Creek website and puppy inquiry process."
+  keywords="terms of service, Doxie Pups Creek terms, puppy website terms"
+>
+  <PageHeader
+    title="Terms of Service"
+    subtitle="Website terms and conditions for using Doxie Pups Creek services"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Terms of Service' }
+    ]}
+  />
+
+  <section class="terms-page">
+    <div class="terms-container">
+      <article class="terms-card">
+        <p class="last-updated">Last updated: February 16, 2026</p>
+
+        <h2>1. Acceptance of Terms</h2>
+        <p>
+          By accessing this website, you agree to these Terms of Service. If you do not agree, please discontinue use
+          of the site.
+        </p>
+
+        <h2>2. Website Purpose</h2>
+        <p>
+          This website is provided to share information about Doxie Pups Creek, available puppies, health policies,
+          and contact methods for prospective families.
+        </p>
+
+        <h2>3. Inquiry and Reservation</h2>
+        <p>
+          Submitting an inquiry form does not guarantee puppy placement. Puppy placement is confirmed only after direct
+          communication, approval, and completion of the required agreement/payment process.
+        </p>
+
+        <h2>4. Pricing and Availability</h2>
+        <p>
+          Puppy availability, pricing, and delivery terms may change at any time before a written agreement is
+          finalized. Posted details are provided in good faith but may be updated without notice.
+        </p>
+
+        <h2>5. Health and Care Information</h2>
+        <p>
+          Content on this site is for general informational purposes and is not a substitute for professional
+          veterinary advice. Always consult your veterinarian for medical care and treatment decisions.
+        </p>
+
+        <h2>6. Intellectual Property</h2>
+        <p>
+          All website content, including text, photos, and branding elements, is the property of Doxie Pups Creek
+          unless otherwise noted. Unauthorized reproduction or distribution is prohibited.
+        </p>
+
+        <h2>7. Prohibited Use</h2>
+        <ul>
+          <li>Using the website for unlawful activity or fraudulent inquiries.</li>
+          <li>Attempting to interfere with website security or performance.</li>
+          <li>Copying site content for commercial use without permission.</li>
+        </ul>
+
+        <h2>8. Third-Party Services</h2>
+        <p>
+          We may use trusted third-party services for contact forms and communication delivery. Their systems and
+          policies may apply when you submit information through our website.
+        </p>
+
+        <h2>9. Limitation of Liability</h2>
+        <p>
+          Doxie Pups Creek is not liable for indirect or incidental damages related to website use, interruptions,
+          or temporary errors in content availability.
+        </p>
+
+        <h2>10. Governing Terms</h2>
+        <p>
+          These Terms of Service are governed by applicable U.S. laws and any local regulations that apply to the
+          breeder and buyer relationship.
+        </p>
+
+        <h2>11. Contact</h2>
+        <p>
+          For questions regarding these terms, contact
+          <a href="mailto:info@doxiepupscreek.com">info@doxiepupscreek.com</a>.
+        </p>
+      </article>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .terms-page {
+    background: #fff8f0;
+    padding: 4rem 1.5rem;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  }
+
+  .terms-container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+
+  .terms-card {
+    background: #fff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  }
+
+  .last-updated {
+    margin: 0 0 0.9rem;
+    font-size: 0.9rem;
+    color: #7a6b5e;
+    font-weight: 600;
+  }
+
+  .terms-card h2 {
+    margin: 1.15rem 0 0.55rem;
+    color: #3e2518;
+    font-size: 1.35rem;
+  }
+
+  .terms-card p,
+  .terms-card li {
+    margin: 0;
+    color: #585858;
+    line-height: 1.68;
+  }
+
+  .terms-card ul {
+    margin: 0.55rem 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .terms-card a {
+    color: #5c3d2e;
+    text-decoration: underline;
+  }
+
+  @media (max-width: 800px) {
+    .terms-page {
+      padding: 3rem 1rem;
+    }
+
+    .terms-card {
+      padding: 1.2rem;
+    }
+  }
+</style>

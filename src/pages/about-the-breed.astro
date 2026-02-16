@@ -1,0 +1,270 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+---
+
+<BaseLayout
+  title="About the Breed | Doxie Pups Creek"
+  description="Learn about Dachshund temperament, size, coat types, health considerations, and whether the breed is the right fit for your home."
+  keywords="Dachshund breed information, mini dachshund temperament, standard dachshund personality, dachshund care"
+>
+  <PageHeader
+    title="About the Breed"
+    subtitle="Everything you should know before welcoming a Dachshund into your home"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'About the Breed' }
+    ]}
+  />
+
+  <section class="breed-page">
+    <div class="breed-container">
+      <article class="intro-card">
+        <h2>Dachshunds: Small Dogs with Big Hearts</h2>
+        <p>
+          Dachshunds are known for their loyal personalities, playful energy, and unique long-bodied build.
+          At Doxie Pups Creek, we raise our puppies in a family setting so they are confident, social, and
+          ready for real home life. Whether you are choosing a Miniature or Standard Dachshund, you can
+          expect a loving companion who bonds deeply with their people.
+        </p>
+      </article>
+
+      <section class="traits-grid">
+        <article class="trait-card">
+          <h3>Temperament</h3>
+          <p>Affectionate, alert, and people-focused. Dachshunds love being close to their family and thrive on daily interaction.</p>
+        </article>
+        <article class="trait-card">
+          <h3>Energy Level</h3>
+          <p>Moderate. They enjoy playtime and short walks, then happily settle in for cuddles and rest.</p>
+        </article>
+        <article class="trait-card">
+          <h3>Trainability</h3>
+          <p>Smart and responsive with consistency. Positive reinforcement and short sessions work best.</p>
+        </article>
+        <article class="trait-card">
+          <h3>Family Fit</h3>
+          <p>Excellent with respectful children and adults. Early socialization helps build confidence in new settings.</p>
+        </article>
+      </section>
+
+      <section class="info-card">
+        <h2>Size and Coat Overview</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Variety</th>
+                <th>Typical Adult Weight</th>
+                <th>Coat & Grooming</th>
+                <th>Personality Style</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Miniature Smooth</td>
+                <td>8-11 lbs</td>
+                <td>Short coat, low maintenance, weekly brushing</td>
+                <td>Bold, curious, lively</td>
+              </tr>
+              <tr>
+                <td>Miniature Longhair</td>
+                <td>8-11 lbs</td>
+                <td>Silky coat, brush 3-4 times per week</td>
+                <td>Gentle, affectionate, calm</td>
+              </tr>
+              <tr>
+                <td>Standard Smooth</td>
+                <td>16-32 lbs</td>
+                <td>Short coat, easy upkeep</td>
+                <td>Confident, loyal, sturdy</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="info-card">
+        <h2>Health and Lifestyle Considerations</h2>
+        <ul>
+          <li>Keep your Dachshund at a healthy weight to reduce stress on the spine and joints.</li>
+          <li>Use ramps for furniture when possible and avoid frequent jumping from high surfaces.</li>
+          <li>Provide daily exercise and mental stimulation with toys, scent games, and training.</li>
+          <li>Schedule regular veterinary care and stay current on vaccines, parasite prevention, and dental care.</li>
+          <li>Choose a secure harness over neck-only pressure for routine walks.</li>
+        </ul>
+      </section>
+
+      <section class="info-card">
+        <h2>Is a Dachshund Right for You?</h2>
+        <p>Dachshunds are a great fit if you are looking for:</p>
+        <ul>
+          <li>A loyal companion who wants to be part of your daily routine.</li>
+          <li>A small-to-medium dog with personality and confidence.</li>
+          <li>A breed that does well in both apartments and houses with consistent exercise.</li>
+          <li>A long-term family member who thrives with structure, affection, and training.</li>
+        </ul>
+      </section>
+
+      <section class="cta-card">
+        <h2>Ready to Meet Your Match?</h2>
+        <p>Browse our available Dachshund puppies and contact us if you want help choosing the right temperament and size for your home.</p>
+        <div class="cta-actions">
+          <a href="/available-puppies" class="btn-primary">View Available Puppies</a>
+          <a href="/contact" class="btn-secondary">Ask Us a Question</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .breed-page {
+    background: #fff8f0;
+    padding: 4rem 1.5rem;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  }
+
+  .breed-container {
+    max-width: 1020px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.25rem;
+  }
+
+  .intro-card,
+  .info-card,
+  .cta-card {
+    background: #fff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(62, 37, 24, 0.08);
+  }
+
+  .intro-card h2,
+  .info-card h2,
+  .cta-card h2 {
+    margin: 0 0 0.75rem;
+    color: #3e2518;
+    font-size: 1.9rem;
+  }
+
+  .intro-card p,
+  .info-card p,
+  .info-card li,
+  .cta-card p {
+    margin: 0;
+    color: #595959;
+    line-height: 1.7;
+    font-size: 1rem;
+  }
+
+  .traits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .trait-card {
+    background: #fff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    padding: 1.35rem;
+    box-shadow: 0 2px 10px rgba(62, 37, 24, 0.07);
+  }
+
+  .trait-card h3 {
+    margin: 0 0 0.45rem;
+    color: #5c3d2e;
+    font-size: 1.25rem;
+  }
+
+  .trait-card p {
+    margin: 0;
+    color: #5c5c5c;
+    line-height: 1.65;
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+  }
+
+  th,
+  td {
+    border-bottom: 1px solid #ebdfd5;
+    text-align: left;
+    padding: 0.8rem 0.6rem;
+    color: #4d4d4d;
+  }
+
+  th {
+    color: #3e2518;
+    font-size: 0.95rem;
+    background: #fcf7f1;
+  }
+
+  .info-card ul {
+    margin: 0.75rem 0 0;
+    padding-left: 1.1rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .cta-actions {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.7rem 1.2rem;
+  }
+
+  .btn-primary {
+    background: linear-gradient(135deg, #5c3d2e, #d4a574);
+    color: #fff;
+  }
+
+  .btn-secondary {
+    border: 1px solid #5c3d2e;
+    color: #5c3d2e;
+    background: #fff;
+  }
+
+  @media (max-width: 900px) {
+    .breed-page {
+      padding: 3rem 1rem;
+    }
+
+    .traits-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .intro-card,
+    .info-card,
+    .cta-card {
+      padding: 1.25rem;
+    }
+
+    .intro-card h2,
+    .info-card h2,
+    .cta-card h2 {
+      font-size: 1.5rem;
+    }
+  }
+</style>
