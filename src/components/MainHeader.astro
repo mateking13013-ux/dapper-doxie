@@ -19,7 +19,9 @@
 
     <nav class="nav-menu">
       <div class="nav-brand-mobile">
-        <span style="font-size: 1.1rem; font-weight: 700; color: #5C3D2E;">Doxie Pups Creek</span>
+        <a href="/" class="nav-brand-mobile-link" aria-label="Doxie Pups Creek home">
+          <img src="/images/logo.png" alt="Doxie Pups Creek logo" class="nav-brand-mobile-img" />
+        </a>
       </div>
       <ul>
         <li><a href="/">Home</a></li>
@@ -174,10 +176,22 @@
 
   .nav-brand-mobile {
     display: none;
-    font-size: 1.35rem;
     margin-bottom: 1.5rem;
-    padding-bottom: 1rem;
+    padding-bottom: 0.95rem;
     border-bottom: 1px solid #eee;
+    width: 100%;
+  }
+
+  .nav-brand-mobile-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .nav-brand-mobile-img {
+    display: block;
+    height: 46px;
+    width: auto;
   }
 
   .nav-cta-mobile {
