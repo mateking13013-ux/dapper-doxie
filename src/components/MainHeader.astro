@@ -25,11 +25,30 @@
         <li><a href="/">Home</a></li>
         <li><a href="/available-puppies">Available Puppies</a></li>
         <li><a href="/about">About Us</a></li>
+        <li><a href="/parents">Parents</a></li>
         <li><a href="/testimonials">Testimonials</a></li>
-        <li><a href="/faq">FAQ</a></li>
-        <li><a href="/health-guarantee">Health Guarantee</a></li>
-        <li><a href="/vaccinations">Vaccinations</a></li>
-        <li><a href="/shipping">Shipping</a></li>
+        <li class="more-info-item">
+          <button class="more-info-trigger" type="button" aria-expanded="false">
+            More Info
+            <svg class="more-info-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </button>
+          <ul class="more-info-menu">
+            <li><a href="/contact">Contact Us</a></li>
+            <li><a href="/faq">FAQ</a></li>
+            <li><a href="/health-guarantee">Health Guarantee</a></li>
+            <li><a href="/vaccinations">Vaccinations</a></li>
+            <li><a href="/shipping">Shipping & Delivery</a></li>
+            <li><a href="/sales-agreement">Sales Agreement</a></li>
+            <li><a href="/about-the-breed">About the Breed</a></li>
+            <li><a href="/basic-care">Basic Care Guide</a></li>
+            <li><a href="/books">Recommended Books</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+            <li><a href="/terms-of-service">Terms of Service</a></li>
+            <li><a href="/return-refund-policy">Return & Refund Policy</a></li>
+          </ul>
+        </li>
       </ul>
       <a href="/contact" class="nav-cta-mobile">Adopt a Puppy</a>
     </nav>
@@ -42,8 +61,21 @@
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.nav-menu');
   const overlay = document.querySelector('.nav-overlay');
+  const moreInfoItem = document.querySelector('.more-info-item');
+  const moreInfoTrigger = document.querySelector('.more-info-trigger');
+  const navLinks = document.querySelectorAll('.nav-menu a');
 
   let isMenuOpen = false;
+
+  const closeMenu = () => {
+    isMenuOpen = false;
+    nav?.classList.remove('active');
+    overlay?.classList.remove('active');
+    menuToggle?.classList.remove('active');
+    menuToggle?.setAttribute('aria-expanded', 'false');
+    moreInfoItem?.classList.remove('open');
+    moreInfoTrigger?.setAttribute('aria-expanded', 'false');
+  };
 
   menuToggle?.addEventListener('click', () => {
     isMenuOpen = !isMenuOpen;
@@ -51,14 +83,36 @@
     overlay?.classList.toggle('active', isMenuOpen);
     menuToggle?.classList.toggle('active', isMenuOpen);
     menuToggle?.setAttribute('aria-expanded', String(isMenuOpen));
+
+    if (!isMenuOpen) {
+      moreInfoItem?.classList.remove('open');
+      moreInfoTrigger?.setAttribute('aria-expanded', 'false');
+    }
   });
 
-  overlay?.addEventListener('click', () => {
-    isMenuOpen = false;
-    nav?.classList.remove('active');
-    overlay?.classList.remove('active');
-    menuToggle?.classList.remove('active');
-    menuToggle?.setAttribute('aria-expanded', 'false');
+  overlay?.addEventListener('click', closeMenu);
+
+  moreInfoTrigger?.addEventListener('click', (event) => {
+    event.preventDefault();
+    const isOpen = moreInfoItem?.classList.toggle('open');
+    moreInfoTrigger?.setAttribute('aria-expanded', String(Boolean(isOpen)));
+  });
+
+  document.addEventListener('click', (event) => {
+    const target = event.target;
+    if (!(target instanceof Node)) return;
+    if (!moreInfoItem?.contains(target)) {
+      moreInfoItem?.classList.remove('open');
+      moreInfoTrigger?.setAttribute('aria-expanded', 'false');
+    }
+  });
+
+  navLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        closeMenu();
+      }
+    });
   });
 </script>
 
@@ -138,7 +192,12 @@
     gap: 2rem;
   }
 
-  .nav-menu a {
+  .nav-menu > ul > li {
+    position: relative;
+  }
+
+  .nav-menu a,
+  .more-info-trigger {
     text-decoration: none;
     color: #4a4a4a;
     font-weight: 500;
@@ -149,7 +208,24 @@
     padding: 0.5rem 0;
   }
 
-  .nav-menu > ul > li > a::after {
+  .more-info-trigger {
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .more-info-icon {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.25s ease;
+  }
+
+  .nav-menu > ul > li > a::after,
+  .more-info-trigger::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -165,8 +241,63 @@
     color: #5C3D2E;
   }
 
-  .nav-menu > ul > li > a:hover::after {
+  .more-info-trigger:hover {
+    color: #5C3D2E;
+  }
+
+  .nav-menu > ul > li > a:hover::after,
+  .more-info-trigger:hover::after {
     width: 100%;
+  }
+
+  .more-info-item.open .more-info-icon,
+  .more-info-item:hover .more-info-icon {
+    transform: rotate(180deg);
+  }
+
+  .more-info-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0.45rem;
+    position: absolute;
+    right: 0;
+    top: calc(100% + 0.55rem);
+    min-width: 250px;
+    background: #fff;
+    border: 1px solid #eadfd4;
+    border-radius: 12px;
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    pointer-events: none;
+    transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s ease;
+    z-index: 120;
+  }
+
+  .more-info-menu li {
+    margin: 0;
+  }
+
+  .more-info-menu a {
+    display: block;
+    padding: 0.55rem 0.65rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #4a4a4a;
+  }
+
+  .more-info-menu a:hover {
+    background: #fff8f0;
+    color: #5C3D2E;
+  }
+
+  .more-info-item:hover .more-info-menu,
+  .more-info-item.open .more-info-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
   }
 
   .header-cta {
@@ -308,14 +439,82 @@
       padding: 0;
     }
 
-    .nav-menu > ul > li > a {
+    .nav-menu > ul > li {
+      width: 100%;
+    }
+
+    .nav-menu > ul > li > a,
+    .more-info-trigger {
       display: block;
       padding: 0.6rem 0;
       font-size: 0.95rem;
+      width: 100%;
+      text-align: left;
     }
 
-    .nav-menu > ul > li > a::after {
+    .more-info-trigger {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .nav-menu > ul > li > a::after,
+    .more-info-trigger::after {
       display: none;
+    }
+
+    .more-info-menu {
+      position: static;
+      top: auto;
+      right: auto;
+      min-width: 100%;
+      box-shadow: none;
+      border-radius: 12px;
+      border-color: #ece1d5;
+      background: #fff8f0;
+      margin: 0.2rem 0 0.5rem;
+      opacity: 1;
+      visibility: visible;
+      transform: none;
+      pointer-events: auto;
+      display: none;
+      padding: 0.55rem;
+    }
+
+    .more-info-item:hover .more-info-menu {
+      display: none;
+    }
+
+    .more-info-item.open .more-info-menu {
+      display: block;
+    }
+
+    .more-info-menu a {
+      font-size: 0.9rem;
+      padding: 0.68rem 0.78rem;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      border: 1px solid #e6d9cd;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 1px 2px rgba(92, 61, 46, 0.06);
+    }
+
+    .more-info-menu li + li {
+      margin-top: 0.42rem;
+    }
+
+    .more-info-menu a:hover,
+    .more-info-menu a:focus-visible {
+      background: #fff4e8;
+      border-color: #d8bea6;
+      color: #5C3D2E;
+    }
+
+    .more-info-item.open .more-info-icon {
+      transform: rotate(180deg);
     }
 
     .header-cta {

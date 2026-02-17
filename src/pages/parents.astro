@@ -1,0 +1,268 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+
+const parents = [
+  {
+    role: 'Sire',
+    name: 'Atlas',
+    image: '/images/parents/parent-1.jpeg',
+    summary: 'Atlas is a confident, people-focused parent with a calm temperament and excellent structure.'
+  },
+  {
+    role: 'Dam',
+    name: 'Willow',
+    image: '/images/parents/parent-2.jpeg',
+    summary: 'Willow is affectionate, gentle, and attentive, with strong maternal instincts and steady personality.'
+  },
+  {
+    role: 'Sire',
+    name: 'Milo',
+    image: '/images/parents/parent-3.jpeg',
+    summary: 'Milo brings playful energy, strong social behavior, and consistent trainable temperament to our lines.'
+  },
+  {
+    role: 'Dam',
+    name: 'Hazel',
+    image: '/images/parents/parent-4.jpeg',
+    summary: 'Hazel is sweet, balanced, and adaptable, with a nurturing disposition and excellent family traits.'
+  },
+  {
+    role: 'Sire',
+    name: 'Oliver',
+    image: '/images/parents/parent-5.jpeg',
+    summary: 'Oliver is affectionate, alert, and well-socialized, with calm house manners and strong family-focused temperament.'
+  }
+];
+---
+
+<BaseLayout
+  title="Meet the Parents | Doxie Pups Creek"
+  description="Meet the parent dogs behind our Doxie Pups Creek litters. We prioritize health, temperament, and responsible family-focused breeding."
+  keywords="Dachshund parents, sire and dam, Doxie Pups Creek breeding program, healthy Dachshund bloodlines"
+>
+  <PageHeader
+    title="Meet the Parents"
+    subtitle="Healthy parents are the foundation of healthy, happy puppies"
+    breadcrumbs={[
+      { label: 'Home', href: '/' },
+      { label: 'Meet the Parents' }
+    ]}
+  />
+
+  <section class="parents-page">
+    <div class="parents-container">
+      <article class="intro-card">
+        <h2>Our Parent Program</h2>
+        <p>
+          At Doxie Pups Creek, we believe every great puppy starts with exceptional parents. We focus on
+          temperament, structure, and long-term health so our puppies are set up for a strong start in life.
+          Each parent is raised and cared for in a clean, family-centered environment with ongoing wellness
+          support and regular veterinary oversight.
+        </p>
+      </article>
+
+      <div class="parents-grid">
+        {parents.map((parent) => (
+          <article class="parent-card">
+            <div class="parent-image-wrap">
+              <img src={parent.image} alt={`${parent.role} ${parent.name} at Doxie Pups Creek`} loading="lazy" />
+              <span class="parent-role">{parent.role}</span>
+            </div>
+            <div class="parent-content">
+              <h3>{parent.name}</h3>
+              <p>{parent.summary}</p>
+            </div>
+          </article>
+        ))}
+      </div>
+
+      <section class="values-card">
+        <h2>What We Prioritize</h2>
+        <ul>
+          <li>Health-first breeding decisions and consistent veterinary care.</li>
+          <li>Stable, family-friendly temperaments for confident puppies.</li>
+          <li>Clean, low-stress, home-raised care from birth onward.</li>
+          <li>Clear support for families before and after puppy pickup.</li>
+        </ul>
+      </section>
+
+      <section class="cta-card">
+        <h2>Interested in a Puppy from These Lines?</h2>
+        <p>Explore available puppies or contact us and we can help you find the right temperament for your home.</p>
+        <div class="cta-row">
+          <a href="/available-puppies" class="btn-primary">View Available Puppies</a>
+          <a href="/contact" class="btn-secondary">Contact Us</a>
+        </div>
+      </section>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .parents-page {
+    padding: 4rem 1.5rem;
+    background: #fff8f0;
+    font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
+  }
+
+  .parents-container {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    gap: 1.2rem;
+  }
+
+  .intro-card,
+  .values-card,
+  .cta-card {
+    background: #ffffff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    padding: 1.9rem;
+    box-shadow: 0 4px 18px rgba(92, 61, 46, 0.08);
+  }
+
+  .intro-card h2,
+  .values-card h2,
+  .cta-card h2 {
+    margin: 0 0 0.6rem;
+    color: #3e2518;
+    font-size: 1.65rem;
+  }
+
+  .intro-card p,
+  .values-card li,
+  .cta-card p {
+    margin: 0;
+    color: #5d5d5d;
+    line-height: 1.68;
+    font-size: 1rem;
+  }
+
+  .parents-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .parent-card {
+    background: #fff;
+    border: 1px solid #e8ddd4;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(92, 61, 46, 0.08);
+  }
+
+  .parent-image-wrap {
+    position: relative;
+    background: #f5ece2;
+  }
+
+  .parent-image-wrap img {
+    width: 100%;
+    height: 325px;
+    object-fit: cover;
+    display: block;
+  }
+
+  .parent-role {
+    position: absolute;
+    top: 0.8rem;
+    left: 0.8rem;
+    background: rgba(62, 37, 24, 0.9);
+    color: #fff;
+    font-size: 0.72rem;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    font-weight: 700;
+    border-radius: 999px;
+    padding: 0.32rem 0.58rem;
+  }
+
+  .parent-content {
+    padding: 1rem 1rem 1.1rem;
+  }
+
+  .parent-content h3 {
+    margin: 0 0 0.35rem;
+    color: #3e2518;
+    font-size: 1.25rem;
+  }
+
+  .parent-content p {
+    margin: 0;
+    color: #5d5d5d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .values-card ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.15rem;
+    display: grid;
+    gap: 0.45rem;
+  }
+
+  .cta-row {
+    margin-top: 0.9rem;
+    display: flex;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.72rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .btn-primary {
+    color: #fff;
+    background: linear-gradient(135deg, #5c3d2e, #d4a574);
+  }
+
+  .btn-secondary {
+    color: #5c3d2e;
+    background: #fff;
+    border: 1.5px solid #d4a574;
+  }
+
+  @media (max-width: 1050px) {
+    .parents-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 900px) {
+    .parents-page {
+      padding: 3rem 1rem;
+    }
+
+    .parents-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .intro-card,
+    .values-card,
+    .cta-card {
+      padding: 1.2rem;
+    }
+
+    .intro-card h2,
+    .values-card h2,
+    .cta-card h2 {
+      font-size: 1.35rem;
+    }
+
+    .parent-image-wrap img {
+      height: 290px;
+    }
+  }
+</style>
