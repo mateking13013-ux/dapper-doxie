@@ -4,34 +4,39 @@ import PageHeader from '../components/PageHeader.astro';
 
 const parents = [
   {
-    role: 'Sire',
-    name: 'Atlas',
+    sire: 'Atlas',
+    dam: 'Willow',
+    pairName: 'Atlas & Willow',
     image: '/images/parents/parent-1.jpeg',
-    summary: 'Atlas is a confident, people-focused parent with a calm temperament and excellent structure.'
+    summary: 'Strong temperament balance with calm confidence, affectionate behavior, and excellent family traits.'
   },
   {
-    role: 'Dam',
-    name: 'Willow',
+    sire: 'Milo',
+    dam: 'Hazel',
+    pairName: 'Milo & Hazel',
     image: '/images/parents/parent-2.jpeg',
-    summary: 'Willow is affectionate, gentle, and attentive, with strong maternal instincts and steady personality.'
+    summary: 'Consistent social personality and clean structure, producing confident puppies with people-focused behavior.'
   },
   {
-    role: 'Sire',
-    name: 'Milo',
+    sire: 'Oliver',
+    dam: 'Daisy',
+    pairName: 'Oliver & Daisy',
     image: '/images/parents/parent-3.jpeg',
-    summary: 'Milo brings playful energy, strong social behavior, and consistent trainable temperament to our lines.'
+    summary: 'Well-matched pair for stable temperament, playful energy, and easy transition into family homes.'
   },
   {
-    role: 'Dam',
-    name: 'Hazel',
+    sire: 'Ranger',
+    dam: 'Luna',
+    pairName: 'Ranger & Luna',
     image: '/images/parents/parent-4.jpeg',
-    summary: 'Hazel is sweet, balanced, and adaptable, with a nurturing disposition and excellent family traits.'
+    summary: 'Balanced parent line known for affectionate personalities and strong adaptability in different households.'
   },
   {
-    role: 'Sire',
-    name: 'Oliver',
+    sire: 'Copper',
+    dam: 'Bella',
+    pairName: 'Copper & Bella',
     image: '/images/parents/parent-5.jpeg',
-    summary: 'Oliver is affectionate, alert, and well-socialized, with calm house manners and strong family-focused temperament.'
+    summary: 'Healthy, attentive pairing with excellent social response and calm, trainable puppy behavior patterns.'
   }
 ];
 ---
@@ -66,11 +71,12 @@ const parents = [
         {parents.map((parent) => (
           <article class="parent-card">
             <div class="parent-image-wrap">
-              <img src={parent.image} alt={`${parent.role} ${parent.name} at Doxie Pups Creek`} loading="lazy" />
-              <span class="parent-role">{parent.role}</span>
+              <img src={parent.image} alt={`Parent pair ${parent.pairName} at Doxie Pups Creek`} loading="lazy" />
+              <span class="parent-role">Parent Pair</span>
             </div>
             <div class="parent-content">
-              <h3>{parent.name}</h3>
+              <h3>{parent.pairName}</h3>
+              <p class="pair-line"><strong>Sire:</strong> {parent.sire} <span>•</span> <strong>Dam:</strong> {parent.dam}</p>
               <p>{parent.summary}</p>
             </div>
           </article>
@@ -195,6 +201,23 @@ const parents = [
     color: #5d5d5d;
     font-size: 0.95rem;
     line-height: 1.6;
+  }
+
+  .pair-line {
+    margin: 0 0 0.35rem !important;
+    color: #6d5d4f !important;
+    font-size: 0.84rem !important;
+    line-height: 1.45 !important;
+  }
+
+  .pair-line strong {
+    color: #4d3528;
+    font-weight: 700;
+  }
+
+  .pair-line span {
+    margin: 0 0.3rem;
+    color: #a4856a;
   }
 
   .values-card ul {
