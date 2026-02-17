@@ -26,6 +26,7 @@
         <li><a href="/available-puppies">Available Puppies</a></li>
         <li><a href="/about">About Us</a></li>
         <li><a href="/parents">Parents</a></li>
+        <li><a href="/health-guarantee">Health Guarantee</a></li>
         <li><a href="/testimonials">Testimonials</a></li>
         <li class="more-info-item">
           <button class="more-info-trigger" type="button" aria-expanded="false">
@@ -37,7 +38,6 @@
           <ul class="more-info-menu">
             <li><a href="/contact">Contact Us</a></li>
             <li><a href="/faq">FAQ</a></li>
-            <li><a href="/health-guarantee">Health Guarantee</a></li>
             <li><a href="/vaccinations">Vaccinations</a></li>
             <li><a href="/shipping">Shipping & Delivery</a></li>
             <li><a href="/sales-agreement">Sales Agreement</a></li>
@@ -397,6 +397,7 @@
       right: -100%;
       width: 300px;
       height: 100vh;
+      max-height: 100vh;
       background: white;
       flex-direction: column;
       padding: 2rem;
@@ -405,6 +406,9 @@
       z-index: 99;
       justify-content: flex-start;
       align-items: flex-start;
+      overflow-y: auto;
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
     }
 
     .nav-menu.active {
