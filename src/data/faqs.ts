@@ -22,11 +22,15 @@ export const faqs: Faq[] = [
   },
   {
     question: 'Do you ship puppies?',
-    answer: 'Yes, we offer safe delivery options nationwide. Our preferred methods include personal pickup at our home (which we highly encourage so you can meet the parents), professional ground transport through a trusted pet transport service, and our flight nanny program where a dedicated handler accompanies your puppy on a commercial flight directly to your nearest airport. Every puppy travels with their health documents, food, and comfort items.'
+    answer: 'Yes. We offer safe shipping through a trusted courier company that specializes in pet transport. Once your puppy is in transit, you receive real-time movement updates so you can follow every step of the journey until arrival. Personal pickup is also available for approved buyers.'
   },
   {
     question: 'How do I reserve a puppy?',
-    answer: 'To reserve a puppy, simply fill out our contact form or give us a call. After we chat and determine the right match for your family, a $500 non-refundable deposit secures your chosen puppy. The remaining balance is due at pickup or before shipping. We accept various payment methods and will keep you updated with photos and videos as your puppy grows.'
+    answer: 'To reserve a puppy for in-person pickup, we require a $500 deposit after we speak and confirm the right match for your family. If you later change your mind, we refund $100 of that deposit. We require this deposit so only serious buyers schedule visits to our home, because we have had many people request free visits without real intent to buy. The remaining balance is due at pickup or before shipping.'
+  },
+  {
+    question: 'How does shipping work after I reserve a puppy?',
+    answer: 'After your deposit is confirmed, we coordinate transport with our trusted courier company. Once your puppy is on transit, you receive real-time updates on your puppy\'s movement, including departure and expected arrival details. Your puppy travels with health documents and comfort items for a safe trip.'
   },
   {
     question: 'Are your puppies socialized?',
