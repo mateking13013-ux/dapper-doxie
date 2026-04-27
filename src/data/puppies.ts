@@ -293,7 +293,7 @@ export const puppies: Puppy[] = [
     sex: 'Female',
     age: '10 Weeks',
     color: 'English Cream',
-    status: 'Available',
+    status: 'Sold',
     price: 750,
     description: 'Zola is a beautiful English cream girl with a soft pale ivory coat and big dark eyes. She has a playful yet gentle personality and loves both outdoor adventures and cozy indoor cuddles. Zola is ready to become the heart of your family.',
   },
