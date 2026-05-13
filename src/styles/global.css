@@ -1,38 +1,38 @@
 /* ================================
-   Doxie Pups Creek
+   Dapper Doxie
    Main Stylesheet
-   Warm Earthy Theme
+   Forest Green Single-Color Theme
 ================================ */
 
 /* CSS Custom Properties (Theme) */
 :root {
-  /* Primary Colors - Chocolate Brown */
-  --color-primary: #5C3D2E;
-  --color-primary-light: #7A5440;
-  --color-primary-dark: #3E2518;
+  /* Primary Colors - Forest Green (single solid color) */
+  --color-primary: #1F5132;
+  --color-primary-light: #2E6B45;
+  --color-primary-dark: #143521;
 
-  /* Secondary Colors - Golden Amber */
-  --color-secondary: #D4A574;
-  --color-secondary-light: #E2BB91;
-  --color-secondary-dark: #B8885A;
+  /* Secondary mapped to forest green tints for compatibility */
+  --color-secondary: #2E6B45;
+  --color-secondary-light: #4A8A63;
+  --color-secondary-dark: #143521;
 
-  /* Accent Colors */
-  --color-gold: #C9A050;
-  --color-cream: #FFF8F0;
+  /* Accents kept neutral so brand stays mono */
+  --color-gold: #2E6B45;
+  --color-cream: #F2F6F2;
 
-  /* Neutrals */
+  /* Neutrals - cool, lightly green-tinted */
   --color-white: #FFFFFF;
-  --color-off-white: #FFFAF5;
-  --color-gray-100: #F5F0EB;
-  --color-gray-200: #EDE5DC;
-  --color-gray-300: #DDD3C8;
-  --color-gray-400: #BDB0A3;
-  --color-gray-500: #9E8E80;
-  --color-gray-600: #756558;
-  --color-gray-700: #5A4B3F;
-  --color-gray-800: #3E3229;
-  --color-gray-900: #2C1810;
-  --color-black: #2C1810;
+  --color-off-white: #F7FAF7;
+  --color-gray-100: #EEF3EE;
+  --color-gray-200: #E1E8E2;
+  --color-gray-300: #C9D3CA;
+  --color-gray-400: #9DABA0;
+  --color-gray-500: #6E7C72;
+  --color-gray-600: #4E5A52;
+  --color-gray-700: #3A4640;
+  --color-gray-800: #232E28;
+  --color-gray-900: #14201A;
+  --color-black: #14201A;
 
   /* Typography */
   --font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, sans-serif;
@@ -165,14 +165,15 @@ img {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+  background: var(--color-primary);
   color: var(--color-white);
-  box-shadow: 0 4px 15px rgba(92, 61, 46, 0.3);
+  box-shadow: 0 4px 15px rgba(31, 81, 50, 0.3);
 }
 
 .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(92, 61, 46, 0.4);
+  background: var(--color-primary-dark);
+  box-shadow: 0 8px 25px rgba(31, 81, 50, 0.4);
   color: var(--color-white);
 }
 

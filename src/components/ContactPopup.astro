@@ -32,8 +32,8 @@
 
     <form id="popup-contact-form" class="popup-form">
       <input type="hidden" name="access_key" value="78f7a8fc-7e7c-4cc8-8322-df87dd5f994e">
-      <input type="hidden" name="subject" id="form-subject" value="Puppy Inquiry - Doxie Pups Creek">
-      <input type="hidden" name="from_name" value="Doxie Pups Creek">
+      <input type="hidden" name="subject" id="form-subject" value="Puppy Inquiry - Dapper Doxie">
+      <input type="hidden" name="from_name" value="Dapper Doxie">
       <input type="hidden" name="Puppy_Interested" id="form-puppy-name" value="">
       <input type="hidden" name="Source_Page" id="form-source-page" value="">
 
@@ -98,11 +98,11 @@
 
     if (puppyName) {
       puppyNameSpan.textContent = puppyName;
-      formSubject.value = `Adoption Request: ${puppyName} - Doxie Pups Creek`;
+      formSubject.value = `Adoption Request: ${puppyName} - Dapper Doxie`;
       formPuppyName.value = puppyName;
     } else {
       puppyNameSpan.textContent = 'Our Puppies';
-      formSubject.value = 'New Inquiry - Doxie Pups Creek';
+      formSubject.value = 'New Inquiry - Dapper Doxie';
       formPuppyName.value = 'General Inquiry';
     }
 
@@ -219,11 +219,11 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    background: #FFF8F0;
+    background: #F7FAF7;
     border-radius: 10px;
     padding: 0.75rem;
     margin-bottom: 0.75rem;
-    border: 1px solid #D4A574;
+    border: 1px solid #2E6B45;
   }
 
   .puppy-preview-image {
@@ -247,7 +247,7 @@
 
   .puppy-status-badge {
     display: inline-block;
-    background: #5C3D2E;
+    background: #1F5132;
     color: white;
     font-size: 0.6rem;
     font-weight: 700;
@@ -260,7 +260,7 @@
   .puppy-preview-info h3 {
     font-size: 1rem;
     font-weight: 700;
-    color: #5C3D2E;
+    color: #1F5132;
     margin: 0 0 0.15rem;
   }
 
@@ -294,7 +294,7 @@
     display: flex;
     align-items: center;
     gap: 0.3rem;
-    color: #5C3D2E;
+    color: #1F5132;
     font-size: 0.7rem;
     font-weight: 600;
   }
@@ -347,7 +347,7 @@
   }
 
   .popup-close:hover {
-    background: #5C3D2E;
+    background: #1F5132;
     color: white;
   }
 
@@ -364,7 +364,7 @@
   }
 
   .popup-title span {
-    color: #5C3D2E;
+    color: #1F5132;
   }
 
   .popup-subtitle {
@@ -415,8 +415,8 @@
   .form-group input:focus,
   .form-group textarea:focus {
     outline: none;
-    border-color: #5C3D2E;
-    box-shadow: 0 0 0 2px rgba(92, 61, 46, 0.1);
+    border-color: #1F5132;
+    box-shadow: 0 0 0 2px rgba(31, 81, 50, 0.1);
   }
 
   .form-group textarea {
@@ -425,7 +425,7 @@
   }
 
   .popup-submit {
-    background: #5C3D2E;
+    background: #1F5132;
     color: white;
     border: none;
     width: 100%;
@@ -439,7 +439,7 @@
   }
 
   .popup-submit:hover {
-    background: #D4A574;
+    background: #2E6B45;
   }
 
   .popup-submit:disabled {
@@ -455,7 +455,7 @@
   .success-icon {
     width: 50px;
     height: 50px;
-    background: #5C3D2E;
+    background: #1F5132;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -482,7 +482,7 @@
   }
 
   .popup-close-btn {
-    background: #5C3D2E;
+    background: #1F5132;
     color: white;
     border: none;
     padding: 0.6rem 1.5rem;
@@ -494,7 +494,7 @@
   }
 
   .popup-close-btn:hover {
-    background: #D4A574;
+    background: #2E6B45;
   }
 
   @media (max-width: 500px) {

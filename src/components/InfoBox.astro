@@ -8,11 +8,11 @@ interface Props {
 const { type = 'info', title } = Astro.props;
 
 const types = {
-  info: { border: '#D4A574', bg: '#FFF8F0' },
+  info: { border: '#2E6B45', bg: '#F7FAF7' },
   success: { border: '#228B22', bg: '#f5faf5' },
-  warning: { border: '#5C3D2E', bg: '#FFF8F0' },
-  tip: { border: '#D4A574', bg: '#FFF8F0' },
-  paw: { border: '#5C3D2E', bg: '#FFF8F0' }
+  warning: { border: '#1F5132', bg: '#F7FAF7' },
+  tip: { border: '#2E6B45', bg: '#F7FAF7' },
+  paw: { border: '#1F5132', bg: '#F7FAF7' }
 };
 
 const config = types[type] || types.info;

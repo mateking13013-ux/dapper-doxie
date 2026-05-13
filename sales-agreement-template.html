@@ -1,218 +1,218 @@
----
-import BaseLayout from '../layouts/BaseLayout.astro';
-import { getAvailablePuppies } from '../data/puppies';
+<!-- ============================================================
+     SALES AGREEMENT PAGE TEMPLATE
+     Stand-alone page content (no header/footer).
+     Drop this inside any site's <body> between your header and footer.
 
-const availablePuppies = getAvailablePuppies();
-const today = new Date().toLocaleDateString('en-US', {
-  month: '2-digit',
-  day: '2-digit',
-  year: 'numeric'
-});
----
+     THINGS TO CUSTOMIZE:
+     1. web3forms access_key  (line ~12)
+     2. Business name, text, and guarantee wording
+     3. Puppy <option> list (or build dynamically)
+     4. Shipping fees & payment methods
+     5. Links in the signature checkbox (sales-agreement, privacy-policy)
+     ============================================================ -->
 
-<BaseLayout
-  title="Sales Agreement | Dapper Doxie"
-  description="Complete the Dapper Doxie Dachshund purchase agreement with buyer information, puppy selection, delivery option, and electronic signature."
-  keywords="Dachshund sales agreement, puppy purchase agreement, Dapper Doxie contract, puppy delivery agreement"
->
-  <section class="agreement-page">
-    <div class="agreement-container">
-      <header class="agreement-intro">
-        <h1>Dachshund Purchase Agreement</h1>
-        <p>
-          Complete this agreement to reserve your Dapper Doxie Dachshund. We will confirm details,
-          countersign, and provide copies for your records. Pricing, transport, and health protections are
-          outlined below.
-        </p>
-      </header>
+<section class="agreement-page">
+  <div class="agreement-container">
+    <header class="agreement-intro">
+      <h1>Dachshund Purchase Agreement</h1>
+      <p>
+        Complete this agreement to reserve your Dapper Doxie Dachshund. We will confirm details,
+        countersign, and provide copies for your records. Pricing, transport, and health protections are
+        outlined below.
+      </p>
+    </header>
 
-      <form id="salesAgreementForm" class="agreement-form">
-        <input type="hidden" name="access_key" value="78f7a8fc-7e7c-4cc8-8322-df87dd5f994e">
-        <input type="hidden" name="subject" value="Sales Agreement Submission - Dapper Doxie">
-        <input type="hidden" name="from_name" value="Dapper Doxie">
-        <input type="hidden" name="website" value="https://dapperdoxie.com">
-        <input type="hidden" name="adoption_fee" id="adoptionFeeInput" value="750">
-        <input type="hidden" name="shipping_fee" id="shippingFeeInput" value="0">
-        <input type="hidden" name="total_fee" id="totalFeeInput" value="750">
+    <form id="salesAgreementForm" class="agreement-form">
+      <!-- Hidden fields for Web3Forms -->
+      <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+      <input type="hidden" name="subject" value="Sales Agreement Submission - Dapper Doxie">
+      <input type="hidden" name="from_name" value="Dapper Doxie">
+      <input type="hidden" name="website" value="https://dapperdoxie.com">
+      <input type="hidden" name="adoption_fee" id="adoptionFeeInput" value="750">
+      <input type="hidden" name="shipping_fee" id="shippingFeeInput" value="0">
+      <input type="hidden" name="total_fee" id="totalFeeInput" value="750">
 
-        <div class="agreement-card">
-          <section class="agreement-section">
-            <h2>Buyer's Information</h2>
-            <div class="field-grid two-col">
-              <label>
-                <span>Enter Your Names</span>
-                <input type="text" name="buyer_name" placeholder="Enter Your Names" required>
-              </label>
-              <label>
-                <span>Phone</span>
-                <input type="tel" name="buyer_phone" placeholder="Phone" required>
-              </label>
-              <label>
-                <span>Your Email</span>
-                <input type="email" id="buyerEmail" name="buyer_email" placeholder="Your Email" required>
-              </label>
-              <label>
-                <span>Address</span>
-                <input type="text" name="buyer_address" placeholder="Address" required>
-              </label>
-              <label>
-                <span>City, State, Zip Code</span>
-                <input type="text" name="buyer_city_state_zip" placeholder="City, State, Zip Code" required>
-              </label>
-              <label>
-                <span>Date</span>
-                <input type="text" id="agreementDate" name="agreement_date" value={today} required>
-              </label>
-            </div>
-          </section>
-
-          <section class="agreement-section">
-            <h2>Pet's Information</h2>
+      <div class="agreement-card">
+        <!-- ── Buyer Info ── -->
+        <section class="agreement-section">
+          <h2>Buyer's Information</h2>
+          <div class="field-grid two-col">
             <label>
-              <span>Select a puppy</span>
-              <select id="selectedPuppy" name="selected_puppy" required>
-                <option value="">Select a puppy</option>
-                {availablePuppies.map((puppy) => (
-                  <option
-                    value={`${puppy.name} - ${puppy.sex}, ${puppy.age}, ${puppy.color}`}
-                    data-price={puppy.price}
-                  >
-                    {puppy.name} ({puppy.sex}) - {puppy.age}
-                  </option>
-                ))}
-              </select>
+              <span>Enter Your Names</span>
+              <input type="text" name="buyer_name" placeholder="Enter Your Names" required>
             </label>
-          </section>
+            <label>
+              <span>Phone</span>
+              <input type="tel" name="buyer_phone" placeholder="Phone" required>
+            </label>
+            <label>
+              <span>Your Email</span>
+              <input type="email" id="buyerEmail" name="buyer_email" placeholder="Your Email" required>
+            </label>
+            <label>
+              <span>Address</span>
+              <input type="text" name="buyer_address" placeholder="Address" required>
+            </label>
+            <label>
+              <span>City, State, Zip Code</span>
+              <input type="text" name="buyer_city_state_zip" placeholder="City, State, Zip Code" required>
+            </label>
+            <label>
+              <span>Date</span>
+              <input type="text" id="agreementDate" name="agreement_date" required>
+            </label>
+          </div>
+        </section>
 
-          <section class="agreement-section">
-            <h2>Shipping Option</h2>
-            <div class="choice-grid">
-              <label class="choice-item">
-                <input type="radio" name="shipping_option" value="Ship To Buyer's Address" data-fee="300" checked>
-                <span id="shippingAddressLabel">Ship To Buyer's Address (+$300)</span>
-              </label>
-              <label class="choice-item">
-                <input type="radio" name="shipping_option" value="Pickup At Seller's Address" data-fee="0">
-                <span id="shippingPickupLabel">In-Person Pickup</span>
-              </label>
-              <label class="choice-item">
-                <input type="radio" name="shipping_option" value="Ship To Buyer's Airport" data-fee="250">
-                <span id="shippingAirportLabel">Ship To Buyer's Airport (+$250)</span>
-              </label>
-            </div>
-          </section>
-
-          <section class="agreement-section payment-section">
-            <h2>Available Payment Method</h2>
-            <div class="choice-grid payments">
-              <label class="choice-item"><input type="radio" name="payment_method" value="Apple Pay" required><span>Apple Pay</span></label>
-              <label class="choice-item"><input type="radio" name="payment_method" value="Zelle"><span>Zelle</span></label>
-              <label class="choice-item"><input type="radio" name="payment_method" value="CashApp"><span>CashApp</span></label>
-              <label class="choice-item"><input type="radio" name="payment_method" value="Wire Transfer"><span>Wire Transfer</span></label>
-              <label class="choice-item"><input type="radio" name="payment_method" value="E transfer (Canada Only)"><span>E transfer (Canada Only)</span></label>
-              <label class="choice-item"><input type="radio" name="payment_method" value="Chime"><span>Chime</span></label>
-            </div>
-          </section>
-
-          <section class="agreement-section summary-section">
-            <h2>Agreement Summary</h2>
-            <div class="summary-rows">
-              <div class="summary-row"><span>Puppy Price</span><strong id="adoptionFee">$750.00</strong></div>
-              <div class="summary-row"><span>Shipping / Pickup</span><strong id="shippingFee">$0.00</strong></div>
-              <div class="summary-row total"><span>Total Due</span><strong id="totalFee">$750.00</strong></div>
-            </div>
-          </section>
-        </div>
-
-        <article class="agreement-card guarantee-card">
-          <h2>Health and Wellness Guarantee - Dapper Doxie</h2>
-          <p>
-            We raise our Dachshund puppies in-home with proactive veterinary care. The following protections
-            apply to every puppy placed.
-          </p>
-
-          <h3>1. Veterinary Examination</h3>
-          <p>
-            The Buyer must take their Dachshund puppy to a licensed veterinarian for a full health check within
-            seven (7) days of receiving the puppy. If a serious congenital defect or underlying illness is found,
-            Dapper Doxie will issue a full refund of the adoption fee, including transportation costs, upon
-            safe return of the puppy.
-          </p>
-
-          <h3>2. Breed-Specific Coverage</h3>
-          <p>
-            Because Dachshunds can be prone to specific genetic conditions, Dapper Doxie provides a lifetime
-            guarantee against serious congenital defects. If diagnosed by two (2) licensed veterinarians, the Buyer
-            may return the puppy for either a full refund of the adoption fee (including transportation costs) or
-            a replacement puppy of equal value.
-          </p>
-
-          <h3>3. Communicable Diseases</h3>
-          <p>
-            If the puppy is diagnosed with a communicable disease within the first fourteen (14) days of arrival,
-            Dapper Doxie will refund the full adoption fee, including transportation costs, upon the puppy's return.
-          </p>
-
-          <h3>4. Transportation and Delivery</h3>
-          <p>
-            <strong>Shipping:</strong> If the puppy is shipped, the Buyer is responsible for transportation expenses.
-            Dapper Doxie uses trusted pet transport services and provides tracking details for peace of mind.
-          </p>
-          <p>
-            <strong>Pickup:</strong> If the Buyer chooses in-person pickup, all remaining balance must be paid in full
-            before or at pickup.
-          </p>
-
-          <h3>5. Cost and Payment</h3>
-          <p>
-            The full adoption fee must be paid prior to delivery or pickup. Any unpaid balance will delay release
-            of the puppy until payment is completed.
-          </p>
-
-          <h3>6. Buyer's Responsibilities</h3>
-          <p>
-            The Buyer agrees to provide lifelong care, including nutritious food, fresh water, safe shelter, daily
-            exercise, and regular veterinary visits. The Buyer must also comply with all local and state regulations
-            regarding dog ownership.
-          </p>
-
-          <p class="agreement-note">
-            This agreement represents the full understanding between Dapper Doxie and the Buyer. Any changes
-            must be made in writing and signed by both parties.
-          </p>
-        </article>
-
-        <div class="agreement-card signature-card">
-          <h2>Signature & Acknowledgment</h2>
-          <label class="terms-row">
-            <input type="checkbox" id="termsAccepted" name="terms_accepted" required>
-            <span>
-              I have read and agree to the <a href="/sales-agreement">Sales Agreement</a> and
-              <a href="/privacy-policy">Privacy Policy</a>.
-            </span>
+        <!-- ── Pet Selection ── -->
+        <section class="agreement-section">
+          <h2>Pet's Information</h2>
+          <label>
+            <span>Select a puppy</span>
+            <select id="selectedPuppy" name="selected_puppy" required>
+              <option value="">Select a puppy</option>
+              <!-- Add your puppies here. data-price sets the adoption fee for that puppy -->
+              <option value="Puppy Name - Male, 8 weeks, Color" data-price="750">Puppy Name (Male) - 8 weeks</option>
+            </select>
           </label>
+        </section>
 
-          <label class="signature-field">
-            <span>Type your full name to sign</span>
-            <input type="text" id="signatureName" name="electronic_signature" placeholder="Type your full name to sign" required>
-          </label>
-          <p class="signature-note">Typing your full name serves as an electronic signature.</p>
-        </div>
+        <!-- ── Shipping ── -->
+        <section class="agreement-section">
+          <h2>Shipping Option</h2>
+          <div class="choice-grid">
+            <label class="choice-item">
+              <input type="radio" name="shipping_option" value="Ship To Buyer's Address" data-fee="300" checked>
+              <span id="shippingAddressLabel">Ship To Buyer's Address (+$300)</span>
+            </label>
+            <label class="choice-item">
+              <input type="radio" name="shipping_option" value="Pickup At Seller's Address" data-fee="0">
+              <span id="shippingPickupLabel">In-Person Pickup</span>
+            </label>
+            <label class="choice-item">
+              <input type="radio" name="shipping_option" value="Ship To Buyer's Airport" data-fee="250">
+              <span id="shippingAirportLabel">Ship To Buyer's Airport (+$250)</span>
+            </label>
+          </div>
+        </section>
 
-        <div class="action-row">
-          <button type="submit" class="btn-submit" id="submitAgreementBtn">
-            <span class="btn-text">Submit Agreement</span>
-            <span class="btn-loading" style="display: none;">Submitting...</span>
-          </button>
-          <button type="button" class="btn-download" id="downloadCopyBtn">Download Copy</button>
-        </div>
+        <!-- ── Payment ── -->
+        <section class="agreement-section payment-section">
+          <h2>Available Payment Method</h2>
+          <div class="choice-grid payments">
+            <label class="choice-item"><input type="radio" name="payment_method" value="Apple Pay" required><span>Apple Pay</span></label>
+            <label class="choice-item"><input type="radio" name="payment_method" value="Zelle"><span>Zelle</span></label>
+            <label class="choice-item"><input type="radio" name="payment_method" value="CashApp"><span>CashApp</span></label>
+            <label class="choice-item"><input type="radio" name="payment_method" value="Wire Transfer"><span>Wire Transfer</span></label>
+            <label class="choice-item"><input type="radio" name="payment_method" value="E transfer (Canada Only)"><span>E transfer (Canada Only)</span></label>
+            <label class="choice-item"><input type="radio" name="payment_method" value="Chime"><span>Chime</span></label>
+          </div>
+        </section>
 
-        <p class="form-status" id="agreementStatus" aria-live="polite"></p>
-      </form>
-    </div>
-  </section>
-</BaseLayout>
+        <!-- ── Summary ── -->
+        <section class="agreement-section summary-section">
+          <h2>Agreement Summary</h2>
+          <div class="summary-rows">
+            <div class="summary-row"><span>Puppy Price</span><strong id="adoptionFee">$750.00</strong></div>
+            <div class="summary-row"><span>Shipping / Pickup</span><strong id="shippingFee">$0.00</strong></div>
+            <div class="summary-row total"><span>Total Due</span><strong id="totalFee">$750.00</strong></div>
+          </div>
+        </section>
+      </div>
 
+      <!-- ── Health Guarantee ── -->
+      <article class="agreement-card guarantee-card">
+        <h2>Health and Wellness Guarantee - Dapper Doxie</h2>
+        <p>
+          We raise our Dachshund puppies in-home with proactive veterinary care. The following protections
+          apply to every puppy placed.
+        </p>
+
+        <h3>1. Veterinary Examination</h3>
+        <p>
+          The Buyer must take their Dachshund puppy to a licensed veterinarian for a full health check within
+          seven (7) days of receiving the puppy. If a serious congenital defect or underlying illness is found,
+          Dapper Doxie will issue a full refund of the adoption fee, including transportation costs, upon
+          safe return of the puppy.
+        </p>
+
+        <h3>2. Breed-Specific Coverage</h3>
+        <p>
+          Because Dachshunds can be prone to specific genetic conditions, Dapper Doxie provides a lifetime
+          guarantee against serious congenital defects. If diagnosed by two (2) licensed veterinarians, the Buyer
+          may return the puppy for either a full refund of the adoption fee (including transportation costs) or
+          a replacement puppy of equal value.
+        </p>
+
+        <h3>3. Communicable Diseases</h3>
+        <p>
+          If the puppy is diagnosed with a communicable disease within the first fourteen (14) days of arrival,
+          Dapper Doxie will refund the full adoption fee, including transportation costs, upon the puppy's return.
+        </p>
+
+        <h3>4. Transportation and Delivery</h3>
+        <p>
+          <strong>Shipping:</strong> If the puppy is shipped, the Buyer is responsible for transportation expenses.
+          Dapper Doxie uses trusted pet transport services and provides tracking details for peace of mind.
+        </p>
+        <p>
+          <strong>Pickup:</strong> If the Buyer chooses in-person pickup, all remaining balance must be paid in full
+          before or at pickup.
+        </p>
+
+        <h3>5. Cost and Payment</h3>
+        <p>
+          The full adoption fee must be paid prior to delivery or pickup. Any unpaid balance will delay release
+          of the puppy until payment is completed.
+        </p>
+
+        <h3>6. Buyer's Responsibilities</h3>
+        <p>
+          The Buyer agrees to provide lifelong care, including nutritious food, fresh water, safe shelter, daily
+          exercise, and regular veterinary visits. The Buyer must also comply with all local and state regulations
+          regarding dog ownership.
+        </p>
+
+        <p class="agreement-note">
+          This agreement represents the full understanding between Dapper Doxie and the Buyer. Any changes
+          must be made in writing and signed by both parties.
+        </p>
+      </article>
+
+      <!-- ── Signature ── -->
+      <div class="agreement-card signature-card">
+        <h2>Signature & Acknowledgment</h2>
+        <label class="terms-row">
+          <input type="checkbox" id="termsAccepted" name="terms_accepted" required>
+          <span>
+            I have read and agree to the <a href="/sales-agreement">Sales Agreement</a> and
+            <a href="/privacy-policy">Privacy Policy</a>.
+          </span>
+        </label>
+
+        <label class="signature-field">
+          <span>Type your full name to sign</span>
+          <input type="text" id="signatureName" name="electronic_signature" placeholder="Type your full name to sign" required>
+        </label>
+        <p class="signature-note">Typing your full name serves as an electronic signature.</p>
+      </div>
+
+      <div class="action-row">
+        <button type="submit" class="btn-submit" id="submitAgreementBtn">
+          <span class="btn-text">Submit Agreement</span>
+          <span class="btn-loading" style="display: none;">Submitting...</span>
+        </button>
+        <button type="button" class="btn-download" id="downloadCopyBtn">Download Copy</button>
+      </div>
+
+      <p class="form-status" id="agreementStatus" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
 <script>
   const agreementForm = document.getElementById('salesAgreementForm');
   const puppySelect = document.getElementById('selectedPuppy');
@@ -382,10 +382,13 @@ const today = new Date().toLocaleDateString('en-US', {
   });
 </script>
 
+<!-- ============================================================
+     CSS
+     ============================================================ -->
 <style>
   .agreement-page {
     padding: 4rem 1.5rem;
-    background: #F7FAF7;
+    background: #fff8f0;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
   }
 
@@ -401,7 +404,7 @@ const today = new Date().toLocaleDateString('en-US', {
   .agreement-intro h1 {
     margin: 0 0 0.75rem;
     font-size: clamp(2rem, 3.2vw, 2.8rem);
-    color: #143521;
+    color: #3e2518;
     line-height: 1.15;
   }
 
@@ -423,7 +426,7 @@ const today = new Date().toLocaleDateString('en-US', {
     border: 1px solid #e8ddd4;
     border-radius: 16px;
     padding: 2rem;
-    box-shadow: 0 4px 20px rgba(31, 81, 50, 0.08);
+    box-shadow: 0 4px 20px rgba(92, 61, 46, 0.08);
   }
 
   .agreement-section {
@@ -442,7 +445,7 @@ const today = new Date().toLocaleDateString('en-US', {
   .guarantee-card h2,
   .signature-card h2 {
     margin: 0 0 0.52rem;
-    color: #143521;
+    color: #3e2518;
     font-size: 1.14rem;
     line-height: 1.25;
   }
@@ -461,39 +464,40 @@ const today = new Date().toLocaleDateString('en-US', {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  label {
+  .agreement-page label {
     display: flex;
     flex-direction: column;
     gap: 0.42rem;
   }
 
-  label > span {
+  .agreement-page label > span {
     color: #4e443b;
     font-size: 0.9rem;
     font-weight: 600;
   }
 
-  input:not([type='radio']):not([type='checkbox']),
-  select {
+  .agreement-page input:not([type='radio']):not([type='checkbox']),
+  .agreement-page select {
     width: 100%;
     border: 2px solid #e8ddd4;
     border-radius: 10px;
     background: #ffffff;
     font-size: 0.98rem;
-    color: #143521;
+    color: #3e2518;
     padding: 0.9rem 1rem;
     min-height: 52px;
     transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    box-sizing: border-box;
   }
 
-  input:not([type='radio']):not([type='checkbox']):focus,
-  select:focus {
+  .agreement-page input:not([type='radio']):not([type='checkbox']):focus,
+  .agreement-page select:focus {
     outline: none;
-    border-color: #2E6B45;
-    box-shadow: 0 0 0 3px rgba(46, 107, 69, 0.18);
+    border-color: #d4a574;
+    box-shadow: 0 0 0 3px rgba(212, 165, 116, 0.18);
   }
 
-  select {
+  .agreement-page select {
     cursor: pointer;
   }
 
@@ -529,7 +533,7 @@ const today = new Date().toLocaleDateString('en-US', {
   }
 
   .choice-item.selected {
-    border-color: #143521;
+    border-color: #b8885a;
     background: #fcf6ef;
     box-shadow: inset 0 0 0 1px rgba(184, 136, 90, 0.2);
   }
@@ -600,7 +604,7 @@ const today = new Date().toLocaleDateString('en-US', {
   }
 
   .summary-row strong {
-    color: #143521;
+    color: #3e2518;
     font-size: 1rem;
     line-height: 1.2;
     display: inline-block;
@@ -617,7 +621,7 @@ const today = new Date().toLocaleDateString('en-US', {
 
   .summary-row.total strong {
     font-size: 1.25rem;
-    color: #1F5132;
+    color: #5c3d2e;
     line-height: 1.2;
   }
 
@@ -634,7 +638,7 @@ const today = new Date().toLocaleDateString('en-US', {
 
   .guarantee-card h3 {
     margin: 1.1rem 0 0.4rem;
-    color: #143521;
+    color: #3e2518;
     font-size: 1.12rem;
   }
 
@@ -662,7 +666,7 @@ const today = new Date().toLocaleDateString('en-US', {
     min-height: 22px;
     margin-top: 0;
     padding: 0;
-    accent-color: #1F5132;
+    accent-color: #5c3d2e;
     flex-shrink: 0;
   }
 
@@ -674,7 +678,7 @@ const today = new Date().toLocaleDateString('en-US', {
   }
 
   .terms-row a {
-    color: #1F5132;
+    color: #5c3d2e;
     text-decoration: underline;
   }
 
@@ -703,14 +707,14 @@ const today = new Date().toLocaleDateString('en-US', {
   }
 
   .btn-submit {
-    background: linear-gradient(135deg, #1F5132, #2E6B45);
+    background: linear-gradient(135deg, #5c3d2e, #7a5440);
     color: #fff;
-    box-shadow: 0 4px 14px rgba(31, 81, 50, 0.24);
+    box-shadow: 0 4px 14px rgba(92, 61, 46, 0.24);
   }
 
   .btn-submit:hover {
     transform: translateY(-1px);
-    box-shadow: 0 7px 16px rgba(31, 81, 50, 0.32);
+    box-shadow: 0 7px 16px rgba(92, 61, 46, 0.32);
   }
 
   .btn-submit:disabled {
@@ -721,8 +725,8 @@ const today = new Date().toLocaleDateString('en-US', {
 
   .btn-download {
     background: #fff;
-    color: #1F5132;
-    border-color: #2E6B45;
+    color: #5c3d2e;
+    border-color: #d4a574;
   }
 
   .btn-download:hover {
@@ -745,6 +749,7 @@ const today = new Date().toLocaleDateString('en-US', {
     color: #8b2f2f;
   }
 
+  /* ── Mobile ── */
   @media (max-width: 900px) {
     .agreement-page {
       padding: 3rem 1rem;
@@ -764,7 +769,7 @@ const today = new Date().toLocaleDateString('en-US', {
     }
 
     .agreement-intro p,
-    label > span,
+    .agreement-page label > span,
     .choice-item span,
     .guarantee-card p,
     .terms-row span,
@@ -784,8 +789,8 @@ const today = new Date().toLocaleDateString('en-US', {
       font-size: 1.05rem;
     }
 
-    input:not([type='radio']):not([type='checkbox']),
-    select,
+    .agreement-page input:not([type='radio']):not([type='checkbox']),
+    .agreement-page select,
     .btn-submit,
     .btn-download {
       font-size: 0.95rem;
@@ -802,6 +807,7 @@ const today = new Date().toLocaleDateString('en-US', {
     }
   }
 
+  /* ── Print ── */
   @media print {
     .top-bar,
     .header,
@@ -831,8 +837,8 @@ const today = new Date().toLocaleDateString('en-US', {
       break-inside: avoid;
     }
 
-    input:not([type='radio']):not([type='checkbox']),
-    select {
+    .agreement-page input:not([type='radio']):not([type='checkbox']),
+    .agreement-page select {
       border: 1px solid #c2c2c2;
       background: #fff;
     }

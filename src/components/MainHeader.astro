@@ -1,12 +1,12 @@
 ---
 // MainHeader component - Main navigation
+import Logo from './Logo.astro';
 ---
 
 <header class="header">
   <div class="header-container">
-    <a href="/" class="logo">
-      <img src="/images/logo.png" alt="Doxie Pups Creek logo" class="logo-img" />
-      <span class="sr-only">Doxie Pups Creek</span>
+    <a href="/" class="logo" aria-label="Dapper Doxie home">
+      <Logo height={48} />
     </a>
 
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -19,8 +19,8 @@
 
     <nav class="nav-menu">
       <div class="nav-brand-mobile">
-        <a href="/" class="nav-brand-mobile-link" aria-label="Doxie Pups Creek home">
-          <img src="/images/logo.png" alt="Doxie Pups Creek logo" class="nav-brand-mobile-img" />
+        <a href="/" class="nav-brand-mobile-link" aria-label="Dapper Doxie home">
+          <Logo height={42} />
         </a>
       </div>
       <ul>
@@ -122,9 +122,9 @@
   .header {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: #FFF8F0;
-    border-bottom: none;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    background: #ffffff;
+    border-bottom: 1px solid #E1E8E2;
+    box-shadow: 0 2px 14px rgba(20, 53, 33, 0.06);
     position: sticky;
     top: 0;
     z-index: 100;
@@ -213,8 +213,8 @@
   .nav-menu a,
   .more-info-trigger {
     text-decoration: none;
-    color: #4a4a4a;
-    font-weight: 500;
+    color: #232E28;
+    font-weight: 600;
     font-size: 0.95rem;
     letter-spacing: 0.2px;
     transition: color 0.3s ease;
@@ -245,18 +245,18 @@
     bottom: 0;
     left: 0;
     width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, #5C3D2E, #D4A574);
+    height: 3px;
+    background: #1F5132;
     transition: width 0.3s ease;
-    border-radius: 1px;
+    border-radius: 2px;
   }
 
   .nav-menu a:hover {
-    color: #5C3D2E;
+    color: #1F5132;
   }
 
   .more-info-trigger:hover {
-    color: #5C3D2E;
+    color: #1F5132;
   }
 
   .nav-menu > ul > li > a:hover::after,
@@ -275,12 +275,13 @@
     padding: 0.45rem;
     position: absolute;
     right: 0;
-    top: calc(100% + 0.55rem);
+    top: 100%;
+    margin-top: 0.55rem;
     min-width: 250px;
     background: #fff;
-    border: 1px solid #eadfd4;
-    border-radius: 12px;
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+    border: 1px solid #E1E8E2;
+    border-radius: 16px;
+    box-shadow: 0 14px 30px rgba(20, 53, 33, 0.12);
     opacity: 0;
     visibility: hidden;
     transform: translateY(8px);
@@ -289,21 +290,32 @@
     z-index: 120;
   }
 
+  .more-info-menu::before {
+    content: '';
+    position: absolute;
+    top: -0.65rem;
+    left: 0;
+    right: 0;
+    height: 0.75rem;
+    background: transparent;
+  }
+
   .more-info-menu li {
     margin: 0;
   }
 
   .more-info-menu a {
     display: block;
-    padding: 0.55rem 0.65rem;
-    border-radius: 8px;
+    padding: 0.6rem 0.75rem;
+    border-radius: 10px;
     font-size: 0.9rem;
-    color: #4a4a4a;
+    color: #232E28;
+    font-weight: 500;
   }
 
   .more-info-menu a:hover {
-    background: #fff8f0;
-    color: #5C3D2E;
+    background: #EEF3EE;
+    color: #1F5132;
   }
 
   .more-info-item:hover .more-info-menu,
@@ -318,23 +330,24 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #5C3D2E, #D4A574);
+    background: #1F5132;
     color: white;
-    padding: 0.7rem 1.5rem;
-    border-radius: 50px;
+    padding: 0.75rem 1.6rem;
+    border-radius: 14px;
     font-size: 0.9rem;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
     letter-spacing: 0.3px;
     transition: all 0.3s ease;
     flex-shrink: 0;
     white-space: nowrap;
-    box-shadow: 0 2px 10px rgba(92, 61, 46, 0.2);
+    box-shadow: 0 4px 0 #143521, 0 6px 14px rgba(20, 53, 33, 0.2);
   }
 
   .header-cta:hover {
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(92, 61, 46, 0.3);
+    background: #2E6B45;
+    box-shadow: 0 6px 0 #143521, 0 10px 18px rgba(20, 53, 33, 0.25);
     color: white;
   }
 
@@ -353,7 +366,7 @@
     display: block;
     width: 24px;
     height: 2.5px;
-    background: #5C3D2E;
+    background: #1F5132;
     border-radius: 3px;
     transition: all 0.3s ease;
   }
@@ -438,16 +451,17 @@
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      background: linear-gradient(135deg, #5C3D2E, #D4A574);
+      background: #1F5132;
       color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 50px;
+      padding: 0.85rem 1.5rem;
+      border-radius: 14px;
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 700;
       text-decoration: none;
       margin-top: 1.5rem;
       width: 100%;
       text-align: center;
+      box-shadow: 0 4px 0 #143521;
     }
 
     .nav-menu > ul {
@@ -488,9 +502,9 @@
       right: auto;
       min-width: 100%;
       box-shadow: none;
-      border-radius: 12px;
-      border-color: #ece1d5;
-      background: #fff8f0;
+      border-radius: 14px;
+      border-color: #C9D3CA;
+      background: #EEF3EE;
       margin: 0.2rem 0 0.5rem;
       opacity: 1;
       visibility: visible;
@@ -514,10 +528,10 @@
       min-height: 44px;
       display: flex;
       align-items: center;
-      border: 1px solid #e6d9cd;
+      border: 1px solid #C9D3CA;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 1px 2px rgba(92, 61, 46, 0.06);
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgba(20, 53, 33, 0.06);
     }
 
     .more-info-menu li + li {
@@ -526,9 +540,9 @@
 
     .more-info-menu a:hover,
     .more-info-menu a:focus-visible {
-      background: #fff4e8;
-      border-color: #d8bea6;
-      color: #5C3D2E;
+      background: #EEF3EE;
+      border-color: #4A8A63;
+      color: #1F5132;
     }
 
     .more-info-item.open .more-info-icon {

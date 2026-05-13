@@ -1,0 +1,72 @@
+---
+interface Props {
+  variant?: 'dark' | 'light';
+  height?: number;
+}
+
+const { variant = 'dark', height = 52 } = Astro.props;
+
+const mark = variant === 'light' ? '#ffffff' : '#1F5132';
+const accent = variant === 'light' ? '#ffffff' : '#1F5132';
+const word = variant === 'light' ? '#ffffff' : '#14201A';
+const tagline = variant === 'light' ? 'rgba(255,255,255,0.7)' : '#4E5A52';
+---
+
+<svg
+  class="dpc-logo"
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 240 64"
+  height={height}
+  width={height * (240 / 64)}
+  role="img"
+  aria-label="Dapper Doxie"
+>
+  <!-- Circular mark -->
+  <circle cx="32" cy="32" r="28" fill={mark} />
+
+  <!-- Paw print, centered inside circle -->
+  <g fill="#ffffff">
+    <!-- Main pad (palm) -->
+    <path d="M32 50
+             c-7 0 -11 -4 -11 -9
+             c0 -5 4.5 -9 11 -9
+             c6.5 0 11 4 11 9
+             c0 5 -4 9 -11 9 Z" />
+    <!-- Top-left toe -->
+    <ellipse cx="22" cy="24" rx="3.6" ry="4.8" />
+    <!-- Top-right toe -->
+    <ellipse cx="42" cy="24" rx="3.6" ry="4.8" />
+    <!-- Outer-left toe -->
+    <ellipse cx="14" cy="32" rx="3.4" ry="4.4" transform="rotate(-22 14 32)" />
+    <!-- Outer-right toe -->
+    <ellipse cx="50" cy="32" rx="3.4" ry="4.4" transform="rotate(22 50 32)" />
+  </g>
+
+  <!-- Wordmark -->
+  <g font-family="'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif">
+    <text
+      x="72"
+      y="32"
+      font-size="20"
+      font-weight="800"
+      fill={word}
+      letter-spacing="-0.5"
+    >Doxie Pups <tspan fill={accent}>Creek</tspan></text>
+    <text
+      x="72"
+      y="48"
+      font-size="8.5"
+      font-weight="600"
+      fill={tagline}
+      letter-spacing="2.4"
+    >FAMILY BREEDERS · EST. 1995</text>
+  </g>
+</svg>
+
+<style>
+  .dpc-logo {
+    display: block;
+    height: auto;
+    max-height: 100%;
+  }
+</style>

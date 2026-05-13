@@ -1,5 +1,6 @@
 ---
 // SiteFooter component
+import Logo from './Logo.astro';
 ---
 
 <footer class="footer">
@@ -7,9 +8,9 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="footer-logo">
-          <span style="font-size: 1.3rem; font-weight: 800; color: white;">Doxie Pups Creek</span>
+          <Logo variant="light" height={54} />
         </div>
-        <p>Family-raised Dachshund puppies with love since 1995. Doxie Pups Creek is dedicated to raising healthy, happy puppies that bring warmth and joy to every home.</p>
+        <p>Family-raised Dachshund puppies with love since 1995. Dapper Doxie is dedicated to raising healthy, happy puppies that bring warmth and joy to every home.</p>
         <div class="footer-social">
           <a href="#" class="social-link" aria-label="Facebook">
             <svg viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
@@ -56,15 +57,15 @@
         <h4>Contact</h4>
         <div class="footer-contact-item">
           <svg class="footer-contact-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <p><a href="mailto:info@doxiepupscreek.com">info@doxiepupscreek.com</a></p>
+          <p><a href="mailto:info@dapperdoxie.com">info@dapperdoxie.com</a></p>
         </div>
 
         <div class="footer-newsletter">
           <p class="newsletter-text">Subscribe for updates and puppy availability!</p>
           <form class="newsletter-form" id="newsletterForm">
             <input type="hidden" name="access_key" value="78f7a8fc-7e7c-4cc8-8322-df87dd5f994e">
-            <input type="hidden" name="subject" value="New Newsletter Subscription - Doxie Pups Creek">
-            <input type="hidden" name="from_name" value="Doxie Pups Creek">
+            <input type="hidden" name="subject" value="New Newsletter Subscription - Dapper Doxie">
+            <input type="hidden" name="from_name" value="Dapper Doxie">
             <input type="email" name="email" class="newsletter-input" placeholder="Your email address" required>
             <button type="submit" class="newsletter-btn">Join</button>
           </form>
@@ -74,7 +75,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p class="footer-copyright">&copy; 2026 <a href="/">Doxie Pups Creek</a>. All rights reserved.</p>
+      <p class="footer-copyright">&copy; 2026 <a href="/">Dapper Doxie</a>. All rights reserved.</p>
       <div class="footer-legal">
         <a href="/privacy-policy">Privacy Policy</a>
         <a href="/terms-of-service">Terms of Service</a>
@@ -132,9 +133,27 @@
   .footer {
     display: block;
     font-family: var(--font-family, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif);
-    background: linear-gradient(135deg, #5C3D2E 0%, #3E2518 100%);
+    background: #1F5132;
     color: white;
     padding-top: 4rem;
+    position: relative;
+  }
+
+  .footer::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: 0;
+    right: 0;
+    height: 40px;
+    background: #1F5132;
+    -webkit-mask-image: radial-gradient(circle 20px at 20px 40px, transparent 98%, #000 100%);
+    mask-image: radial-gradient(circle 20px at 20px 40px, transparent 98%, #000 100%);
+    -webkit-mask-size: 40px 40px;
+    mask-size: 40px 40px;
+    -webkit-mask-repeat: repeat-x;
+    mask-repeat: repeat-x;
+    transform: translateY(-40px);
   }
 
   .footer-container {
@@ -191,8 +210,12 @@
   }
 
   .social-link:hover {
-    background: #D4A574;
-    transform: translateY(-3px);
+    background: #ffffff;
+    transform: translateY(-3px) rotate(-4deg);
+  }
+
+  .social-link:hover svg {
+    fill: #1F5132;
   }
 
   .social-link svg {
@@ -215,10 +238,10 @@
     position: absolute;
     left: 0;
     bottom: 0;
-    width: 30px;
-    height: 3px;
-    background: #5C3D2E;
-    border-radius: 2px;
+    width: 36px;
+    height: 4px;
+    background: #ffffff;
+    border-radius: 4px;
   }
 
   .footer-links {
@@ -256,7 +279,7 @@
   .footer-contact-icon {
     width: 20px;
     height: 20px;
-    fill: #5C3D2E;
+    fill: #ffffff;
     flex-shrink: 0;
     margin-top: 2px;
   }
@@ -279,8 +302,9 @@
   }
 
   .footer-newsletter {
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
     padding: 1.5rem;
     margin-top: 0.5rem;
   }
@@ -301,9 +325,9 @@
     flex: 1;
     padding: 0.75rem 1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 12px;
     font-size: 0.9rem;
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.12);
     color: white;
   }
 
@@ -317,18 +341,19 @@
   }
 
   .newsletter-btn {
-    background: #5C3D2E;
-    color: white;
+    background: #ffffff;
+    color: #1F5132;
     border: none;
     padding: 0.75rem 1.25rem;
-    border-radius: 8px;
-    font-weight: 600;
+    border-radius: 12px;
+    font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   .newsletter-btn:hover {
-    background: #D4A574;
+    background: #EEF3EE;
+    transform: translateY(-2px);
   }
 
   .newsletter-btn:disabled {

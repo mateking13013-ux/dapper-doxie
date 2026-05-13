@@ -48,7 +48,7 @@ const { puppies } = Astro.props;
             </div>
             {puppy.status === 'Available' && (
               <a
-                href={`sms:+15025725074?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://doxiepupscreek.com/available-puppies`)}`}
+                href={`sms:+15025725074?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://dapperdoxie.com/available-puppies`)}`}
                 class="btn-send-text"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H5.17L4 17.17V4h16v12z"/><path d="M7 9h2v2H7zm4 0h2v2h-2zm4 0h2v2h-2z"/></svg>
@@ -139,7 +139,7 @@ const { puppies } = Astro.props;
           </div>
           {puppy.status === 'Available' && (
             <a
-              href={`sms:+15025725074?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://doxiepupscreek.com/available-puppies`)}`}
+              href={`sms:+15025725074?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://dapperdoxie.com/available-puppies`)}`}
               class="btn-sms-under"
             >
               Send Text
@@ -154,7 +154,7 @@ const { puppies } = Astro.props;
 <style>
   .puppies-section {
     padding: 40px 20px;
-    background: #FFF8F0;
+    background: #F7FAF7;
   }
 
   .puppies-section .container {
@@ -264,7 +264,7 @@ const { puppies } = Astro.props;
   }
 
   .price-banner {
-    background: linear-gradient(135deg, #5C3D2E 0%, #D4A574 100%);
+    background: linear-gradient(135deg, #1F5132 0%, #2E6B45 100%);
     color: #fff;
     padding: 12px 16px;
     border-radius: 8px;
@@ -317,7 +317,7 @@ const { puppies } = Astro.props;
     width: 28px;
     height: 28px;
     margin: 0 auto 5px;
-    color: #5C3D2E;
+    color: #1F5132;
   }
 
   .stat-icon svg {
@@ -372,8 +372,8 @@ const { puppies } = Astro.props;
   }
 
   .comes-with-card {
-    background: #FFF8F0;
-    border: 1px solid #D4A574;
+    background: #F7FAF7;
+    border: 1px solid #2E6B45;
     border-radius: 8px;
     padding: 10px 14px;
     margin-bottom: 15px;
@@ -382,7 +382,7 @@ const { puppies } = Astro.props;
   .comes-with-card .comes-with-title {
     margin: 0 0 8px;
     font-size: 0.85rem;
-    color: #3E2518;
+    color: #143521;
     font-weight: 700;
     line-height: 1.5;
   }
@@ -395,7 +395,7 @@ const { puppies } = Astro.props;
 
   .comes-with-card .comes-with-list li {
     font-size: 0.8rem;
-    color: #3E2518;
+    color: #143521;
     padding: 2px 0;
     padding-left: 18px;
     position: relative;
@@ -405,7 +405,7 @@ const { puppies } = Astro.props;
     content: "\2713";
     position: absolute;
     left: 0;
-    color: #D4A574;
+    color: #2E6B45;
     font-weight: 700;
   }
 
@@ -442,51 +442,51 @@ const { puppies } = Astro.props;
     letter-spacing: 0.5px;
     transition: all 0.3s ease;
     text-decoration: none;
-    background: #5C3D2E;
+    background: #1F5132;
     color: #fff;
-    border: 2px solid #5C3D2E;
+    border: 2px solid #1F5132;
   }
 
   .btn-sms-under:hover {
-    background: #3E2518;
-    border-color: #3E2518;
+    background: #143521;
+    border-color: #143521;
     color: #fff;
   }
 
   .btn-primary {
-    background: #5C3D2E;
+    background: #1F5132;
     color: #fff;
-    border: 2px solid #5C3D2E;
+    border: 2px solid #1F5132;
   }
 
   .btn-primary:hover {
-    background: #3E2518;
-    border-color: #3E2518;
+    background: #143521;
+    border-color: #143521;
     color: #fff;
   }
 
   .btn-outline {
     background: transparent;
-    color: #5C3D2E;
-    border: 2px solid #5C3D2E;
+    color: #1F5132;
+    border: 2px solid #1F5132;
   }
 
   .btn-outline:hover {
-    background: #5C3D2E;
+    background: #1F5132;
     color: #fff;
   }
 
   .btn-adopt {
-    background: #FFF8F0;
-    color: #5C3D2E;
-    border: 2px solid #D4A574;
+    background: #F7FAF7;
+    color: #1F5132;
+    border: 2px solid #2E6B45;
     padding-top: 12px;
     padding-bottom: 12px;
   }
 
   .btn-adopt:hover {
     background: #F6E8D9;
-    color: #3E2518;
+    color: #143521;
     border-color: #C79866;
   }
 
@@ -548,8 +548,8 @@ const { puppies } = Astro.props;
     }
 
     .price-banner {
-      background: #FFF8F0;
-      border: 1px solid #D4A574;
+      background: #F7FAF7;
+      border: 1px solid #2E6B45;
       padding: 10px 12px;
       margin-bottom: 12px;
       align-items: center;
@@ -565,7 +565,7 @@ const { puppies } = Astro.props;
     }
 
     .price-amount {
-      color: #5C3D2E;
+      color: #1F5132;
       font-size: 1.3rem;
       width: auto;
     }
@@ -581,7 +581,7 @@ const { puppies } = Astro.props;
       display: inline-flex;
       align-items: center;
       gap: 5px;
-      background: #5C3D2E;
+      background: #1F5132;
       color: white;
       text-decoration: none;
       padding: 8px 14px;
