@@ -134,7 +134,7 @@ const { puppies } = Astro.props;
                   href={`sms:+13032103986?&body=${encodeURIComponent(`Hello I am interested in this Dachshund Puppy ${puppy.name} \nwebsite: https://dapperdoxiepups.com/available-puppies`)}`}
                   class="btn btn-primary btn-contact"
                 >Send Text</a>
-                <button type="button" class="btn btn-outline btn-adopt" onclick={`openContactPopup('${puppy.name}', '${puppy.image}', '${puppy.breed} · ${puppy.color}', ${puppy.price})`}>Adopt Me</button>
+                <button type="button" class="btn btn-outline btn-adopt" onclick={`openContactPopup('${puppy.name}', '${puppy.image}', '${puppy.breed} · ${puppy.color}', ${puppy.price})`}>Contact Us</button>
               </>
             ) : (
               <span class="btn btn-sold">This Puppy Has Been Adopted</span>
