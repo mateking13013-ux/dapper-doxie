@@ -514,7 +514,12 @@ const { puppies } = Astro.props;
 
     .main-image {
       position: relative;
-      height: 380px;
+      height: auto;
+      aspect-ratio: 3 / 4;
+    }
+
+    .main-image img {
+      object-position: center top;
     }
 
     .buttons-row {
@@ -539,7 +544,8 @@ const { puppies } = Astro.props;
     }
 
     .main-image {
-      height: 380px;
+      height: auto;
+      aspect-ratio: 3 / 4;
     }
 
     .puppy-details {
