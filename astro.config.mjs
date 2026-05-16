@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://dapperdoxie.com',
+  site: 'https://dapperdoxiepups.com',
   compressHTML: true,
   build: {
     inlineStylesheets: 'auto'
