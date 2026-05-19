@@ -304,7 +304,7 @@ export const puppies: Puppy[] = [
     sex: 'Female',
     age: '10 Weeks',
     color: 'Chocolate & Tan',
-    status: 'Available',
+    status: 'Sold',
     price: 750,
     description: 'Anya is a gorgeous girl with a rich chocolate coat and warm tan markings on her face and paws. She has striking light eyes and a sweet, curious personality. Anya loves to explore and then curl up for snuggles, making her a perfect companion for any family.',
   },
