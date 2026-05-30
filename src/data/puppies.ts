@@ -18,7 +18,7 @@ export const puppies: Puppy[] = [
     sex: 'Female',
     age: '10 Weeks',
     color: 'Chocolate Dapple Long Hair',
-    status: 'Available',
+    status: 'Sold',
     price: 750,
     description: 'Bailey is a stunning long-haired girl with a beautiful chocolate dapple coat, cream markings on her face and chest, and the softest ears you have ever felt. She has soulful dark eyes and a sweet, gentle nature. Bailey loves cuddles and gets along wonderfully with everyone she meets.',
   },
